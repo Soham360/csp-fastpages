@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+**[Soham Kamat](https://soham360.github.io/csp-fastpages/)** [^1] is a high school student who has created this fastpage as a part of AP Computer Science Principals.
 
 
 

@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "First Jupyter Notebook",
-            "content": "print(&quot;Hello World!&quot;) .",
+            "content": "print(&quot;Hello World!&quot;) . Hello World! .",
             "url": "https://soham360.github.io/csp-fastpages/jupyter/2022/08/22/first-notebook.html",
             "relUrl": "/jupyter/2022/08/22/first-notebook.html",
             "date": " • Aug 22, 2022"

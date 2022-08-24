@@ -1,8 +1,8 @@
 ---
 toc: true
 layout: post
-description: A minimal example of using markdown with fastpages.
+description: My goals for APCSP 2022-2023
 categories: [markdown]
-title: An Example Markdown Post
+title: Goals
 ---
-# My First Post
+# My Goals

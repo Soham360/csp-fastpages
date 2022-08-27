@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -600,6 +600,46 @@ cat config
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+show the secrets of .git
+total 52
+-rw-r--r-- 1 soham soham    23 Aug 26 20:25 HEAD
+drwxr-xr-x 2 soham soham  4096 Aug 26 20:25 <span class="ansi-blue-intense-fg ansi-bold">branches</span>
+-rw-r--r-- 1 soham soham   270 Aug 26 20:25 config
+-rw-r--r-- 1 soham soham    73 Aug 26 20:25 description
+drwxr-xr-x 2 soham soham  4096 Aug 26 20:25 <span class="ansi-blue-intense-fg ansi-bold">hooks</span>
+-rw-r--r-- 1 soham soham 12026 Aug 26 20:25 index
+drwxr-xr-x 2 soham soham  4096 Aug 26 20:25 <span class="ansi-blue-intense-fg ansi-bold">info</span>
+drwxr-xr-x 3 soham soham  4096 Aug 26 20:25 <span class="ansi-blue-intense-fg ansi-bold">logs</span>
+drwxr-xr-x 4 soham soham  4096 Aug 26 20:25 <span class="ansi-blue-intense-fg ansi-bold">objects</span>
+-rw-r--r-- 1 soham soham   184 Aug 26 20:25 packed-refs
+drwxr-xr-x 5 soham soham  4096 Aug 26 20:25 <span class="ansi-blue-intense-fg ansi-bold">refs</span>
+
+look at config file
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/Soham360/csp-fastpages.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 

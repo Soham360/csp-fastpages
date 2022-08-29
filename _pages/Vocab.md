@@ -3,7 +3,7 @@ layout: page
 permalink: /Vocabulary/
 title: Vocabulary
 ---
-
+![]({{ site.baseurl }}/images/vocabulary.png "Vocabulary's logo")
 ## Python Commands to know
 
 - function - A group of related statements that perform a specific task

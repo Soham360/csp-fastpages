@@ -4,8 +4,6 @@ permalink: /Notes/
 title: Notes
 --- 
 
-# Notes
-
 ## Python commands to know
 
 - function - A group of related statements that perform a specific task

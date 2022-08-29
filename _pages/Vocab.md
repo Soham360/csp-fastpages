@@ -4,8 +4,6 @@ permalink: /Vocabulary/
 title: Vocabulary
 ---
 
-# Vocabulary
-
 ## Commonly Used Commands
 
 - cd: change directory

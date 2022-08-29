@@ -7,6 +7,8 @@ title: My Goals
 ---
 ## My Goals for APCSP
 
+![]({{ site.baseurl }}/images/GoalsLogo.png "Goal's logo")
+
 - How to code using python and java
 - Learn how to create a github fastpage (complete)
 - Finish with an A

@@ -16,7 +16,7 @@ title: Extra Credit
 - 25 examples of games
 
 ### AP Calculus
-- 
+- Section 2.4 problems 15-32
 
 ### English
 - Happiness Essay

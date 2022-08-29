@@ -15,3 +15,19 @@ title: Vocabulary
 - repository - A location where all the files for a particular project are stored
 - string - A series of readable or usable sentences that the user will use
 - len() - Returns the length (the number of items) of an object
+
+## Ubuntu Commands to know
+
+- cd: change directory
+- cat {filename}: concatenate
+- pwd: print working directory
+- git clone {url}: clones GitHub repository
+- ls: list files in a directory
+- cp {filename}: copy
+- mkdir {name}: makes directory called {name}
+- rm {filename}: removes {filename}
+- locate {filename}: finds file called {filename}
+- sudo {command}: SuperUser Do {command}
+- wget {download link}: downloads files from the internet
+- useradd {username}: adds user named {username}
+- userdel {username}: deletes user name {username}

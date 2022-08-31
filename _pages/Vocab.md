@@ -2,6 +2,7 @@
 layout: page
 permalink: /Vocabulary/
 title: Vocabulary
+image: images/vocabulary.png
 ---
 ![]({{ site.baseurl }}/images/vocabulary.png "Vocabulary's logo")
 ## Python Commands to know

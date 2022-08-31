@@ -2,6 +2,7 @@
 layout: page
 permalink: /Notes/
 title: Notes
+image: images/noteslogo.png
 --- 
 ![]({{ site.baseurl }}/images/noteslogo.png "note's logo")
 ## Week 1 Notes:

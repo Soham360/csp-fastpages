@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Soham Week 1 Extra credit
-categories: [markdown]
+categories: [markdown, Week 1]
 title: Extra Credit
 ---
 

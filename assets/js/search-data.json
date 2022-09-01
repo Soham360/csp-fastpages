@@ -2,33 +2,33 @@
   
     
         "post0": {
-            "title": "Test",
-            "content": "try: import piplite await piplite.install([&#39;ipywidgets&#39;]) except ImportError: pass import ipywidgets as widgets widgets.Dropdown( options=[(&#39;One&#39;, 1), (&#39;Two&#39;, 2), (&#39;Three&#39;, 3)], value=2, description=&#39;Number:&#39;, ) .",
-            "url": "https://soham360.github.io/csp-fastpages/jupyter/2022/08/30/test.html",
-            "relUrl": "/jupyter/2022/08/30/test.html",
-            "date": " • Aug 30, 2022"
+            "title": "Lists",
+            "content": "InfoDb = [] # InfoDB is a data structure with expected Keys and Values # Append to List a Dictionary of key/values related to a person and cars InfoDb.append({ &quot;FirstName&quot;: &quot;John&quot;, &quot;LastName&quot;: &quot;Mortensen&quot;, &quot;DOB&quot;: &quot;October 21&quot;, &quot;Residence&quot;: &quot;San Diego&quot;, &quot;Email&quot;: &quot;jmortensen@powayusd.com&quot;, &quot;Owns_Cars&quot;: [&quot;2015-Fusion&quot;, &quot;2011-Ranger&quot;, &quot;2003-Excursion&quot;, &quot;1997-F350&quot;, &quot;1969-Cadillac&quot;] }) # Append to List a 2nd Dictionary of key/values InfoDb.append({ &quot;FirstName&quot;: &quot;Sunny&quot;, &quot;LastName&quot;: &quot;Naidu&quot;, &quot;DOB&quot;: &quot;August 2&quot;, &quot;Residence&quot;: &quot;Temecula&quot;, &quot;Email&quot;: &quot;snaidu@powayusd.com&quot;, &quot;Owns_Cars&quot;: [&quot;4Runner&quot;] }) # Define an empty List called InfoDb # InfoDB is a data structure with expected Keys and Values # Append to List a Dictionary of key/values related to a person and cars InfoDb.append({ &quot;FirstName&quot;: &quot;Soham&quot;, &quot;LastName&quot;: &quot;Kamat&quot;, &quot;DOB&quot;: &quot;March 9&quot;, &quot;Residence&quot;: &quot;San Diego&quot;, &quot;Email&quot;: &quot;sohamk10039@stu.powayusd.com&quot;, &quot;Owns_Cars&quot;: [&quot;Tesla&quot;] }) print(InfoDb) . Input In [5] print(&#34; n&#34;) ^ SyntaxError: invalid syntax .",
+            "url": "https://soham360.github.io/csp-fastpages/collegeboard/python_lists",
+            "relUrl": "/collegeboard/python_lists",
+            "date": " • Aug 31, 2022"
         }
         
     
   
     
         ,"post1": {
-            "title": "Lists",
-            "content": "",
-            "url": "https://soham360.github.io/csp-fastpages/collegeboard/python_lists",
-            "relUrl": "/collegeboard/python_lists",
-            "date": " • Aug 30, 2022"
+            "title": "My Quiz",
+            "content": "import getpass, sys def question_and_answer(prompt): print(&quot;Question: &quot; + prompt) msg = input() print(&quot;Answer: &quot; + msg) def question_with_response(prompt): print(&quot;Question: &quot; + prompt) msg = input() return msg questions = 5 correct = 0 print(&#39;Hello, &#39; + getpass.getuser() + &quot; running &quot; + sys.executable) print(&quot;You will be asked &quot; + str(questions) + &quot; questions.&quot;) question_and_answer(&quot;Are you ready to take a test?&quot;) rsp = question_with_response(&quot;Who is the leader for all time points scored in the NBA?&quot;) if rsp == &quot;Kareem Abdul Jabbar&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) rsp = question_with_response(&quot;Who is the leader for all time 3-pointers made in the NBA?&quot;) if rsp == &quot;Stephen Curry&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) rsp = question_with_response(&quot;Who is the leader for all time steals in the NBA?&quot;) if rsp == &quot;John Stockton&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) rsp = question_with_response(&quot;Who is the leader for all time steals in the NBA?&quot;) if rsp == &quot;John Stockton&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) rsp = question_with_response(&quot;Who is the leader for all time rebounds in the NBA?&quot;) if rsp == &quot;Wilt Chanberlain&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) print(getpass.getuser() + &quot; you scored &quot; + str(correct) +&quot;/&quot; + str(questions)) . Hello, soham running /usr/bin/python3 You will be asked 5 questions. Question: Are you ready to take a test? Answer: yes Question: Who is the leader for all time points scored in the NBA? Kareem Abdul Jabbar is correct! Question: Who is the leader for all time 3-pointers made in the NBA? is incorrect! Question: Who is the leader for all time steals in the NBA? is incorrect! Question: Who is the leader for all time steals in the NBA? is incorrect! Question: Who is the leader for all time rebounds in the NBA? is incorrect! soham you scored 1/5 .",
+            "url": "https://soham360.github.io/csp-fastpages/jupyter/2022/08/31/SohamQuiz.html",
+            "relUrl": "/jupyter/2022/08/31/SohamQuiz.html",
+            "date": " • Aug 31, 2022"
         }
         
     
   
     
         ,"post2": {
-            "title": "My Quiz",
-            "content": "import getpass, sys def question_and_answer(prompt): print(&quot;Question: &quot; + prompt) msg = input() print(&quot;Answer: &quot; + msg) def question_with_response(prompt): print(&quot;Question: &quot; + prompt) msg = input() return msg questions = 5 correct = 0 print(&#39;Hello, &#39; + getpass.getuser() + &quot; running &quot; + sys.executable) print(&quot;You will be asked &quot; + str(questions) + &quot; questions.&quot;) question_and_answer(&quot;Are you ready to take a test?&quot;) rsp = question_with_response(&quot;Who is the leader for all time points scored in the NBA?&quot;) if rsp == &quot;Kareem Abdul Jabbar&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) rsp = question_with_response(&quot;Who is the leader for all time 3-pointers made in the NBA?&quot;) if rsp == &quot;Stephen Curry&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) rsp = question_with_response(&quot;Who is the leader for all time steals in the NBA?&quot;) if rsp == &quot;John Stockton&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) rsp = question_with_response(&quot;Who is the leader for all time steals in the NBA?&quot;) if rsp == &quot;John Stockton&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) rsp = question_with_response(&quot;Who is the leader for all time rebounds in the NBA?&quot;) if rsp == &quot;Wilt Chanberlain&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) print(getpass.getuser() + &quot; you scored &quot; + str(correct) +&quot;/&quot; + str(questions)) . Hello, soham running /usr/bin/python3 You will be asked 5 questions. Question: Are you ready to take a test? Answer: yes Question: Who is the leader for all time points scored in the NBA? Kareem Abdul Jabbar is correct! Question: Who is the leader for all time 3-pointers made in the NBA? is incorrect! Question: Who is the leader for all time steals in the NBA? is incorrect! Question: Who is the leader for all time steals in the NBA? is incorrect! Question: Who is the leader for all time rebounds in the NBA? is incorrect! soham you scored 1/5 .",
-            "url": "https://soham360.github.io/csp-fastpages/jupyter/2022/08/30/SohamQuiz.html",
-            "relUrl": "/jupyter/2022/08/30/SohamQuiz.html",
-            "date": " • Aug 30, 2022"
+            "title": "Test",
+            "content": "def isPalindrome(s): return s == s[::-1] s = input(&quot;Enter a word: &quot;) ans = isPalindrome(s) if ans: print(&quot;Yes&quot;) else: print(&quot;No&quot;) . Yes .",
+            "url": "https://soham360.github.io/csp-fastpages/jupyter/2022/08/31/Palindrome.html",
+            "relUrl": "/jupyter/2022/08/31/Palindrome.html",
+            "date": " • Aug 31, 2022"
         }
         
     
@@ -81,8 +81,8 @@
         ,"post7": {
             "title": "My Goals",
             "content": "My Goals for APCSP . . How to code using python and java | Learn how to create a github fastpage (complete) | Finish with an A | Prepare myself for a future in computer science | .",
-            "url": "https://soham360.github.io/csp-fastpages/markdown/2022/08/22/First-Post.html",
-            "relUrl": "/markdown/2022/08/22/First-Post.html",
+            "url": "https://soham360.github.io/csp-fastpages/markdown/week%200/2022/08/22/First-Post.html",
+            "relUrl": "/markdown/week%200/2022/08/22/First-Post.html",
             "date": " • Aug 22, 2022"
         }
         

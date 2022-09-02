@@ -5,7 +5,7 @@ description: My goals for APCSP 2022-2023
 comments: true
 categories: [markdown, Week 0]
 title: My Goals
-image: images/Goalslogo.png
+image: images/GoalsLogo.png
 ---
 ## My Goals for APCSP
 

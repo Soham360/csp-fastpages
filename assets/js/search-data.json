@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "Palindrome",
-            "content": "def isPalindrome(s): print(s) print(s[::-1]) return s == s[::-1] s = input(&quot;Enter a word: &quot;) ans = isPalindrome(s) if ans: print(s + &quot; is a palindrome&quot;) else: print(s + &quot; is not a palindrome&quot;) . a a a is a palindrome .",
+            "content": "def isPalindrome(s): print(s) print(s[::-1]) return s == s[::-1] s = input(&quot;Enter a word: &quot;) ans = isPalindrome(s) if ans: print(s + &quot; is a palindrome&quot;) else: print(s + &quot; is not a palindrome&quot;) . madamimadam madamimadam madamimadam is a palindrome .",
             "url": "https://soham360.github.io/csp-fastpages/jupyter/week%202/2022/09/01/Palindrome.html",
             "relUrl": "/jupyter/week%202/2022/09/01/Palindrome.html",
             "date": " • Sep 1, 2022"

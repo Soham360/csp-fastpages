@@ -4,21 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Lists | Soham Kamat</title>
+<title>Palindrome | Soham Kamat</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Lists" />
+<meta property="og:title" content="Palindrome" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}." />
-<meta property="og:description" content="An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}." />
-<link rel="canonical" href="https://soham360.github.io/csp-fastpages/collegeboard/python_lists" />
-<meta property="og:url" content="https://soham360.github.io/csp-fastpages/collegeboard/python_lists" />
+<meta name="description" content="Code to see if a word is a palindrome" />
+<meta property="og:description" content="Code to see if a word is a palindrome" />
+<link rel="canonical" href="https://soham360.github.io/csp-fastpages/jupyter/week%202/2022/09/01/Palindrome.html" />
+<meta property="og:url" content="https://soham360.github.io/csp-fastpages/jupyter/week%202/2022/09/01/Palindrome.html" />
 <meta property="og:site_name" content="Soham Kamat" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-09-01T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Lists" />
+<meta property="twitter:title" content="Palindrome" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-01T00:00:00-05:00","datePublished":"2022-09-01T00:00:00-05:00","description":"An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}.","headline":"Lists","mainEntityOfPage":{"@type":"WebPage","@id":"https://soham360.github.io/csp-fastpages/collegeboard/python_lists"},"url":"https://soham360.github.io/csp-fastpages/collegeboard/python_lists"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-01T00:00:00-05:00","datePublished":"2022-09-01T00:00:00-05:00","description":"Code to see if a word is a palindrome","headline":"Palindrome","mainEntityOfPage":{"@type":"WebPage","@id":"https://soham360.github.io/csp-fastpages/jupyter/week%202/2022/09/01/Palindrome.html"},"url":"https://soham360.github.io/csp-fastpages/jupyter/week%202/2022/09/01/Palindrome.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/csp-fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://soham360.github.io/csp-fastpages/feed.xml" title="Soham Kamat" /><link rel="shortcut icon" type="image/x-icon" href="/csp-fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,7 +73,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Lists</h1><p class="page-description">An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-01T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Palindrome</h1><p class="page-description">Code to see if a word is a palindrome</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-01T00:00:00-05:00" itemprop="datePublished">
         Sep 1, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -86,7 +86,10 @@ window.onload = wrap_img;
     
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
       
-        <a class="category-tags-link" href="/csp-fastpages/categories/#collegeboard">collegeboard</a>
+        <a class="category-tags-link" href="/csp-fastpages/categories/#jupyter">jupyter</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/csp-fastpages/categories/#Week 2">Week 2</a>
         
       
       </p>
@@ -97,24 +100,24 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-justify-center">
           <div class="px-2">
 
-    <a href="https://github.com/Soham360/csp-fastpages/tree/master/_notebooks/lists.ipynb" role="button" target="_blank">
+    <a href="https://github.com/Soham360/csp-fastpages/tree/master/_notebooks/Palindrome.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/Soham360/csp-fastpages/master?filepath=_notebooks%2Flists.ipynb" target="_blank">
+    <a href="https://mybinder.org/v2/gh/Soham360/csp-fastpages/master?filepath=_notebooks%2FPalindrome.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/Soham360/csp-fastpages/blob/master/_notebooks/lists.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/Soham360/csp-fastpages/blob/master/_notebooks/Palindrome.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
           <div class="px-2">
-  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FSoham360%2Fcsp-fastpages%2Fblob%2Fmaster%2F_notebooks%2Flists.ipynb" target="_blank">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FSoham360%2Fcsp-fastpages%2Fblob%2Fmaster%2F_notebooks%2FPalindrome.ipynb" target="_blank">
       <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
   </a>
 </div>
@@ -128,7 +131,7 @@ window.onload = wrap_img;
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/lists.ipynb
+# file to edit: _notebooks/Palindrome.ipynb
 -->
 
 <div class="container" id="notebook-container">
@@ -140,30 +143,18 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">InfoDb</span> <span class="o">=</span> <span class="p">[]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">isPalindrome</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+	<span class="k">return</span> <span class="n">s</span> <span class="o">==</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="c1"># InfoDB is a data structure with expected Keys and Values</span>
+<span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter a word: "</span><span class="p">)</span>
+<span class="n">ans</span> <span class="o">=</span> <span class="n">isPalindrome</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 
-<span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Ryan"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Hakimipour"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"June 15"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"RyanHaki@gmail.com"</span><span class="p">,</span>
-    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
-<span class="p">})</span>
-
-<span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Soham"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Kamat"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"March 9"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"sohamk10039@stu.powayusd.com"</span><span class="p">,</span>
-    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
-<span class="p">})</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">ans</span><span class="p">:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">s</span> <span class="o">+</span> <span class="s2">" is a palindrome"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">s</span> <span class="o">+</span> <span class="s2">" is not a palindrome"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -176,7 +167,9 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[{'FirstName': 'John', 'LastName': 'Mortensen', 'DOB': 'October 21', 'Residence': 'San Diego', 'Email': 'jmortensen@powayusd.com', 'Owns_Cars': ['2015-Fusion', '2011-Ranger', '2003-Excursion', '1997-F350', '1969-Cadillac']}, {'FirstName': 'Sunny', 'LastName': 'Naidu', 'DOB': 'August 2', 'Residence': 'Temecula', 'Email': 'snaidu@powayusd.com', 'Owns_Cars': ['4Runner']}, {'FirstName': 'Soham', 'LastName': 'Kamat', 'DOB': 'March 9', 'Residence': 'San Diego', 'Email': 'sohamk10039@stu.powayusd.com', 'Owns_Cars': ['Tesla']}]
+<pre>a
+a
+a is a palindrome
 </pre>
 </div>
 </div>
@@ -191,7 +184,15 @@ window.onload = wrap_img;
 
 
 
-  </div><a class="u-url" href="/csp-fastpages/collegeboard/python_lists" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Soham360/csp-fastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/csp-fastpages/jupyter/week%202/2022/09/01/Palindrome.html" hidden></a>
 </article>
 
       </div>

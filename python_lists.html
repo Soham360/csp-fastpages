@@ -143,7 +143,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">InfoDb</span> <span class="o">=</span> <span class="p">[]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">InfoDb</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#this is the empty dictionary that I will append things to</span>
 
 <span class="c1"># InfoDB is a data structure with expected Keys and Values</span>
 
@@ -293,7 +293,7 @@ Lucas Kamat
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">isPalindrome</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">isPalindrome</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="c1">#function that prints the input and prints the input backwards</span>
 	<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 	<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 	<span class="k">return</span> <span class="n">s</span> <span class="o">==</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -345,20 +345,20 @@ bye is not a palindrome
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">PythonQuiz</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">PythonQuiz</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span> <span class="c1"># this is the function that prints the questions and accepts the input</span>
     <span class="k">global</span> <span class="n">word</span>
     <span class="nb">print</span> <span class="p">(</span><span class="s2">"Question: "</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
     <span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">word</span>
 
-<span class="n">questions_number</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">questions_number</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1">#this is the number of questions</span>
 <span class="n">correct_answer</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Hello, you will be asked "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions_number</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" short questions about common conversions."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Hello, you will be asked "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions_number</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" short questions about common conversions."</span><span class="p">)</span> <span class="c1">#This is the question that starts the quiz</span>
 
 <span class="n">MyQuiz</span><span class="o">=</span><span class="p">[]</span>
 
-<span class="n">MyQuiz</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+<span class="n">MyQuiz</span><span class="o">.</span><span class="n">append</span><span class="p">({</span> <span class="c1">#These are the questions</span>
     <span class="s2">"How many centimeters are in 12 meters"</span><span class="p">:</span> <span class="s2">"1200"</span><span class="p">,</span>
     <span class="s2">"How many kilometers is 100,000 centimeters?"</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span>
     <span class="s2">"How many yards are in 27 feet?"</span><span class="p">:</span> <span class="s2">"9"</span><span class="p">,</span>

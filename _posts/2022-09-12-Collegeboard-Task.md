@@ -1,5 +1,10 @@
-# Collegeboard Task
-> This is my Collegeboard Task. More will be added as the weeks go by.
+---
+toc: true
+layout: post
+description: This is my Collegeboard Task. More will be added as the weeks go by.
+categories: [markdown, Week 3]
+title: Collegeboard Task
+---
 
 ### Information I know that could help with the project:
 

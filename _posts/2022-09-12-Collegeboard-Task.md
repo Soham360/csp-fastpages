@@ -1,7 +1,7 @@
 # Collegeboard Task
 > This is my Collegeboard Task. More will be added as the weeks go by.
 
-Information I know that could help with the project:
+### Information I know that could help with the project:
 
 * How to make a quiz
 * How to create list
@@ -17,11 +17,10 @@ Information I know that could help with the project:
 
 ### Week 3 Brainstorming
 
-Purposes for a project:
+* Purposes for a project:
+    * Test the user’s senses
+    * Test the user’s knowledge of a given topic
 
-* test the user’s senses
-* test the user’s knowledge of a given topic
-
-#### Ideas for the project:
-
-A game that involves the user to use one of their 5 senses to complete a simple task quickly. A quiz in a unique style; Jeopardy, Head to Head, or 5 seconds.
+* Ideas for the project:
+    * A game that involves the user to use one of their 5 senses to complete a simple task quickly.
+    * A quiz in a unique style; Jeopardy, Head to Head, or 5 seconds.

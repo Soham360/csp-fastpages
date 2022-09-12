@@ -1,0 +1,27 @@
+# Collegeboard Task
+> This is my Collegeboard Task. More will be added as the weeks go by.
+
+Information I know that could help with the project:
+
+* How to make a quiz
+* How to create list
+* How to use dictionaries
+* How to code using python
+* How to code using java
+
+### What I need to do for the project:
+
+* Learn how to create more advanced functions in both javascript and python
+* Learn how to display variables on your screen in AppLab
+* Look over the college board requirements
+
+### Week 3 Brainstorming
+
+Purposes for a project:
+
+* test the user’s senses
+* test the user’s knowledge of a given topic
+
+#### Ideas for the project:
+
+A game that involves the user to use one of their 5 senses to complete a simple task quickly. A quiz in a unique style; Jeopardy, Head to Head, or 5 seconds.

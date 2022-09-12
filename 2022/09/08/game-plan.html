@@ -125,6 +125,81 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="This-is-my-original-code">This is my original code<a class="anchor-link" href="#This-is-my-original-code"> </a></h1><p>This is what I used to first start my quiz. It worked well but it didn't have a "Incorrect" screen that it redirected to if there was a question that was answered incorrectly. It was also not efficient. It had a "onEvent" block for every possible answer so it was messy and inefficient.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">var</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">var</span> <span class="n">question</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">score</span><span class="p">);</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;question: &quot;</span> <span class="o">+</span> <span class="n">question</span><span class="p">);</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;StartButton&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">change_screen</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question1Screen&quot;</span><span class="p">);</span>
+    <span class="n">question</span> <span class="o">=</span> <span class="n">question</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">});</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;Dislike1&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question2Screen&quot;</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;Dislike2&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question2Screen&quot;</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;Dislike3&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question2Screen&quot;</span><span class="p">);</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">score</span><span class="p">);</span>
+    <span class="n">question</span> <span class="o">=</span> <span class="n">question</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">});</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;Dislike4&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question2Screen&quot;</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;Viewed1&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+  	<span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question3Screen&quot;</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;Viewed2&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;finalscreen&quot;</span><span class="p">);</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">score</span><span class="p">);</span>
+    <span class="n">question</span> <span class="o">=</span> <span class="n">question</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">setText</span><span class="p">(</span><span class="s2">&quot;text_area2&quot;</span><span class="p">,</span> <span class="s2">&quot;You answered &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">score</span> <span class="o">+</span> <span class="s2">&quot;/3 questions correctly!&quot;</span><span class="p">));</span>
+  <span class="p">});</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;Viewed3&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question3Screen&quot;</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;Viewed4&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question3Screen&quot;</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;Question2Answers&quot;</span><span class="p">,</span> <span class="s2">&quot;change&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="n">var</span> <span class="n">Question2answer</span> <span class="o">=</span> <span class="n">getText</span><span class="p">(</span><span class="s2">&quot;Question2Answers&quot;</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">Question2answer</span> <span class="o">==</span> <span class="s2">&quot;The San Diego Zoo&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question3Screen&quot;</span><span class="p">);</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">score</span><span class="p">);</span>
+    <span class="n">question</span> <span class="o">=</span> <span class="n">question</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;finalscreen&quot;</span><span class="p">);</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">score</span><span class="p">);</span>
+    <span class="n">question</span> <span class="o">=</span> <span class="n">question</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 

@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -306,6 +306,7 @@ window.onload = wrap_img;
     <span class="o">//</span> <span class="n">Question</span> <span class="mi">3</span> <span class="n">Code</span>
     <span class="n">onEvent</span><span class="p">(</span><span class="s2">"Viewed2"</span><span class="p">,</span> <span class="s2">"click"</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
         <span class="n">setScreen</span><span class="p">(</span><span class="s2">"finalscreen"</span><span class="p">);</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
           <span class="n">setText</span><span class="p">(</span><span class="s2">"Encouragement"</span><span class="p">,</span> <span class="s2">"Wow, you got a perfect score!"</span><span class="p">);</span>
         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
@@ -323,27 +324,49 @@ window.onload = wrap_img;
     <span class="n">onEvent</span><span class="p">(</span><span class="s2">"Viewed1"</span><span class="p">,</span> <span class="s2">"click"</span><span class="p">,</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
       <span class="n">setScreen</span><span class="p">(</span><span class="s2">"finalscreen"</span><span class="p">);</span>
       <span class="n">setText</span><span class="p">(</span><span class="s2">"text_area2"</span><span class="p">,</span> <span class="s2">"You answered "</span> <span class="o">+</span> <span class="p">(</span><span class="n">score</span> <span class="o">+</span> <span class="s2">"/3 questions correctly!"</span><span class="p">));</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">setText</span><span class="p">(</span><span class="s2">"Encouragement"</span><span class="p">,</span> <span class="s2">"Wow, you got a perfect score!"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">setText</span><span class="p">(</span><span class="s2">"Encouragement"</span><span class="p">,</span> <span class="s2">"Almost there. Keep trying to get 3/3!"</span><span class="p">);</span>
+          <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+              <span class="n">setText</span><span class="p">(</span><span class="s2">"Encouragement"</span><span class="p">,</span> <span class="s2">"Oops, I think you made a few mistakes."</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
     <span class="p">});</span>
     <span class="n">onEvent</span><span class="p">(</span><span class="s2">"Viewed3"</span><span class="p">,</span> <span class="s2">"click"</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
       <span class="n">setScreen</span><span class="p">(</span><span class="s2">"finalscreen"</span><span class="p">);</span>
       <span class="n">setText</span><span class="p">(</span><span class="s2">"text_area2"</span><span class="p">,</span> <span class="s2">"You answered "</span> <span class="o">+</span> <span class="p">(</span><span class="n">score</span> <span class="o">+</span> <span class="s2">"/3 questions correctly!"</span><span class="p">));</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">setText</span><span class="p">(</span><span class="s2">"Encouragement"</span><span class="p">,</span> <span class="s2">"Wow, you got a perfect score!"</span><span class="p">);</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">setText</span><span class="p">(</span><span class="s2">"Encouragement"</span><span class="p">,</span> <span class="s2">"Almost there. Keep trying to get 3/3!"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">setText</span><span class="p">(</span><span class="s2">"Encouragement"</span><span class="p">,</span> <span class="s2">"Oops, I think you made a few mistakes."</span><span class="p">);</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
     <span class="p">});</span>
     <span class="n">onEvent</span><span class="p">(</span><span class="s2">"Viewed4"</span><span class="p">,</span> <span class="s2">"click"</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
       <span class="n">setScreen</span><span class="p">(</span><span class="s2">"finalscreen"</span><span class="p">);</span>
       <span class="n">setText</span><span class="p">(</span><span class="s2">"text_area2"</span><span class="p">,</span> <span class="s2">"You answered "</span> <span class="o">+</span> <span class="p">(</span><span class="n">score</span> <span class="o">+</span> <span class="s2">"/3 questions correctly!"</span><span class="p">));</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">setText</span><span class="p">(</span><span class="s2">"Encouragement"</span><span class="p">,</span> <span class="s2">"Wow, you got a perfect score!"</span><span class="p">);</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">setText</span><span class="p">(</span><span class="s2">"Encouragement"</span><span class="p">,</span> <span class="s2">"Almost there. Keep trying to get 3/3!"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">setText</span><span class="p">(</span><span class="s2">"Encouragement"</span><span class="p">,</span> <span class="s2">"Oops, I think you made a few mistakes."</span><span class="p">);</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
     <span class="p">});</span>
   <span class="p">});</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">setText</span><span class="p">(</span><span class="s2">"Encouragement"</span><span class="p">,</span> <span class="s2">"Wow, you got a perfect score!"</span><span class="p">);</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">setText</span><span class="p">(</span><span class="s2">"Encouragement"</span><span class="p">,</span> <span class="s2">"Almost there. Keep trying to get 3/3!"</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">setText</span><span class="p">(</span><span class="s2">"Encouragement"</span><span class="p">,</span> <span class="s2">"Oops, I think you made a few mistakes."</span><span class="p">);</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
 </pre></div>
 
     </div>

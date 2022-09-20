@@ -77,7 +77,7 @@ Think-Pair-Share
 ## Screenshot of Collegeboard quiz results
 This is the screenshot showing that I completed the Collegeboard Collaboration quiz.
 
-
+![]({{ site.baseurl }}/images/QuizResults1.png "My Quiz Results")
 
 ## Hack Questions
 Hack Questions

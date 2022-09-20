@@ -44,16 +44,16 @@ Effective collaboration leads to the practice of interpersonal skills, such as:
 Essential Knowledge
 - Common models such as pair programming exist to facilitate collaboration
 - Information gathered from potential users can be used to understand the purpose of a program from diverse perspectives and to develop a program that fully incorporates these perspectives
-- Consultation and communication with users are important aspects of the development of computing innovations
 - Online tools support collaboration by allowing programmers to share and provide feedback on ideas and documents
+- Consultation and communication with users are important aspects of the development of computing innovations
 
 ---
 
 ## How to collaborate in class
-Pair Programming
-- Two programmers work together as a pair. One (driver)writes program code, while the other (observer, pointer, navigator) reviews each line of program code
 Think-Pair-Share
 - Students think through a problem alone, pair with a partner to share ideas, and then share results with the class
+Pair Programming
+- Two programmers work together as a pair. One (driver)writes program code, while the other (observer, pointer, navigator) reviews each line of program code
 
 ---
 
@@ -63,7 +63,7 @@ Think-Pair-Share
 - Acknowledge code segments used from other sources
 - Acknowledge media used from other sources
 - Differentiate what you and your partner(s) did
-- Clarify the functionality of your code
+- Explain the the function of the code
 
 ---
 
@@ -82,5 +82,5 @@ This is the screenshot showing that I completed the Collegeboard Collaboration q
 ## Hack Questions
 Hack Questions
 1. My group setup is not strictly on the basis of current friends and common interests because we did not know each other before but now have become friends.
-2. My group setup is with diversity because we all have varying computer science levels. We have a diverse backgrounds: Puneri, Marathi, Persian, and mixed Hispanic.
+2. My group setup is with diversity because we all have varying computer science levels. We also have diverse backgrounds: Puneri, Marathi, Persian, and mixed Hispanic.
 3. My group is best equipped for the skill sets needed for success in classrooms because we can work together very well.

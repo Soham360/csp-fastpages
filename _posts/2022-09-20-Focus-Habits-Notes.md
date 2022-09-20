@@ -29,23 +29,22 @@ I made 2 notes of gratitudes, one to my friend and one to my parents. For the no
 
 ## Gratitude List
 These are the things that I am grateful for:
-- Access to food
+- Heating and air conditioning
 - A house
-- Access of education
 - Many friends
 - To have clothing
-- Heating and air conditioning
-- Money
-- Having access technology
+- Access of education
 - Family
+- Access to food
+- Having access technology
+- Money
 
 ---
 
 ## Goals
 I made some goals, not just things that I want, but also goals based on mental health and happiness:
-- Get 4-5 on all AP Exams
-- Always be thankful for what I have
-- Keep my mental health in good shape
+- Get 5s on all AP Exams
 - Help others maintain happiness
-- Stay happy
+- Keep my mental health in good shape
 - Avoid stress
+- Stay happy

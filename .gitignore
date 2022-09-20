@@ -12,3 +12,18 @@ _notebooks/.ipynb_checkpoints
 .netlify
 .tweet-cache
 __pycache__
+
+
+
+# Ignore from local build
+settings.ini
+Gemfile.lock
+images/copied_from_nb/
+_posts/2020-02-20-test.md
+_posts/2022-08-22-first-notebook.md
+_posts/2022-08-23-Bash-Kernel.md
+_posts/2022-08-27-BasketballQuiz.md
+_posts/2022-08-28-extra-credit-post.md
+_posts/2022-08-28-google-docx-post.md
+_posts/2022-08-29-lists.md
+_posts/2022-09-08-game-plan.md

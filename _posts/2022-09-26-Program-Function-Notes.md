@@ -8,25 +8,25 @@ categories: [week5, collegeboard]
 ---
 
 ### Notes on 1.2 Daily Video 1
-- Categories of Innovations include Applications (games, social media, productivity), Physical Devices (computers, tablets, smart "things"), Systems (E-commerce, email).
 - You want to think about some guiding questions when you think about purpose:
     - Why does the computing innovation exist?
     - What problem(s) does the computing innovation solve?
     - What does the computing innovation allow us to do that we could not before?
+- Categories of Innovations include Applications (games, social media, productivity), Physical Devices (computers, tablets, smart "things"), Systems (E-commerce, email).
 <img src="{{site.baseurl}}/images/week5purpose.jpg">
 
 ### Notes on 1.2 Daily Video 2
 - Computer programs accept input in a variety of different forms (tacile aka touch, audio, visual, text).
-- Programs are mostly event-driven --> events (mouse clicks, screen taps/swipes, physical button clicks, eyboard entries, audio keywords/phrases) are triggered by actions, which sends input to the program
 - Input affects output of a program
 - Outputs can be visual, audio, tactile (touch/feel like vibrations), text
+- Programs are mostly event-driven --> events (mouse clicks, screen taps/swipes, physical button clicks, eyboard entries, audio keywords/phrases) are triggered by actions, which sends input to the program
 
 ### Notes on 1.2 Daily Video 3
-- A program (aka software) is a collection of statements.
-    - A statement is a single command, a group of statements is a code segment
 - Describing code segments:
     - Simply state what it does
     - Include what it does/how it does it
+- A program (aka software) is a collection of statements.
+    - A statement is a single command, a group of statements is a code segment
 
 ### Collegeboard Quiz
 I took the Program Function and Purpose Quiz MCQ.

@@ -13,7 +13,6 @@ categories: [week5, collegeboard]
     - What problem(s) does the computing innovation solve?
     - What does the computing innovation allow us to do that we could not before?
 - Categories of Innovations include Applications (games, social media, productivity), Physical Devices (computers, tablets, smart "things"), Systems (E-commerce, email).
-<img src="{{site.baseurl}}/images/week5purpose.jpg">
 
 ### Notes on 1.2 Daily Video 2
 - Computer programs accept input in a variety of different forms (tacile aka touch, audio, visual, text).

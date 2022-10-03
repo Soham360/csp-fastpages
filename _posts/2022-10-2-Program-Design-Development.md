@@ -78,9 +78,9 @@ Documentation happens throughout the development of the program:
 
 ---
 
-Final Project Design
-Idea/Brain Write
-A random quiz generator. Save notes in the website and the alogrithm uses the notes to genrate questions for a quiz. The quiz is then scored and the topics missed are highlighted. Me and my team reviewed over the different possible final project ideas that we made and this is the best one we came up with.
+## Final Project Design
+ - Idea/Brain Write
+
 
 Outline and how it fits requirements
 Program Purpose and Function -The purpose of the program is to randomly generate vocabulary words based on a defenition. The program will take the user’s notes and, based on it, select the key terms and a hangman type game where it gives you a definition and you have to guess word based off it.

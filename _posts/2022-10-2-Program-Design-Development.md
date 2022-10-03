@@ -4,7 +4,7 @@ comments: true
 title: Program Design and Development Notes
 layout: post
 description: These are my notes on the program purpose, Collegeboard Unit 1.3
-categories: [week6, collegeboard]
+categories: [Week 6, collegeboard]
 ---
 
 ## The Development Process (Video 1):

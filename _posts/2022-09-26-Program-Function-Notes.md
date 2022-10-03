@@ -4,7 +4,7 @@ comments: true
 title: Unit 1.2 Program Function and Purpose Notes
 layout: post
 description: These are my notes on the program purpose, Collegeboard Unit 1.2
-categories: [week5, collegeboard]
+categories: [Week 5, collegeboard]
 ---
 
 ### Notes on 1.2 Daily Video 1

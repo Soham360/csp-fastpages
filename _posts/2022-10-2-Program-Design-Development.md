@@ -79,24 +79,24 @@ Documentation happens throughout the development of the program:
 ---
 
 ## Final Project Design
- - Idea/Brain Write
+### Idea/Brain Write
 
 
-Outline and how it fits requirements
-Program Purpose and Function -The purpose of the program is to randomly generate vocabulary words based on a defenition. The program will take the user’s notes and, based on it, select the key terms and a hangman type game where it gives you a definition and you have to guess word based off it.
+ - Outline and how it fits requirements
+     - Program Purpose and Function -The purpose of the program is to randomly generate vocabulary words based on a definition. The program will take the user’s notes and, based on it, select the key terms and a hangman type game where it gives you a definition and you have to guess word based off it.
 
-Data Abstraction
+ - Data Abstraction
+     - The program will contain lists and dictionaries. Every key term will have a definition and these will be stored in a dictionary which will be stored in a list. Or they will be stored in a local database and we will use the objects in the database to create the hangman quiz.
 
-The program will contain lists and dictionaries. Every key term will have a definition and these will be stored in a dictionary which will be stored in a list. Or they will be stored in a local database and we will use the objects in the database to create the hangman quiz.
-Managing Complexity
+ - Managing Complexity
+     - The dictionaries and databases will manage the complexity of the program by organizing the data inputted by the user. It will also help calling back to creating the hangman quiz.
 
-The dictionaries and databases will manage the complexity of the program by organizing the data inputted by the user. It will also help calling back to creating the hangman quiz.
-Procedural Abstraction
+ - Procedural Abstraction
+     - 
+     A function will be created to call back to the data inputted by the user. The function will iterate over the dictionary/database and use the values in them as a parameter to make a hangman quiz.
 
-A function will be created to call back to the data inputted by the user. The function will iterate over the dictionary/database and use the values in them as a parameter to make a hangman quiz.
-Algorithm Implementation
+ - Algorithm Implementation
+     - Like stated before, the program will contain a function that uses iteration and sequencing to make a hangman quiz based off the data inputted by the user that is saved in a database or dictionary.
 
-Like stated before, the program will contain a function that uses iteration and sequencing to make a hangman quiz based off the data inputted by the user that is saved in a database or dictionary.
-Testing
-
-The function will be called each time the user inputs a note and each time the user generates a hangman quiz. When the user inputs a note, the function is called and saves the note inside a dictionary or database. When the user presses the button that generates the hangman quiz, the function is again called and iterates through the user’s notes to generate a hangman quiz that is related to the key terms the user inputted.
+ - Testing
+     - The function will be called each time the user inputs a note and each time the user generates a hangman quiz. When the user inputs a note, the function is called and saves the note inside a dictionary or database. When the user presses the button that generates the hangman quiz, the function is again called and iterates through the user’s notes to generate a hangman quiz that is related to the key terms the user inputted.

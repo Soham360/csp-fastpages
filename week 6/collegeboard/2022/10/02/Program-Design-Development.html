@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      3 min read
     
 </span></p>
 
@@ -102,11 +102,6 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#the-development-process-video-1">The Development Process (Video 1):</a></li>
 <li class="toc-entry toc-h2"><a href="#how-is-a-program-developed-video-2">How is a Program Developed? (Video 2)</a></li>
 <li class="toc-entry toc-h2"><a href="#when-does-documentation-happen-video-3">When does documentation happen? (Video 3)</a></li>
-<li class="toc-entry toc-h2"><a href="#final-project-design">Final Project Design</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#ideabrain-write">Idea/Brain Write</a></li>
-</ul>
-</li>
 </ul><h2 id="the-development-process-video-1">
 <a class="anchor" href="#the-development-process-video-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Development Process (Video 1):</h2>
 <p>All programs originate from an idea. That idea is what gives the program a certain purpose. The best way developers turn their ideas into reality is by following specific steps and stick to it. However, these steps are more of a guideline. The development of a program is a lot more exploratory and steps that you follow are dependent on what happens during development. However some steps are essential and you must do them no matter what happens.</p>
@@ -131,7 +126,6 @@ window.onload = wrap_img;
 <h2 id="how-is-a-program-developed-video-2">
 <a class="anchor" href="#how-is-a-program-developed-video-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>How is a Program Developed? (Video 2)</h2>
 <p>Rarely a solo endeavor</p>
-
 <ul>
   <li>Usually developed by teams of people It all starts with an idea</li>
   <li>Programs are developed with a specific purpose in mind</li>
@@ -202,54 +196,24 @@ window.onload = wrap_img;
   <li>Efficiency of overall programming process</li>
   <li>Programmers’ ability to test and refine the program</li>
   <li>Programmers’ response to bugs</li>
+  <li>How to make comments in different languages:
+    <ul>
+      <li>Python (<code class="language-plaintext highlighter-rouge">#</code>)</li>
+      <li>Java (<code class="language-plaintext highlighter-rouge">//</code> - single line; <code class="language-plaintext highlighter-rouge">/* */</code> - multiple lines; <code class="language-plaintext highlighter-rouge">/** **/</code> - multiple line documentation)</li>
+      <li>Javascript, C/C++, Swift - also use something similar to Java</li>
+      <li>XML/HTML (<code class="language-plaintext highlighter-rouge">&lt;!-- --&gt;</code>)</li>
+      <li>Applescript/Pascal (<code class="language-plaintext highlighter-rouge">* *</code>)</li>
+      <li>block-based languages use pop-outs for comments</li>
+    </ul>
+  </li>
 </ul>
 
 <hr>
 
 <p>Collegeboard quiz results</p>
 
-<p>This is the screenshot of the results of the quiz I took on Collegeboard
+<p>This is the screenshot of the results of the quiz I took on Collegeboard.
 <img src="/csp-fastpages/images/week6results.png" alt=""></p>
-
-<hr>
-
-<h2 id="final-project-design">
-<a class="anchor" href="#final-project-design" aria-hidden="true"><span class="octicon octicon-link"></span></a>Final Project Design</h2>
-<h3 id="ideabrain-write">
-<a class="anchor" href="#ideabrain-write" aria-hidden="true"><span class="octicon octicon-link"></span></a>Idea/Brain Write</h3>
-
-<ul>
-  <li>Outline and how it fits requirements
-    <ul>
-      <li>Program Purpose and Function -The purpose of the program is to randomly generate vocabulary words based on a definition. The program will take the user’s notes and, based on it, select the key terms and a hangman type game where it gives you a definition and you have to guess word based off it.</li>
-    </ul>
-  </li>
-  <li>Data Abstraction
-    <ul>
-      <li>The program will contain lists and dictionaries. Every key term will have a definition and these will be stored in a dictionary which will be stored in a list. Or they will be stored in a local database and we will use the objects in the database to create the hangman quiz.</li>
-    </ul>
-  </li>
-  <li>Managing Complexity
-    <ul>
-      <li>The dictionaries and databases will manage the complexity of the program by organizing the data inputted by the user. It will also help calling back to creating the hangman quiz.</li>
-    </ul>
-  </li>
-  <li>Procedural Abstraction
-    <ul>
-      <li>A function will be created to call back to the data inputted by the user. The function will iterate over the dictionary/database and use the values in them as a parameter to make a hangman quiz.</li>
-    </ul>
-  </li>
-  <li>Algorithm Implementation
-    <ul>
-      <li>Like stated before, the program will contain a function that uses iteration and sequencing to make a hangman quiz based off the data inputted by the user that is saved in a database or dictionary.</li>
-    </ul>
-  </li>
-  <li>Testing
-    <ul>
-      <li>The function will be called each time the user inputs a note and each time the user generates a hangman quiz. When the user inputs a note, the function is called and saves the note inside a dictionary or database. When the user presses the button that generates the hangman quiz, the function is again called and iterates through the user’s notes to generate a hangman quiz that is related to the key terms the user inputted.</li>
-    </ul>
-  </li>
-</ul>
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"

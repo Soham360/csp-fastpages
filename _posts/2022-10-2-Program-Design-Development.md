@@ -22,7 +22,6 @@ All programs originate from an idea. That idea is what gives the program a certa
 
 ## How is a Program Developed? (Video 2)
 Rarely a solo endeavor
-
  - Usually developed by teams of people It all starts with an idea
  - Programs are developed with a specific purpose in mind
  - Developers follow specific steps and stick to their plan
@@ -68,35 +67,17 @@ Documentation happens throughout the development of the program:
  - Efficiency of overall programming process
  - Programmers’ ability to test and refine the program
  - Programmers’ response to bugs
-
+ - How to make comments in different languages:
+     - Python (`#`)
+    - Java (`//` - single line; `/* */` - multiple lines; `/** **/` - multiple line documentation)
+    - Javascript, C/C++, Swift - also use something similar to Java
+    - XML/HTML (`<!-- -->`)
+    - Applescript/Pascal (`* *`)
+    - block-based languages use pop-outs for comments
+ 
  ---
 
  Collegeboard quiz results
 
- This is the screenshot of the results of the quiz I took on Collegeboard
+ This is the screenshot of the results of the quiz I took on Collegeboard.
 ![]({{ site.baseurl }}/images/week6results.png)
-
----
-
-## Final Project Design
-### Idea/Brain Write
-
-
- - Outline and how it fits requirements
-     - Program Purpose and Function -The purpose of the program is to randomly generate vocabulary words based on a definition. The program will take the user’s notes and, based on it, select the key terms and a hangman type game where it gives you a definition and you have to guess word based off it.
-
- - Data Abstraction
-     - The program will contain lists and dictionaries. Every key term will have a definition and these will be stored in a dictionary which will be stored in a list. Or they will be stored in a local database and we will use the objects in the database to create the hangman quiz.
-
- - Managing Complexity
-     - The dictionaries and databases will manage the complexity of the program by organizing the data inputted by the user. It will also help calling back to creating the hangman quiz.
-
- - Procedural Abstraction
-     - 
-     A function will be created to call back to the data inputted by the user. The function will iterate over the dictionary/database and use the values in them as a parameter to make a hangman quiz.
-
- - Algorithm Implementation
-     - Like stated before, the program will contain a function that uses iteration and sequencing to make a hangman quiz based off the data inputted by the user that is saved in a database or dictionary.
-
- - Testing
-     - The function will be called each time the user inputs a note and each time the user generates a hangman quiz. When the user inputs a note, the function is called and saves the note inside a dictionary or database. When the user presses the button that generates the hangman quiz, the function is again called and iterates through the user’s notes to generate a hangman quiz that is related to the key terms the user inputted.

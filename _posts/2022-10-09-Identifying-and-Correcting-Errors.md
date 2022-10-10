@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Correcting Errors College Board Assignment
-categories: [markdown]
+categories: [markdown, Week 7]
 title: 1.4 Identifying and Correcting Errors
 ---
 

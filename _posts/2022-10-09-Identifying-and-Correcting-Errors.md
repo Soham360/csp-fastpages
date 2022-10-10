@@ -48,4 +48,9 @@ title: 1.4 Identifying and Correcting Errors
     - Plan how to test (influenced by specifications)
 - After testing programmers revise sections of their code that didn’t work
 - You keep testing, and then get users to test, and then release
-- And even after, you will get errors, leading to certain maintainence patches
+- And even after, you will get errors, leading to certain maintenance patches
+
+# Quiz Results
+
+ This is the screenshot of the results of the quiz I took on Collegeboard.
+![]({{ site.baseurl }}/images/Picture.png)

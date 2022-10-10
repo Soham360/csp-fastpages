@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -504,11 +504,19 @@ Did you insert a valid key in X-RapidAPI-Key of API cell above?
 
 <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 <span class="n">rating</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"What would you like to rate the quote on a scale from 1 to 10"</span><span class="p">))</span>
-<span class="k">if</span> <span class="n">rating</span> <span class="o">&lt;=</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">rating</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">rating</span> <span class="o">&lt;=</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">rating</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span> <span class="c1">#Checks if the rating is between the acceptable range</span>
 	<span class="nb">print</span><span class="p">(</span><span class="s2">"You rated this quote"</span><span class="p">,</span> <span class="n">rating</span><span class="p">,</span> <span class="s2">"out of 10"</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
+	<span class="k">if</span> <span class="n">rating</span> <span class="o">&lt;=</span> <span class="mi">6</span><span class="p">:</span> <span class="c1">#Checks if the rating is higher than 6</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">"Since you didn't like this quote very much, I'll try to recommend you quotes with with a higher rating than"</span> <span class="p">,</span> <span class="n">rating</span> <span class="p">,</span> <span class="s2">"/10"</span><span class="p">)</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">"I'm glad you enjoyed this quote!"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> <span class="c1">#Tells the user to try and rate the quote again within the acceptable range</span>
 	<span class="nb">print</span><span class="p">(</span><span class="s2">"Please rate this quote on a scale from 1 to 10"</span><span class="p">)</span>
 	<span class="n">rating</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"What would you like to rate the quote on a scale from 1 to 10"</span><span class="p">))</span>
+	<span class="k">if</span> <span class="n">rating</span> <span class="o">&lt;=</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">rating</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span> <span class="c1">#Checks if the new rating is between the acceptable range again</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">"You rated this quote"</span><span class="p">,</span> <span class="n">rating</span><span class="p">,</span> <span class="s2">"out of 10"</span><span class="p">)</span>
+	<span class="k">else</span><span class="p">:</span> <span class="c1">#Since the rating isn't within the acceptable range, tells the user to run the program again</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">"Please run the program again, as you haven't given a rating within the acceptable range of 1 to 10"</span><span class="p">)</span> <span class="c1">#</span>
 </pre></div>
 
     </div>
@@ -521,9 +529,10 @@ Did you insert a valid key in X-RapidAPI-Key of API cell above?
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>"To dare is to lose ones footing momentarily. To not dare is to lose oneself."
--Soren Kierkegaard
+<pre>"The least movement is of importance to all nature. The entire ocean is affected by a pebble."
+-Blaise Pascal
 Please rate this quote on a scale from 1 to 10
+Please run the program again, as you haven't given a rating within the acceptable range of 1 to 10
 </pre>
 </div>
 </div>

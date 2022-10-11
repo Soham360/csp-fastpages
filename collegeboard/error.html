@@ -415,37 +415,37 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">menu</span> <span class="o">=</span>  <span class="p">{</span><span class="s2">&quot;burger&quot;</span><span class="p">:</span> <span class="mf">3.99</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">menu</span> <span class="o">=</span>  <span class="p">{</span><span class="s2">&quot;burger&quot;</span><span class="p">:</span> <span class="mf">3.99</span><span class="p">,</span> <span class="c1">#This is the Menu</span>
          <span class="s2">&quot;fries&quot;</span><span class="p">:</span> <span class="mf">1.99</span><span class="p">,</span>
          <span class="s2">&quot;drink&quot;</span><span class="p">:</span> <span class="mf">0.99</span><span class="p">}</span>
-<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Makes the starting amount 0</span>
 
 <span class="n">orders</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Menu&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">menu</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;  $&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;  $&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="c1"># Code that prints the Menu</span>
 
-<span class="n">Name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
+<span class="n">Name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span> <span class="c1"># Asks your name</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello &quot;</span> <span class="o">+</span> <span class="n">Name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
-<span class="n">order</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What do you want today?&quot;</span><span class="p">)</span>
-<span class="k">while</span> <span class="n">order</span> <span class="o">!=</span> <span class="s2">&quot;checkout&quot;</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">order</span> <span class="o">==</span> <span class="s2">&quot;burger&quot;</span><span class="p">:</span>
+<span class="n">order</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What do you want today?&quot;</span><span class="p">)</span> <span class="c1"># Asks what you would like today</span>
+<span class="k">while</span> <span class="n">order</span> <span class="o">!=</span> <span class="s2">&quot;checkout&quot;</span><span class="p">:</span> <span class="c1"># Makes sure you dont want to checkout</span>
+    <span class="k">if</span> <span class="n">order</span> <span class="o">==</span> <span class="s2">&quot;burger&quot;</span><span class="p">:</span> <span class="c1"># Code for yif you want a </span>
         <span class="n">total</span> <span class="o">+=</span> <span class="mf">3.99</span>
         <span class="n">orders</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;burger&quot;</span><span class="p">)</span>
         <span class="n">order</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What else do you want today? Type &#39;checkout&#39; to exit.&quot;</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;burger added&quot;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">order</span> <span class="o">==</span> <span class="s2">&quot;fries&quot;</span><span class="p">:</span>
+    <span class="k">elif</span> <span class="n">order</span> <span class="o">==</span> <span class="s2">&quot;fries&quot;</span><span class="p">:</span> <span class="c1"># Code for yif you want fries</span>
         <span class="n">total</span> <span class="o">+=</span> <span class="mf">1.99</span>
         <span class="n">orders</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;fries&quot;</span><span class="p">)</span>
         <span class="n">order</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What else do you want today? Type &#39;checkout&#39; to exit.&quot;</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fries added&quot;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">order</span> <span class="o">==</span> <span class="s2">&quot;drink&quot;</span><span class="p">:</span>
+    <span class="k">elif</span> <span class="n">order</span> <span class="o">==</span> <span class="s2">&quot;drink&quot;</span><span class="p">:</span> <span class="c1"># Code for yif you want a drink</span>
         <span class="n">total</span> <span class="o">+=</span> <span class="mf">0.99</span>
         <span class="n">orders</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;drink&quot;</span><span class="p">)</span>
         <span class="n">order</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What else do you want today? Type &#39;checkout&#39; to exit.&quot;</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;drink added&quot;</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">order</span> <span class="o">==</span> <span class="s2">&quot;checkout&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">order</span> <span class="o">==</span> <span class="s2">&quot;checkout&quot;</span><span class="p">:</span> <span class="c1"># Checkout code</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Here is everything that you ordered: &quot;</span> <span class="p">,</span> <span class="n">orders</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your total for this meal is $&quot;</span> <span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">total</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
@@ -465,18 +465,22 @@ burger  $3.99
 fries  $1.99
 drink  $0.99
 Hello Soham!
-drink added
-drink added
 burger added
 burger added
 burger added
-fries added
+burger added
 burger added
 burger added
 burger added
 fries added
-Here is everything that you ordered:  [&#39;drink&#39;, &#39;drink&#39;, &#39;burger&#39;, &#39;burger&#39;, &#39;burger&#39;, &#39;fries&#39;, &#39;burger&#39;, &#39;burger&#39;, &#39;burger&#39;, &#39;fries&#39;]
-Your total for this meal is $ 29.9
+drink added
+fries added
+drink added
+burger added
+fries added
+drink added
+Here is everything that you ordered:  [&#39;burger&#39;, &#39;burger&#39;, &#39;burger&#39;, &#39;burger&#39;, &#39;burger&#39;, &#39;burger&#39;, &#39;burger&#39;, &#39;fries&#39;, &#39;drink&#39;, &#39;fries&#39;, &#39;drink&#39;, &#39;burger&#39;, &#39;fries&#39;, &#39;drink&#39;]
+Your total for this meal is $ 40.86
 </pre>
 </div>
 </div>

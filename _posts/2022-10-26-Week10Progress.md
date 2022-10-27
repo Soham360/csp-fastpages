@@ -12,7 +12,7 @@ comments: true
 Here is the To Do List of all the Jobs given to each member of our team:
 ![]({{site.baseurl}}/images/PlanningProcess.png)
 
-We ran into many issues while working together on this project. One of these issues was that we kept running into merge conflicts when making commits. This was because while we were working on it individually, when one person saved a file and another person already made a commit, the commit button for Person 1 would show up instead of the Pull button. To solve this problem, we decided to use a VSCode extension called LiveShare. LiveShare allows people to edit files like it is a shared Google Document and saves all of the changes to the host's computer, reducing the chance of a merge conflict.
+We ran into many issues while working together on this project. One of these issues was that we kept running into merge conflicts when making commits. This was because while we were working on it individually, when one person saved a file and another person already made a commit, the commit button for Person 1 would show up instead of the Pull button. To solve this problem, we decided to use a VSCode extension called LiveShare. LiveShare allows people to edit files like it is a shared Google Document and saves all of the changes to the host's computer, reducing the chance of a merge conflict. Also, to undo merge conflicts, I did some research and found the command `rm -rf .git/MERGE*`. You run this in the terminal and then discard the changes. After this, the merge conflict is solved.
 
 
 # Progress

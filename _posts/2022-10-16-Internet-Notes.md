@@ -64,9 +64,6 @@ Computer Protocol Models
         - DNS- Domain Name Service
             - Applications that translate a human readable URL to an IP address
         - World Wide Web (WWW) is not the Internet!
-![]({{site.baseurl}}/images/diagram12.png "https://github.com/Emaad-Mir/emaad-fastpages")
-
-
 
 
 # Daily Video 2: Takeaways
@@ -84,7 +81,7 @@ Computer Protocol Models
 
 After watching these two videos, I now find it pretty fascinating about how the Internet works, as it is much more complex than I thought it was. I was able to learn many new things about the Internet and get a better grasp of how it can be applied to many of the things that we do on the Internet in our daily lives. With this big idea, I had to rewatch certain segments of the video to truly understand what it was talking about. Overall, watching these videos helped me realize the complexity of how the Internet works, and I will definitely be taking what I learned here into more consideration in the many things that I do online.
 
-# COllegeboard Quiz Results
+# Collegeboard Quiz Results
 
 ![]({{site.baseurl}}/images/Picture.png)
 

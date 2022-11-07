@@ -6,40 +6,38 @@ categories: [markdown, Week 11]
 title: Night At The Museum Post
 ---
 ## Night At The Museum
-
-
-Night at the Museum takes place one night near the end of the trimester where students in art and craft classes can show off their progress and work. Classes include 3D Animation, AP Studio Art, Drawing and Painting, Ceramics, CSP, CSA, and more. In CSP and CSA, teams present their final project, while in drawing and painting, students show off their best artpieces. 3D Animation students also present their digital artworks while ceramics students present their sculptures. During this night, all the art students can gather and have fun as they survey all the artworks.
+Night and the Museum usually takes place towards the end of the trimester. This is an even in which students in art and craft classes can show off their work and final projects. The classes showing off their work during this event include 3D Animation, AP Studio Art, Drawing and Painting, Ceramics, APCSP, APCSA, and more. In the Computer Science classes, teams present their final project, while in Drawing and Painting, students show off their best art piece. 3D Animation students also presented their digital artworks while Ceramics students presented their sculptures. I thought this event was really fun because I could see what my friends did in their classes while they could see what I did in mine. A lot of the projects were really creative and I was very impressed.
 
 ---
 
-### AP/Studio Art
-Here are a few screenshots of artworks in Studio Art.
+### AP Studio Art
+Here are a few pictures of art work in Studio Art.
 ![]({{ site.baseurl }}/images/Art.JPG)
-I've never  have never been the best at drawing, so I was fascinated by how the artists managed to make their artwork look realistic, and used shading to create a sense of three-dimensional space.
+I was really impressed by all of the art that the students created. I know I would never be able to create such amazing pieces. I was really blown away by the piece above. It was very large, about 3 feet tall and 2 feet wide and it was very detailed and realistic.
 
 ---
 
 ### Ceramics
-Here is a screenshot of artworks in Ceramics.
+Here is a picture of sculptures in Ceramics.
 ![]({{ site.baseurl }}/images/CactusCeramics.JPG)
 ![]({{ site.baseurl }}/images/Dragon.JPG)
 ![]({{ site.baseurl }}/images/InterestingFruit.JPG)
 ![]({{ site.baseurl }}/images/Octopus.JPG)
 ![]({{ site.baseurl }}/images/SatanSkull.JPG)
-I have never even done Ceramics before, so I have no idea how students mold their clay and then dry them into a sculpture as shown above.
+Ceramics seems like a really easy art to do but I know it really isn't. It incredible how they are able to use rough, gray or brown clay, and create such colorful, shiny, sculptures!
 
 ---
 
 ### Drawing and Painting
-Here is a screenshot of art work in Ceramics.
+Here is a picture of art work in Drawing and Painting.
 ![]({{ site.baseurl }}/images/City.JPG)
 ![]({{ site.baseurl }}/images/Food.JPG)
 ![]({{ site.baseurl }}/images/Skulls.JPG)
-I have never even done Ceramics before, so I have no idea how students mold their clay and then dry them into a sculpture as shown above.
+The art in this class room was so impressive. There were so many different styles and colors used in these works of art. It was incredible walking around the room and taking these pictures.
 
 ---
 
 ### AP Computer Science Principles
-Here is a screenshot of art work in Ceramics.
+Here is a picture of Orlando Carcamo with his project that can tell you the weather in San Diego.
 ![]({{ site.baseurl }}/images/ORLANDO.JPG)
-I have never even done Ceramics before, so I have no idea how students mold their clay and then dry them into a sculpture as shown above.
+The APCSP and APCSA classrooms were very packed and full of students attempting to finish their assignments. However, there were also many other groups already done with theirs. I saw many different projects including chess, a weather app, and a fitness tracker. These were all very impressive and extremely hard to create.

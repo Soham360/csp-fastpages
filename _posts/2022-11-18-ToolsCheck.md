@@ -14,12 +14,12 @@ title: Trimester 2 Tools Check
 
 ### Evidence of Local FastPages running
 
-![]({{ site.baseurl }}/images/API.png)
+![]({{ site.baseurl }}/images/LocalFastPages.png)
 
 ---
 
 ### Proof of API working
 
-![]({{ site.baseurl }}/images/LocalFastPages.png)
+![]({{ site.baseurl }}/images/API.png)
 
 ---

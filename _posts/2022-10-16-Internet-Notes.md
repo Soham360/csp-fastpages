@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Week 8 Notes
-categories: [markdown, Week 8]
+categories: [Markdown, Week 8, Collegeboard]
 title: 4.1 Collegeboard Notes
 comments: true
 ---

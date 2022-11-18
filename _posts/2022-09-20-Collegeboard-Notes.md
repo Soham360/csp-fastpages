@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Note on Collegeboard videos on Collaboration
-categories: [markdown, Week 4]
+categories: [Markdown, Week 4]
 title: Collegeboard Collaboration Notes
 ---
 

@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Progress on Flask WebPage Week 10
-categories: [markdown, Week 10]
+categories: [Markdown, Week 10]
 title: Week 10 Flask Progress
 comments: true
 ---

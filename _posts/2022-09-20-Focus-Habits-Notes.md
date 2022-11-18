@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Notes on the Psychology and the Good Life video
-categories: [markdown, Week 4]
+categories: [Markdown, Week 4, Collegeboard]
 title: Focus and Habits Notes
 ---
 

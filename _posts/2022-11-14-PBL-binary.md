@@ -10,7 +10,7 @@ week: 13
 type: pbl
 ---
 
-<!-- Hack 1: add a character display to text when 8 bits, determine if printable or not printable -->
+<!-- Hack 1: add a character display to text when 8 bits, determine if printable or not printable(yes) -->
 <!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one -->
 <!-- Hack 3: do your own thing -->
 
@@ -21,7 +21,7 @@ type: pbl
         <span class="fs-4">Binary Math with Conversions</span>
     </header>
     <div class="row justify-content-md-center">
-        <div class="col-8">
+        <div class="col-18">
             <table class="table">
             <tr id="table">
                 <th>Plus</th>
@@ -29,6 +29,7 @@ type: pbl
                 <th>Octal</th>
                 <th>Hexadecimal</th>
                 <th>Decimal</th>
+                <th>Character</th>
                 <th>Minus</th>
             </tr>
             <tr>
@@ -37,6 +38,7 @@ type: pbl
                 <td id="octal">0</td>
                 <td id="hexadecimal">0</td>
                 <td id="decimal">0</td>
+                <td id="character">Not Printable</td>
                 <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
             </tr>
             </table>
@@ -58,6 +60,16 @@ type: pbl
                 {% for i in (0..bits) %}
                 <td><input type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
                 {% endfor %}
+            </tr>
+            <tr>
+                <th>+128</th>
+                <th>+64</th>
+                <th>+32</th>
+                <th>+16</th>
+                <th>+8</th>
+                <th>+4</th>
+                <th>+2</th>
+                <th>+1</th>
             </tr>
             </table>
         </div>
@@ -89,6 +101,15 @@ type: pbl
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
+        // Character conversion
+        // Characters based on ASCII
+        ascii_char = parseInt(binary, 2)
+        if (ascii_char > 31 && ascii_char < 127) 
+            document.getElementById('character').innerHTML = String.fromCharCode(ascii_char);
+        else
+            document.getElementById('character').innerHTML = "Not Printable"
+    
+        
     }
     //
     function decimal_2_base(decimal, base) {

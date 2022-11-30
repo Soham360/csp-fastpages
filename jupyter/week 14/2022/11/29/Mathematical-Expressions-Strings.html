@@ -195,9 +195,9 @@ window.onload = wrap_img;
 <span class="n">cookie2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="s2">&quot;rasin&quot;</span><span class="p">)</span>
 <span class="n">len1</span> <span class="o">=</span> <span class="n">cookie</span> <span class="o">/</span> <span class="mi">2</span>
 <span class="n">len2</span> <span class="o">=</span> <span class="n">cookie2</span> <span class="o">*</span> <span class="mi">45</span>
-<span class="n">vote1</span> <span class="o">=</span> <span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="s2">&quot;vote&quot;</span><span class="p">,</span> <span class="n">len2</span><span class="p">)</span>
-<span class="n">vote2</span> <span class="o">=</span> <span class="p">(</span><span class="n">cookie2</span><span class="p">,</span> <span class="s2">&quot;vote&quot;</span><span class="p">,</span> <span class="n">len1</span><span class="p">)</span>
-<span class="n">votes</span> <span class="o">=</span> <span class="n">vote1</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">vote2</span>
+<span class="n">vote1</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">cookie</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; vote &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">len2</span><span class="p">)</span>
+<span class="n">vote2</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">cookie2</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; vote &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">len1</span><span class="p">)</span>
+<span class="n">votes</span> <span class="o">=</span> <span class="n">vote1</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">vote2</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">votes</span><span class="p">)</span>
 </pre></div>
 
@@ -210,18 +210,10 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/soham/vscode/csp-fastpages/_notebooks/2022-11-29-Mathematical-Expressions-Strings.ipynb Cell 7</span> in <span class="ansi-cyan-fg">&lt;cell line: 5&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2022-11-29-Mathematical-Expressions-Strings.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2&#39;&gt;3&lt;/a&gt;</span> len1 = cookie / 2
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2022-11-29-Mathematical-Expressions-Strings.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3&#39;&gt;4&lt;/a&gt;</span> len2 = cookie2 * 45
-<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2022-11-29-Mathematical-Expressions-Strings.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt;</span> vote1 = str(cookie, &#34;vote&#34;, len2)
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2022-11-29-Mathematical-Expressions-Strings.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span> vote2 = str(cookie2, &#34;vote&#34;, len1)
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2022-11-29-Mathematical-Expressions-Strings.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span> votes = vote1 + &#34; &#34; + vote2
-
-<span class="ansi-red-fg">TypeError</span>: str() argument 3 must be str, not int</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>8 vote 225
+5 vote 4.0
+</pre>
 </div>
 </div>
 

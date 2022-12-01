@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -137,7 +137,132 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Notes-on-Units-3.3-&amp;-3.4">Notes on Units 3.3 &amp; 3.4<a class="anchor-link" href="#Notes-on-Units-3.3-&amp;-3.4"> </a></h1>
+<h1 id="Notes-on-Units-3.3-&amp;-3.4">Notes on Units 3.3 &amp; 3.4<a class="anchor-link" href="#Notes-on-Units-3.3-&amp;-3.4"> </a></h1><h2 id="Algorithms">Algorithms<a class="anchor-link" href="#Algorithms"> </a></h2><ul>
+<li>Sequencing<ul>
+<li>do tasks in order</li>
+</ul>
+</li>
+<li>Selection<ul>
+<li>helps choose two different outcomes based off 1 decision</li>
+</ul>
+</li>
+<li>Iteration<ul>
+<li>if a condition is true, then it can repeat starting from a certain step until said condition is false</li>
+</ul>
+</li>
+<li>Flowcharts<ul>
+<li>show the function of an algorithms</li>
+</ul>
+</li>
+</ul>
+<h2 id="Arithmetic-Operation">Arithmetic Operation<a class="anchor-link" href="#Arithmetic-Operation"> </a></h2><ul>
+<li>subtraction (-)</li>
+<li>addition (+)</li>
+<li>multiplication (*)</li>
+<li>division (/)</li>
+<li>Getting the remainder (MOD) (%)</li>
+<li>ORDER OF OPERATIONS MATTERS<ul>
+<li>reassigning variables using operations on other variables can get confusing</li>
+</ul>
+</li>
+</ul>
+<h3 id="Arithmetic-Hacks">Arithmetic Hacks<a class="anchor-link" href="#Arithmetic-Hacks"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Num1</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">Num2</span> <span class="o">=</span> <span class="n">Num1</span> <span class="o">%</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">15</span>                    <span class="c1"># num2 = 20</span>
+<span class="n">Num3</span> <span class="o">=</span> <span class="n">Num2</span> <span class="o">/</span> <span class="n">Num1</span> <span class="o">+</span> <span class="p">(</span> <span class="n">Num2</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">)</span>       <span class="c1"># num3 = 20/50 + 40 = 40.4</span>
+<span class="n">Num4</span> <span class="o">=</span> <span class="n">Num3</span> <span class="o">+</span> <span class="n">Num1</span> <span class="o">/</span> <span class="mi">5</span> <span class="o">-</span> <span class="mi">10</span>             <span class="c1"># num4 = 40.4 + 10 - 10</span>
+<span class="n">Result</span> <span class="o">=</span> <span class="n">Num4</span> <span class="o">-</span> <span class="n">Num2</span>                    <span class="c1"># Result = 40.4 - 20 = 20.4</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Num1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">Num2</span> <span class="o">=</span> <span class="n">Num1</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>                     <span class="c1"># num2 = 1 * 4 = 4</span>
+<span class="n">Num1</span> <span class="o">=</span> <span class="n">Num2</span>                             <span class="c1"># num1 = 4</span>
+<span class="n">Num3</span> <span class="o">=</span> <span class="n">Num1</span> <span class="o">*</span> <span class="mi">3</span>                         <span class="c1"># num3 = 4 * 3 = 12</span>
+<span class="n">Result</span> <span class="o">=</span> <span class="n">Num3</span> <span class="o">%</span> <span class="mi">2</span>                       <span class="c1"># Result = 0</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">valueA</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">valueB</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="n">valueC</span> <span class="o">=</span> <span class="mi">17</span>
+<span class="n">valueB</span> <span class="o">=</span> <span class="n">valueC</span> <span class="o">-</span> <span class="n">valueA</span>                <span class="c1"># valueB = 17 - 4 = 13</span>
+<span class="n">valueA</span> <span class="o">=</span> <span class="n">valueA</span> <span class="o">*</span> <span class="mi">10</span>                    <span class="c1"># valueA = 4 * 10 = 40</span>
+<span class="k">if</span> <span class="n">valueB</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>                         <span class="c1"># valueB is 13, which is greater than 10</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">valueC</span><span class="p">)</span>                       <span class="c1"># This will print 17</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>17
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Strings">Strings<a class="anchor-link" href="#Strings"> </a></h2><ul>
+<li>Collection of character (#s, letters, spaces, special characters)</li>
+<li>procedures can be used with strings<ul>
+<li>len() finds length of strings</li>
+</ul>
+</li>
+<li>concatenation combines strings<ul>
+<li>concat("cookie", "monster") outputs "cookiemonster"</li>
+</ul>
+</li>
+</ul>
+
 </div>
 </div>
 </div>

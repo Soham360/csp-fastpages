@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Post with screenshots for the HTML Hacks
-categories: [markdown, Week 2]
+categories: [Markdown, Week 2]
 title: HTML Screenshot Hacks
 ---
 

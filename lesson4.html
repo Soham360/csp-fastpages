@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lists and Iteration | Soham Kamat</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Lists and Iteration" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Lists and Iteration Lesson" />
+<meta property="og:description" content="Lists and Iteration Lesson" />
+<link rel="canonical" href="https://soham360.github.io/csp-fastpages/lesson4" />
+<meta property="og:url" content="https://soham360.github.io/csp-fastpages/lesson4" />
+<meta property="og:site_name" content="Soham Kamat" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-05T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lists and Iteration" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-05T00:00:00-06:00","datePublished":"2022-12-05T00:00:00-06:00","description":"Lists and Iteration Lesson","headline":"Lists and Iteration","mainEntityOfPage":{"@type":"WebPage","@id":"https://soham360.github.io/csp-fastpages/lesson4"},"url":"https://soham360.github.io/csp-fastpages/lesson4"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/csp-fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://soham360.github.io/csp-fastpages/feed.xml" title="Soham Kamat" /><link rel="shortcut icon" type="image/x-icon" href="/csp-fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/csp-fastpages/">Soham Kamat</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/csp-fastpages/CollegeBoard/">CollegeBoard</a><a class="page-link" href="/csp-fastpages/_pages/Submenu.html">Submenu</a><a class="page-link" href="/csp-fastpages/Vocabulary/">Vocabulary</a><a class="page-link" href="/csp-fastpages/about/">About Me</a><a class="page-link" href="/csp-fastpages/Notes/">Notes</a><a class="page-link" href="/csp-fastpages/search/">Search</a><a class="page-link" href="/csp-fastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Lists and Iteration</h1><p class="page-description">Lists and Iteration Lesson</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-05T00:00:00-06:00" itemprop="datePublished">
+        Dec 5, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      9 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/csp-fastpages/categories/#lessons">lessons</a>
+        
+      
+      </p>
+    
+
+    
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Lists">Lists </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#What-are-lists?">What are lists? </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#List-examples-in-Python,-JavaScript,-and-Pseudocode.">List examples in Python, JavaScript, and Pseudocode. </a></li>
+<li class="toc-entry toc-h3"><a href="#More-list-examples">More list examples </a></li>
+<li class="toc-entry toc-h3"><a href="#Lists-are-just-one-of-four-collection-data-types-in-Python">Lists are just one of four collection data types in Python </a></li>
+<li class="toc-entry toc-h3"><a href="#Terms">Terms </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Methods-in-Lists">Methods in Lists </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Try-this">Try this </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Iteration">Iteration </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#First,-what-not-to-do">First, what not to do </a></li>
+<li class="toc-entry toc-h2"><a href="#Iteration">Iteration </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Iterator?-Iterable?-Iteration?">Iterator? Iterable? Iteration? </a></li>
+<li class="toc-entry toc-h3"><a href="#Loops">Loops </a></li>
+<li class="toc-entry toc-h3"><a href="#Using-the-range()-function">Using the range() function </a></li>
+<li class="toc-entry toc-h3"><a href="#Else,-elif,-and-break">Else, elif, and break </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#HW-Iteration">HW Iteration </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#2D-Iteration">2D Iteration </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#2D-Arrays">2D Arrays </a></li>
+<li class="toc-entry toc-h2"><a href="#Printing-a-2D-Array">Printing a 2D Array </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#More-Functions">More Functions </a></li>
+<li class="toc-entry toc-h3"><a href="#Challenge">Challenge </a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-12-05-final_Iteration_lesson.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Lists">
+<a class="anchor" href="#Lists" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lists<a class="anchor-link" href="#Lists"> </a>
+</h1>
+<h2 id="What-are-lists?">
+<a class="anchor" href="#What-are-lists?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What are lists?<a class="anchor-link" href="#What-are-lists?"> </a>
+</h2>
+<p>Lists: a sequence of variables</p>
+<ul>
+<li>we can use lists to store multiple items into one variable</li>
+<li>used to store collections of data</li>
+<li>changeable, ordered, allow duplicates</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="List-examples-in-Python,-JavaScript,-and-Pseudocode.">
+<a class="anchor" href="#List-examples-in-Python,-JavaScript,-and-Pseudocode." aria-hidden="true"><span class="octicon octicon-link"></span></a>List examples in Python, JavaScript, and Pseudocode.<a class="anchor-link" href="#List-examples-in-Python,-JavaScript,-and-Pseudocode."> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"apple"</span><span class="p">,</span> <span class="s2">"grape"</span><span class="p">,</span> <span class="s2">"strawberry"</span><span class="p">]</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['apple', 'grape', 'strawberry']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">const</span> <span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"apple"</span><span class="p">,</span> <span class="s2">"grape"</span><span class="p">,</span> <span class="s2">"strawberry"</span><span class="p">];</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="err">←</span> <span class="p">[</span><span class="n">apple</span><span class="p">,</span> <span class="n">grape</span><span class="p">,</span> <span class="n">strawberry</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="More-list-examples">
+<a class="anchor" href="#More-list-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>More list examples<a class="anchor-link" href="#More-list-examples"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">brands</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"nike"</span><span class="p">,</span> <span class="s2">"adidas"</span><span class="p">,</span> <span class="s2">"underarmour"</span><span class="p">]</span> <span class="c1">#string</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="c1">#integer</span>
+<span class="n">truefalse</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span> <span class="c1">#boolean</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Lists-are-just-one-of-four-collection-data-types-in-Python">
+<a class="anchor" href="#Lists-are-just-one-of-four-collection-data-types-in-Python" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lists are just one of four collection data types in Python<a class="anchor-link" href="#Lists-are-just-one-of-four-collection-data-types-in-Python"> </a>
+</h3>
+<ul>
+<li>Tuple: collection that is ordered, unchangeable, allows duplicates</li>
+<li>Set: collection that is unordered, unchangeable, doesn't allow duplicates</li>
+<li>Dictionary: collection that is ordered, changeable, doesn't allow duplicates</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Terms">
+<a class="anchor" href="#Terms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Terms<a class="anchor-link" href="#Terms"> </a>
+</h3>
+<ul>
+<li>Index: a term used to sort data in order to reference to an element in a list (allows for duplicates)</li>
+<li>Elements: the values in the list assigned to an index</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"apple"</span><span class="p">,</span> <span class="s2">"grape"</span><span class="p">,</span> <span class="s2">"strawberry"</span><span class="p">]</span>
+<span class="n">index</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">fruits</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>grape
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Methods-in-Lists">
+<a class="anchor" href="#Methods-in-Lists" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods in Lists<a class="anchor-link" href="#Methods-in-Lists"> </a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Definition</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>append()</td>
+<td>adds element to the end of the list</td>
+<td>fruits.append("watermelon")</td>
+</tr>
+<tr>
+<td>index()</td>
+<td>returns the index of the first element with the specified value</td>
+<td>fruits.index("apple")</td>
+</tr>
+<tr>
+<td>insert()</td>
+<td>adds element at given position</td>
+<td>fruits.insert(1, "watermelon")</td>
+</tr>
+<tr>
+<td>remove()</td>
+<td>removes the first item with the specified value</td>
+<td>fruits.remove("strawberry")</td>
+</tr>
+<tr>
+<td>reverse()</td>
+<td>reverses the list order</td>
+<td>fruits.reverse()</td>
+</tr>
+<tr>
+<td>sort()</td>
+<td>sorts the list</td>
+<td>fruits.sort()</td>
+</tr>
+<tr>
+<td>count()</td>
+<td>returns the amount of elements with the specified value</td>
+<td>fruits.count("apple")</td>
+</tr>
+<tr>
+<td>copy()</td>
+<td>returns a copy of the list</td>
+<td>fruits.copy()</td>
+</tr>
+<tr>
+<td>clear()</td>
+<td>removes the elements from the list</td>
+<td>fruits.clear()</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sports</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"football"</span><span class="p">,</span> <span class="s2">"hockey"</span><span class="p">,</span> <span class="s2">"baseball"</span><span class="p">,</span> <span class="s2">"basketball"</span><span class="p">]</span>
+
+<span class="c1"># change the value "soccer" to "hockey"</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">sports</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['football', 'hockey', 'baseball', 'basketball']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sports</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"football"</span><span class="p">,</span> <span class="s2">"soccer"</span><span class="p">,</span> <span class="s2">"baseball"</span><span class="p">,</span> <span class="s2">"basketball"</span><span class="p">]</span>
+
+<span class="c1"># add "golf" as the 3rd element in the list</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">sports</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['football', 'soccer', 'baseball', 'basketball']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Try-this">
+<a class="anchor" href="#Try-this" aria-hidden="true"><span class="octicon octicon-link"></span></a>Try this<a class="anchor-link" href="#Try-this"> </a>
+</h3>
+<ul>
+<li>Determine the output of the code segment</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Iteration">
+<a class="anchor" href="#Iteration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iteration<a class="anchor-link" href="#Iteration"> </a>
+</h1>
+<blockquote>
+<p>stuff</p>
+</blockquote>
+<ul>
+<li>title:Iteration HW- toc: true</li>
+<li>comments: true</li>
+<li>categories: [iteration]</li>
+<li>tags: [iteration]</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="First,-what-not-to-do">
+<a class="anchor" href="#First,-what-not-to-do" aria-hidden="true"><span class="octicon octicon-link"></span></a>First, what not to do<a class="anchor-link" href="#First,-what-not-to-do"> </a>
+</h2>
+<blockquote>
+<p>Iteration is important for your time and sanity</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"alpha"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"bravo"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"charlie"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"delta"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"echo"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"foxtrot"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"golf"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"hotel"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"india"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"juliett"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"kilo"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"lima"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"mike"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"november"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"oscar"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"papa"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"quebec"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"romeo"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"sierra"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"tango"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"uniform"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"victor"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"whiskey"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"x-ray"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"yankee"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"zulu"</span><span class="p">)</span>
+<span class="c1">#please help me </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>alpha
+bravo
+charlie
+delta
+echo
+foxtrot
+golf
+hotel
+india
+juliett
+kilo
+lima
+mike
+november
+oscar
+papa
+quebec
+romeo
+sierra
+tango
+uniform
+victor
+whiskey
+x-ray
+yankee
+zulu
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote>
+<p>Coding all of these individually takes a lot of unnecessary time, how can we shorten this time?</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Iteration">
+<a class="anchor" href="#Iteration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iteration<a class="anchor-link" href="#Iteration"> </a>
+</h2>
+<blockquote>
+<p>Iteration is the repetition of a process or utterance applied to the result or taken from a previous statement.
+There's a lot of types of iteration though, what to use? How do we apply iteration to lists?</p>
+<p>Some methods include using a "for loop", using a "for loop and range()", using a "while loop", and using comprehension</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote>
+<p>Lists, tuples, dictionaries, and sets are iterable objects. They are the 'containers' that store the data to iterate.</p>
+<p>Each of these containers are able to iterate with the iter() command.</p>
+<p>There are 2 types of iteration:definite and indefinite. Definite iteration clarifies how many times the loop is going to run, while indefinite specifies a condition that must be met</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span> 
+    <span class="n">statement</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Iterator?-Iterable?-Iteration?">
+<a class="anchor" href="#Iterator?-Iterable?-Iteration?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iterator? Iterable? Iteration?<a class="anchor-link" href="#Iterator?-Iterable?-Iteration?"> </a>
+</h3>
+<ul>
+<li>When an object is iterable it can be used in an iteration </li>
+<li>When passed through the function iter() it returns an iterator </li>
+<li>Strings, lists, dictionaries, sets and tuples are all examples of iterable objects.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'alpha'</span><span class="p">,</span> <span class="s1">'bravo'</span><span class="p">,</span> <span class="s1">'charlie'</span><span class="p">]</span>
+
+<span class="n">itr</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">itr</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">itr</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">itr</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>alpha
+bravo
+charlie
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Loops">
+<a class="anchor" href="#Loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loops<a class="anchor-link" href="#Loops"> </a>
+</h3>
+<ul>
+<li>Well, above is basically just printing them again, so how do we takes these iterators into something we can make use for? </li>
+<li>Loops take essentially what we did above and automates it, here are some examples.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Alpha"</span><span class="p">,</span> <span class="s2">"Bravo"</span><span class="p">,</span> <span class="s2">"Charlie"</span><span class="p">,</span> <span class="s2">"Delta"</span><span class="p">,</span> <span class="s2">"Echo"</span><span class="p">,</span> <span class="s2">"Foxtrot"</span><span class="p">,</span> <span class="s2">"Golf"</span><span class="p">,</span> <span class="s2">"Hotel"</span><span class="p">,</span> <span class="s2">"India"</span><span class="p">,</span> <span class="s2">"Juliett"</span><span class="p">,</span> <span class="s2">"Kilo"</span><span class="p">,</span> <span class="s2">"Lima"</span><span class="p">,</span> <span class="s2">"Mike"</span><span class="p">,</span> <span class="s2">"November"</span><span class="p">,</span> <span class="s2">"Oscar"</span><span class="p">,</span> <span class="s2">"Papa"</span><span class="p">,</span> <span class="s2">"Quebec"</span><span class="p">,</span> <span class="s2">"Romeo"</span><span class="p">,</span> <span class="s2">"Sierra"</span><span class="p">,</span> <span class="s2">"Tango"</span><span class="p">,</span> <span class="s2">"Uniform"</span><span class="p">,</span> <span class="s2">"Victor"</span><span class="p">,</span> <span class="s2">"Whiskey"</span><span class="p">,</span> <span class="s2">"X-ray"</span><span class="p">,</span> <span class="s2">"Yankee"</span><span class="p">,</span> <span class="s2">"Zulu"</span><span class="p">]</span>
+
+<span class="c1"># using a for loop </span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="c1">#for item in the list, print the item </span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Alpha"</span><span class="p">,</span> <span class="s2">"Bravo"</span><span class="p">,</span> <span class="s2">"Charlie"</span><span class="p">,</span> <span class="s2">"Delta"</span><span class="p">,</span> <span class="s2">"Echo"</span><span class="p">,</span> <span class="s2">"Foxtrot"</span><span class="p">,</span> <span class="s2">"Golf"</span><span class="p">,</span> <span class="s2">"Hotel"</span><span class="p">,</span> <span class="s2">"India"</span><span class="p">,</span> <span class="s2">"Juliett"</span><span class="p">,</span> <span class="s2">"Kilo"</span><span class="p">,</span> <span class="s2">"Lima"</span><span class="p">,</span> <span class="s2">"Mike"</span><span class="p">,</span> <span class="s2">"November"</span><span class="p">,</span> <span class="s2">"Oscar"</span><span class="p">,</span> <span class="s2">"Papa"</span><span class="p">,</span> <span class="s2">"Quebec"</span><span class="p">,</span> <span class="s2">"Romeo"</span><span class="p">,</span> <span class="s2">"Sierra"</span><span class="p">,</span> <span class="s2">"Tango"</span><span class="p">,</span> <span class="s2">"Uniform"</span><span class="p">,</span> <span class="s2">"Victor"</span><span class="p">,</span> <span class="s2">"Whiskey"</span><span class="p">,</span> <span class="s2">"X-ray"</span><span class="p">,</span> <span class="s2">"Yankee"</span><span class="p">,</span> <span class="s2">"Zulu"</span><span class="p">]</span>
+
+<span class="c1"># Taking the length of the list </span>
+<span class="n">lengthList</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span> 
+
+<span class="c1"># Iteration using the amount of items in the list</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lengthList</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Alpha"</span><span class="p">,</span> <span class="s2">"Bravo"</span><span class="p">,</span> <span class="s2">"Charlie"</span><span class="p">,</span> <span class="s2">"Delta"</span><span class="p">,</span> <span class="s2">"Echo"</span><span class="p">,</span> <span class="s2">"Foxtrot"</span><span class="p">,</span> <span class="s2">"Golf"</span><span class="p">,</span> <span class="s2">"Hotel"</span><span class="p">,</span> <span class="s2">"India"</span><span class="p">,</span> <span class="s2">"Juliett"</span><span class="p">,</span> <span class="s2">"Kilo"</span><span class="p">,</span> <span class="s2">"Lima"</span><span class="p">,</span> <span class="s2">"Mike"</span><span class="p">,</span> <span class="s2">"November"</span><span class="p">,</span> <span class="s2">"Oscar"</span><span class="p">,</span> <span class="s2">"Papa"</span><span class="p">,</span> <span class="s2">"Quebec"</span><span class="p">,</span> <span class="s2">"Romeo"</span><span class="p">,</span> <span class="s2">"Sierra"</span><span class="p">,</span> <span class="s2">"Tango"</span><span class="p">,</span> <span class="s2">"Uniform"</span><span class="p">,</span> <span class="s2">"Victor"</span><span class="p">,</span> <span class="s2">"Whiskey"</span><span class="p">,</span> <span class="s2">"X-ray"</span><span class="p">,</span> <span class="s2">"Yankee"</span><span class="p">,</span> <span class="s2">"Zulu"</span><span class="p">]</span>
+
+<span class="c1"># Once again, taking the length of the list</span>
+<span class="n">lengthList</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+<span class="c1"># Setting the variable we are going to use as 0</span>
+<span class="n">i</span><span class="o">=</span><span class="mi">0</span> 
+
+<span class="c1"># Iteration using the while loop </span>
+<span class="c1"># Argument saying WHILE a certain variable is a certain condition, the code should run</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">lengthList</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Using-the-range()-function">
+<a class="anchor" href="#Using-the-range()-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using the range() function<a class="anchor-link" href="#Using-the-range()-function"> </a>
+</h3>
+<blockquote>
+<p>But wait, there's more</p>
+<ul>
+<li>Need to save even more time? The above is useful for many occasions, but can get tedious fast, in this case, use range()</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+2
+3
+4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Else,-elif,-and-break">
+<a class="anchor" href="#Else,-elif,-and-break" aria-hidden="true"><span class="octicon octicon-link"></span></a>Else, elif, and break<a class="anchor-link" href="#Else,-elif,-and-break"> </a>
+</h3>
+<blockquote>
+<p>For when 1 statement isn't enough</p>
+<ul>
+<li>Else:when the condition does not meet, do statement()- Elif: when the condition does not meet, but meets another condition, do statement()</li>
+<li>Break: stop the loop</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="HW-Iteration">
+<a class="anchor" href="#HW-Iteration" aria-hidden="true"><span class="octicon octicon-link"></span></a>HW Iteration<a class="anchor-link" href="#HW-Iteration"> </a>
+</h2>
+<p>Use the list below to turn the first letter of any word (using input()) into its respective NATO phonetic alphabet word</p>
+<p>Ex:</p>
+<p>list -&gt;</p>
+<p>lima
+india
+sierra
+tango</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"alfa"</span><span class="p">,</span> <span class="s2">"bravo"</span><span class="p">,</span> <span class="s2">"charlie"</span><span class="p">,</span> <span class="s2">"delta"</span><span class="p">,</span> <span class="s2">"echo"</span><span class="p">,</span> <span class="s2">"foxtrot"</span><span class="p">,</span> <span class="s2">"golf"</span><span class="p">,</span> <span class="s2">"hotel"</span><span class="p">,</span> <span class="s2">"india"</span><span class="p">,</span> <span class="s2">"juliett"</span><span class="p">,</span> <span class="s2">"kilo"</span><span class="p">,</span>
+<span class="s2">"lima"</span><span class="p">,</span> <span class="s2">"mike"</span><span class="p">,</span> <span class="s2">"november"</span><span class="p">,</span> <span class="s2">"oscar"</span><span class="p">,</span> <span class="s2">"papa"</span><span class="p">,</span> <span class="s2">"quebec"</span><span class="p">,</span> <span class="s2">"romeo"</span><span class="p">,</span> <span class="s2">"sierra"</span><span class="p">,</span> <span class="s2">"tango"</span><span class="p">,</span> <span class="s2">"uniform"</span><span class="p">,</span> <span class="s2">"victor"</span><span class="p">,</span> <span class="s2">"whiskey"</span><span class="p">,</span> <span class="s2">"xray"</span><span class="p">,</span> <span class="s2">"yankee"</span><span class="p">,</span> <span class="s2">"zulu"</span><span class="p">]</span>
+
+<span class="n">inp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">inp</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">inp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">words</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hotel
+echo
+lima
+lima
+oscar
+whiskey
+oscar
+romeo
+lima
+delta
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2D-Iteration">
+<a class="anchor" href="#2D-Iteration" aria-hidden="true"><span class="octicon octicon-link"></span></a>2D Iteration<a class="anchor-link" href="#2D-Iteration"> </a>
+</h1>
+<h2 id="2D-Arrays">
+<a class="anchor" href="#2D-Arrays" aria-hidden="true"><span class="octicon octicon-link"></span></a>2D Arrays<a class="anchor-link" href="#2D-Arrays"> </a>
+</h2>
+<p>A 2D array is simply just a list of lists. The example below is technically correct but...</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">keypad</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="s2">" "</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">" "</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Conventially 2D arrays are written like below. This is because 2D arrays are meant to be read in 2 dimensions (hence the name). Writing them like below makes them easier to visualize and understand.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">keypad</span> <span class="o">=</span>   <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+            <span class="p">[</span><span class="s2">" "</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">" "</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Printing-a-2D-Array">
+<a class="anchor" href="#Printing-a-2D-Array" aria-hidden="true"><span class="octicon octicon-link"></span></a>Printing a 2D Array<a class="anchor-link" href="#Printing-a-2D-Array"> </a>
+</h2>
+<p>We already know that we can't just print the matrix by calling it. We need to iterate through it to print it.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_matrix1</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span> 
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">)):</span>  <span class="c1"># outer for loop. This runs on i which represents the row. range(len(matrix)) is in order to iterate through the length of the matrix</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>  <span class="c1"># inner for loop. This runs on the length of the i'th row in the matrix (j changes for each row with a different length)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>  <span class="c1"># [i][j] is the 2D location of that value in the matrix, kinda like a coordinate pair. [i] iterates to the specific row and [j] iterates to the specific value in the row. end=" " changes the end value to space, not a new line.</span>
+        <span class="nb">print</span><span class="p">()</span> <span class="c1"># prints extra line. this is in the outer loop, not the inner loop, because it only wants to print a new line for each row</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Raw matrix (list of lists): "</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">keypad</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Matrix printed using nested for loop iteration:"</span><span class="p">)</span>
+<span class="n">print_matrix1</span><span class="p">(</span><span class="n">keypad</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Raw matrix (list of lists): 
+[[1, 2, 3], [4, 5, 6], [7, 8, 9], [' ', 0, ' ']]
+Matrix printed using nested for loop iteration
+1 2 3 
+4 5 6 
+7 8 9 
+  0   
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_matrix2</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">matrix</span><span class="p">:</span>  <span class="c1"># Iterates through each "row" of matrix. Row is a dummy variable, it could technically be anything. It iterates through each value of matrix and each value is it's own list. in this syntax the list is stored in "row".</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>  <span class="c1"># Iterates through each value in row. Again col, column, is a dummy variable. Each value in row is stored in col.</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span> <span class="c1"># Same as 1</span>
+        <span class="nb">print</span><span class="p">()</span> <span class="c1"># Same as 1</span>
+
+<span class="n">print_matrix2</span><span class="p">(</span><span class="n">keypad</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 2 3 
+4 5 6 
+7 8 9 
+  0   
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="More-Functions">
+<a class="anchor" href="#More-Functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>More Functions<a class="anchor-link" href="#More-Functions"> </a>
+</h3>
+<p>Try to find another way to print the matrix. Only complete one of the two (unless you'd like to do both). Below is a hint</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruit</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"apples"</span><span class="p">,</span> <span class="s2">"bananas"</span><span class="p">,</span> <span class="s2">"grapes"</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">fruit</span><span class="p">)</span> <span class="c1"># Python built in function: "*". Figure out what it does</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['apples', 'bananas', 'grapes']
+apples bananas grapes
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_matrix3</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+    <span class="n">code</span> <span class="o">=</span> <span class="s2">"your code goes here"</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Alternatively, find a way to print the matrix using the iter() function you already learned. Or use both!</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_matrix4</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+    <span class="n">code</span> <span class="o">=</span> <span class="s2">"your code goes here"</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">keyboard</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">"`"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"-"</span><span class="p">,</span> <span class="s2">"="</span><span class="p">],</span>
+            <span class="p">[</span><span class="s2">"Q"</span><span class="p">,</span> <span class="s2">"W"</span><span class="p">,</span> <span class="s2">"E"</span><span class="p">,</span> <span class="s2">"R"</span><span class="p">,</span> <span class="s2">"T"</span><span class="p">,</span> <span class="s2">"Y"</span><span class="p">,</span> <span class="s2">"U"</span><span class="p">,</span> <span class="s2">"I"</span><span class="p">,</span> <span class="s2">"O"</span><span class="p">,</span> <span class="s2">"P"</span><span class="p">,</span> <span class="s2">"["</span><span class="p">,</span> <span class="s2">"]"</span><span class="p">],</span>
+            <span class="p">[</span><span class="s2">"A"</span><span class="p">,</span> <span class="s2">"S"</span><span class="p">,</span> <span class="s2">"D"</span><span class="p">,</span> <span class="s2">"F"</span><span class="p">,</span> <span class="s2">"G"</span><span class="p">,</span> <span class="s2">"H"</span><span class="p">,</span> <span class="s2">"J"</span><span class="p">,</span> <span class="s2">"K"</span><span class="p">,</span> <span class="s2">"L"</span><span class="p">,</span> <span class="s2">";"</span><span class="p">,</span> <span class="s2">"'"</span><span class="p">],</span>
+            <span class="p">[</span><span class="s2">"Z"</span><span class="p">,</span> <span class="s2">"X"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">,</span> <span class="s2">"V"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="s2">"N"</span><span class="p">,</span> <span class="s2">"M"</span><span class="p">,</span> <span class="s2">","</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"/"</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Print what month you were born and how old you are by iterating through the keyboard (don't just write a string).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Challenge">
+<a class="anchor" href="#Challenge" aria-hidden="true"><span class="octicon octicon-link"></span></a>Challenge<a class="anchor-link" href="#Challenge"> </a>
+</h3>
+<p>Change all of the letters that you DIDN'T print above to spaces, " ", and then print the full keyboard. (the things you did print should remain in the same spot)</p>
+<p>Alternative Challenge: If you would prefer, animate it using some form of delay so it flashes one of your letters at a time on the board in order and repeats. (this one may be slightly more intuitive)</p>
+<p>DO NOT HARD CODE THIS.
+Don't make it harder on yourself, iterate through, make it abstract so it can be used dynamically. You should be able to input any string and your code should work.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>  1         6             
+      R                
+A         H           
+    C       M       
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If you get stuck you can just make a picture with an array and print it (I will grade based on how good it looks)</p>
+<p>I do expect an attempt so write some code to show you tried the challenge.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/csp-fastpages/lesson4" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/csp-fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/csp-fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/csp-fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Soham Kamat&#39;s GitHub FastPage</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

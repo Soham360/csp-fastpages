@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      8 min read
     
 </span></p>
 
@@ -137,50 +137,23 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Lesson-Overview:-3.5---Boolean-Expressions">Lesson Overview: 3.5 - Boolean Expressions<a class="anchor-link" href="#Lesson-Overview:-3.5---Boolean-Expressions"> </a></h1><ul>
-<li>Here we will focus on:<ul>
-<li>basics of Booleans</li>
-<li>its relationship with binary</li>
-<li>relational operators</li>
-<li>Logical Operators</li>
-</ul>
-</li>
-</ul>
-<h2 id="What-is-a-boolean?">What is a boolean?<a class="anchor-link" href="#What-is-a-boolean?"> </a></h2><ul>
-<li>A data type with two possible values: true or false</li>
-</ul>
-<h2 id="Boolean-and-Binary">Boolean and Binary<a class="anchor-link" href="#Boolean-and-Binary"> </a></h2><p>So similar yet so different.</p>
 <ul>
-<li>Boolean math and binary notation both use the same two ciphers: 1 and 0.</li>
-<li>However, please note that Boolean quantities are restricted to a singular bit (can only be either 1, or 0)</li>
-<li>On the otherhand, binary numbers may be composed of many bits adding up in place-weighted form to any finite value, or size</li>
+<li>Boolean: a data type. it has two possible values.<ul>
+<li>TRUE</li>
+<li>FALSE</li>
+<li>can only be 1 or 0</li>
 </ul>
-<h2 id="Must-Knows">Must Knows<a class="anchor-link" href="#Must-Knows"> </a></h2><ul>
-<li>A Boolean value is either TRUE or FALSE</li>
-<li><p>The AP Exam will provide you with a reference sheet with the operators below.</p>
 </li>
-<li><p>A few ways these operators could be used...</p>
+<li>Operators<ul>
+<li>a = b - equal to</li>
+<li>a (not equal to symbol) b - not equal to</li>
+<li>a &gt; b - greater than</li>
+<li>a &lt; b - less than</li>
+<li>a (is greater than or equal to symbol) b - greater than or equal to</li>
+<li>a (is less than or equal to symbol) b - less than or equal to
+EXERCISE: Use a boolean expression to determine if the average grade is above an 80 and print the result (True or False).</li>
+</ul>
 </li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Relational-Operators-in-action">Relational Operators in action<a class="anchor-link" href="#Relational-Operators-in-action"> </a></h2><ul>
-<li>How could you use operators to determine if the average of 5 grades is greater than 80?</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>With the grades below, use a boolean expression to determine if the average grade is above an 80 and print the result (True or False)</li>
-<li>Try it in as few steps as possible!</li>
-<li>Be creative! There are obviously TONS of different practical solutions</li>
 </ul>
 
 </div>
@@ -349,18 +322,13 @@ Hello == Hola: True
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Focusing-on-Selection">Focusing on Selection<a class="anchor-link" href="#Focusing-on-Selection"> </a></h2><p><strong>Selection</strong>: uses a condition that evaluates to <i>true</i> or <i>false</i></p>
-<p>Selection determines which part of an algorithm are executed based on a condition being true or false</p>
-<p><strong>Algorithm</strong> is a finite set of instructions that accomplish a specific task</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conditional-Statements">Conditional Statements<a class="anchor-link" href="#Conditional-Statements"> </a></h2><p>Also known as "if statements"</p>
-<p>Can be seen as if statements or if blocks</p>
-<p>Can also be seen as if else statements or if else-blocks</p>
+<ul>
+<li>Selection: uses a condition<ul>
+<li>result - TRUE or FALSE</li>
+</ul>
+</li>
+<li>Algorithm: set of instructions that accomplish a task</li>
+</ul>
 
 </div>
 </div>
@@ -487,31 +455,6 @@ Hello == Hola: True
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Nested conditional statements consist of conditional statements within other conditional statements</li>
-<li>Utilizes "if else" statements within "if else" statements</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Basics of a nested conditional:</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>Block Coding Visual of Nested Conditionals:</p>
-</li>
-<li><p>Example Psuedocode of Nested Conditional Statements</p>
-</li>
-</ul>
 <h1 id="Analyzing-Code-Walkthrough">Analyzing Code Walkthrough<a class="anchor-link" href="#Analyzing-Code-Walkthrough"> </a></h1><ul>
 <li>Psuedocode to the left, block code to the right</li>
 <li><p>Approach the problem by going through each condition one at a time</p>
@@ -629,6 +572,13 @@ Hello == Hola: True
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>NOTE: || means <em>or</em> in javascript</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Writing-Nested-Code-Activity">Writing Nested Code Activity<a class="anchor-link" href="#Writing-Nested-Code-Activity"> </a></h2><ol>
 <li>Write a program that fits these conditions using nested conditionals:<ul>
 <li>If a person has at least 8 hours, they are experienced</li>
@@ -638,16 +588,6 @@ Hello == Hola: True
 </ul>
 </li>
 </ol>
-<h2 id="Hacks-Assignments:">Hacks Assignments:<a class="anchor-link" href="#Hacks-Assignments:"> </a></h2><p><strong>Conditionals</strong>:</p>
-<ul>
-<li>Write a program that fits these conditions using nested conditionals:<ul>
-<li>If the product is expired, print "this product is no good"</li>
-<li>If the cost is above 50 dollars, and the product isn't expired, print "this product is too expensive"</li>
-<li>If the cost is above 25 dollars but under 50, and the product isn't expired, print "this is a regular product"</li>
-<li>If the cost is under 25 dollars, print "this is a cheap product"</li>
-</ul>
-</li>
-</ul>
 
 </div>
 </div>
@@ -702,6 +642,22 @@ You are super experienced!
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks-Assignments:">Hacks Assignments:<a class="anchor-link" href="#Hacks-Assignments:"> </a></h2><p><strong>Conditionals</strong>:</p>
+<ul>
+<li>Write a program that fits these conditions using nested conditionals:<ul>
+<li>If the product is expired, print "this product is no good"</li>
+<li>If the cost is above 50 dollars, and the product isn't expired, print "this product is too expensive"</li>
+<li>If the cost is above 25 dollars but under 50, and the product isn't expired, print "this is a regular product"</li>
+<li>If the cost is under 25 dollars, print "this is a cheap product"</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">

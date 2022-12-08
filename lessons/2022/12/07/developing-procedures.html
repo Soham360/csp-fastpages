@@ -100,6 +100,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#Calling-Procedures">Calling Procedures </a></li>
 <li class="toc-entry toc-h2"><a href="#Developing-Procedures">Developing Procedures </a></li>
 <li class="toc-entry toc-h2"><a href="#Procedural-Abstraction">Procedural Abstraction </a></li>
+<li class="toc-entry toc-h2"><a href="#Complexity-Example">Complexity Example </a></li>
 <li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
 </ul><!--
 #################################################
@@ -217,6 +218,45 @@ Steps of developing procedure: picking a useful name, thinking of parameters (wh
 <li>Simply, procedural abstraction is naming and calling a <strong><em>__</em></strong> procedure</li>
 <li>Making sure to include the right arguments so the <strong><em>__</em></strong> can do what its supposed to do is crucial</li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Complexity-Example">
+<a class="anchor" href="#Complexity-Example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Complexity Example<a class="anchor-link" href="#Complexity-Example"> </a>
+</h2>
+<p>One of the biggest advantages of procedural abstraction is managing complexity.</p>
+<p>Think about the process of simplifying the code?
+What do you think the advantage of the code segment on the left is?</p>
+<table>
+<thead>
+<tr>
+<th>Code Segment 1</th>
+<th>Code Segment 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ROTATE_LEFT()</td>
+<td>detourLeft()</td>
+</tr>
+</tbody>
+</table>
+<p>MOVE_FORWARD()|turnCorner()| 
+ROTATE_RIGHT  |MOVE_FORWARD()| 
+MOVE_FORWARD()|MOVE_FORWARD()|
+MOVE_FORWARD()
+ROTATE_RIGHT()
+MOVE_FORWARD()
+ROTATE_LEFT()
+MOVE_FORWARD()
+ROTATE_LEFT()
+MOVE_FORWARD()
+MOVE_FORWARD
+MOVE_FORWARD()</p>
 
 </div>
 </div>

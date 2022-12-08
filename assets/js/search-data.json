@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Unit 3 Sections 12-13",
-            "content": "",
+            "content": "Notes on the presentations . Slide 1 . A __ is a named group of programming instructions that may have parameters and return values. | Procedures are referred to by different names, such as __ or __, depending on the programing language. | Parameters are input values of a procedure. __ specify the values of the parameters when procedure is called. | A procedure call interrupts the __ execution of statements causing the program to execute the statements within the procedure before continuing. One the last statement in the procedure (or a return statement) has executed, flow or control is returned to the point immediately following where the procedure was __. | . Slide 2 . When calling procedures, it&#39;s important to take notice to whether it returns data, or a block of __. | If the procedure just returns a block of statements, you call the procedure by referring to the procedure name, and __ the arguments. | If the procedure returns some sort of data like a __ or __, then you will assign that value to a variable | .",
             "url": "https://soham360.github.io/csp-fastpages/lessons/2022/12/07/Calling&DevelopingProcedures.html",
             "relUrl": "/lessons/2022/12/07/Calling&DevelopingProcedures.html",
             "date": " • Dec 7, 2022"

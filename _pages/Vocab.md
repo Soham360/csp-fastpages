@@ -32,3 +32,57 @@ image: images/vocabulary.png
 - wget {download link}: downloads files from the internet
 - useradd {username}: adds user named {username}
 - userdel {username}: deletes user name {username}
+
+## General Programming Terms to know
+
+- Bits - 
+- Bytes - 
+- Hexadecimal/Nibbles - 
+- Binary Numbers - 
+    - Unsigned Integer - 
+    - Signed Integer - 
+    - Floating Point - 
+- Binary Data Abstractions - 
+    - Boolean - 
+    - ASCII - 
+    - Unicode - 
+    - RGB - 
+- Data Compression - 
+    - Lossy - 
+    - Lossless - 
+- Variables - 
+    - Data Types - 
+    - Assignment Operators - 
+- Managing Complexity with Variables - 
+    - Lists - 
+    - 2D Lists - 
+    - Dictionaries - 
+    - Class - 
+- Algorithms - 
+    - Sequence - 
+    - Selection - 
+    - Iteration - 
+- Expressions
+    - Comparison Operators - 
+    - Booleans Expressions and Selection - 
+    - Booleans Expressions and Iteration - 
+    - Truth Tables - 
+- Characters - 
+- Strings - 
+- Length - 
+- Concatenation - 
+- Upper - 
+- Lower - 
+- Traversing Strings - 
+- Python If - 
+- Elif - 
+- Else conditionals - 
+- Nested Selection Statements - 
+- Python For - 
+- While loops with Range - 
+- with List - 
+- Combining loops with conditionals to Break, Continue - 
+- Procedural Abstraction - 
+- Python Def procedures - 
+- Parameters - 
+- Return Values - 

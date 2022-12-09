@@ -34,7 +34,7 @@ image: images/vocabulary.png
 - userdel {username}: deletes user name {username}
 
 ## General Programming Terms to know
-
+### Unit 2 Vocabulary Terms
 - Bits - the smallest unit of data that a computer can process and store
 - Bytes - a group of binary digits or bits (usually eight) operated on as a unit.
 - Hexadecimal/Nibbles - a numbering system with base 16
@@ -50,20 +50,22 @@ image: images/vocabulary.png
 - Data Compression
     - Lossy - a data encoding and compression technique that deliberately discards some data in the compression process
     - Lossless - restores and rebuilds file data in its original form after the file is decompressed
+
+### Unit 3 Vocabulary Terms
 - Variables
     - Data Types - a classification that specifies which type of value a variable has
     - Assignment Operators - he operator used to assign a new value to a variable, property, event or indexer element in C# programming language
 - Managing Complexity with Variables
     - Lists - any information displayed or organized in a logical or linear formation
     - 2D Lists - list of lists
-    - Dictionaries - 
-    - Class - 
-- Algorithms - 
-    - Sequence - 
-    - Selection - 
-    - Iteration - 
+    - Dictionaries - an abstract data type that defines an unordered collection of data as a set of key-value pairs
+    - Class - a template definition of the method s and variable s in a particular kind of object
+- Algorithms
+    - Sequence - the first programming construct
+    - Selection - a programming construct where a section of code is run only if a condition is met
+    - Iteration - a process where the design of a product or application is improved by repeated review and testing
 - Expressions
-    - Comparison Operators - 
+    - Comparison Operators - operators that compare values and return true or false
     - Booleans Expressions and Selection - 
     - Booleans Expressions and Iteration - 
     - Truth Tables - 

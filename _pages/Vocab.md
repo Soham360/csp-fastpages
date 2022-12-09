@@ -35,16 +35,16 @@ image: images/vocabulary.png
 
 ## General Programming Terms to know
 
-- Bits - 
-- Bytes - 
-- Hexadecimal/Nibbles - 
-- Binary Numbers - 
-    - Unsigned Integer - 
-    - Signed Integer - 
-    - Floating Point - 
-- Binary Data Abstractions - 
-    - Boolean - 
-    - ASCII - 
+- Bits - the smallest unit of data that a computer can process and store
+- Bytes - a group of binary digits or bits (usually eight) operated on as a unit.
+- Hexadecimal/Nibbles - a numbering system with base 16
+- Binary Numbers -  a numbering scheme in which there are only two possible values for each digit 0 or 1
+    - Unsigned Integer - just like integers (whole numbers) but have the property that they don't have a + or - sign associated with them
+    - Signed Integer - a 32-bit datum that encodes an integer in the range [-2147483648 to 2147483647]
+    - Floating Point - a positive or negative whole number with a decimal point
+- Binary Data Abstractions
+    - Boolean - a logical data type that can have only the values true or false
+    - ASCII - the most common character encoding format for text data in computers and on the internet
     - Unicode - 
     - RGB - 
 - Data Compression - 

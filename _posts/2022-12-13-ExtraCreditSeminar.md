@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Extra Credit Seminar 12/13/22
-categories: [Markdown, Week 11]
+categories: [Markdown, Week 15]
 title: Extra Credit Seminar
 ---
 
@@ -20,12 +20,18 @@ Thermo Fisher:
 - $1.5B invested in R&D
 - $40B in revenue
 
+Qualities of a good engineer:
+- Can listen
+- Can understand the requirements
+- Can use that understanding to make technology solve the requirement
+- Able to explain their process
 ## Presenter #2: Kris Porter
 - Went to UCLA
 - CCNA training
 - Machine Learning
 - Python (Udemy)
 - Data Structures, Algorithms and System Design
+- Twitter University
 
 Some projects he worked on:
 1. Streaming Media Infrastructure at NBC Universal
@@ -33,3 +39,4 @@ Some projects he worked on:
 3. Twitter Projects
     - New DataCenter Deployment
     - Migrating HomeTimeline to GraphQL
+

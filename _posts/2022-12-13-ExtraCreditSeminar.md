@@ -25,18 +25,50 @@ Qualities of a good engineer:
 - Can understand the requirements
 - Can use that understanding to make technology solve the requirement
 - Able to explain their process
+
 ## Presenter #2: Kris Porter
-- Went to UCLA
+- Attended Livermore High School alum
+- Enrolled at UCLA for Electrical Engineering (masters degree)
+- Master’s Degree in Electrical Engineering from Cal State LA (Communications Systems)
 - CCNA training
-- Machine Learning
+- Machine Learning and Deep Learning (Qualcomm)
 - Python (Udemy)
 - Data Structures, Algorithms and System Design
 - Twitter University
 
+Research
+- Center for Embedded Networked Sensors(NIMS)
+- Introduced the linux Operating System, Software Development Life Cycle
+
+Time Line
+- 2010 - Systems Engineer at a Start up, GPM (Email marketing automation)
+- 2012 - NBC Universal, Streaming media Infrastructures
+- 2014 intro to DevOps, transition to Qualcomm
+- 2021 Working at Twitter
+
 Some projects he worked on:
-1. Streaming Media Infrastructure at NBC Universal
-2. Analytics Infrastructure
-3. Twitter Projects
+- Streaming media Infrastructure for the 2012 Olympic Games
+- Streaming Media Infrastructure at NBC Universal
+- Analytics Infrastructure projects (locationSmart, Qualcomm)
+- Twitter Projects
     - New DataCenter Deployment
     - Migrating HomeTimeline to GraphQL
 
+## Class Discussion
+
+Agile methodology (tech perspective):
+- Different companies have their own versions of Agile
+- Different companies use it based on their needs for their goals
+- For example, Qualcomm, had groups of 150 engineers
+- Used roadmaps and flowcharts to coordinate with other engineers
+
+Greatest skill an engineer or someone hoping for a career in tech:
+- Perseverance and the drive/passion to learn
+- Adapt and learn from your mistakes
+- Minimize your distractions and maintain a good balance
+
+Ways that learning code would help in other sectors?
+- Coding can teach skills and methods you can use to tackle other problems
+
+## Summary
+Kathyleen Beveridge and Kris Porter are two computer scientists who used to work at Qualcomm with Mr. Mortensen. They talked about their experiences and the projects they've worked on. They gave some recommendations on how to be a better Computer Scientist. They ended the seminar with a few questions from the audience.

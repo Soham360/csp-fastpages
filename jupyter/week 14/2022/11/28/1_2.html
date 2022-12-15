@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Variables, Assignments, and Data Abstraction Presentation Homework | Soham Kamat</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Variables, Assignments, and Data Abstraction Presentation Homework" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is my solution to the homework that was assigned on 11/28/2022" />
+<meta property="og:description" content="This is my solution to the homework that was assigned on 11/28/2022" />
+<link rel="canonical" href="https://soham360.github.io/csp-fastpages/jupyter/week%2014/2022/11/28/1_2.html" />
+<meta property="og:url" content="https://soham360.github.io/csp-fastpages/jupyter/week%2014/2022/11/28/1_2.html" />
+<meta property="og:site_name" content="Soham Kamat" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-11-28T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Variables, Assignments, and Data Abstraction Presentation Homework" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-28T00:00:00-06:00","datePublished":"2022-11-28T00:00:00-06:00","description":"This is my solution to the homework that was assigned on 11/28/2022","headline":"Variables, Assignments, and Data Abstraction Presentation Homework","mainEntityOfPage":{"@type":"WebPage","@id":"https://soham360.github.io/csp-fastpages/jupyter/week%2014/2022/11/28/1_2.html"},"url":"https://soham360.github.io/csp-fastpages/jupyter/week%2014/2022/11/28/1_2.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/csp-fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://soham360.github.io/csp-fastpages/feed.xml" title="Soham Kamat" /><link rel="shortcut icon" type="image/x-icon" href="/csp-fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/csp-fastpages/">Soham Kamat</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/csp-fastpages/CollegeBoard/">CollegeBoard</a><a class="page-link" href="/csp-fastpages/_pages/Submenu.html">Submenu</a><a class="page-link" href="/csp-fastpages/Vocabulary/">Vocabulary</a><a class="page-link" href="/csp-fastpages/about/">About Me</a><a class="page-link" href="/csp-fastpages/Notes/">Notes</a><a class="page-link" href="/csp-fastpages/search/">Search</a><a class="page-link" href="/csp-fastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Variables, Assignments, and Data Abstraction Presentation Homework</h1><p class="page-description">This is my solution to the homework that was assigned on 11/28/2022</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-11-28T00:00:00-06:00" itemprop="datePublished">
+        Nov 28, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/csp-fastpages/categories/#jupyter">jupyter</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/csp-fastpages/categories/#Week 14">Week 14</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Soham360/csp-fastpages/tree/master/_notebooks/2022-11-28-1_2.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/csp-fastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Soham360/csp-fastpages/master?filepath=_notebooks%2F2022-11-28-1_2.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Soham360/csp-fastpages/blob/master/_notebooks/2022-11-28-1_2.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FSoham360%2Fcsp-fastpages%2Fblob%2Fmaster%2F_notebooks%2F2022-11-28-1_2.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-11-28-1_2.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Notes-on-Units-3.1-&amp;-3.2">Notes on Units 3.1 &amp; 3.2<a class="anchor-link" href="#Notes-on-Units-3.1-&amp;-3.2"> </a></h1><h3 id="Variables">Variables<a class="anchor-link" href="#Variables"> </a></h3><ul>
+<li>Variables organize help organize data by naming it something related to the information it carries<ul>
+<li>contains a name, value, and type<ul>
+<li>NAMING:<ul>
+<li>use general terms</li>
+<li>keep it concise</li>
+<li>use consistent notation (caps, etc...)</li>
+<li>don't make it too vague</li>
+<li>no spaces</li>
+</ul>
+</li>
+<li>TYPES:<ul>
+<li>Integer - a number</li>
+<li>Text/string - a word or string of characters</li>
+</ul>
+</li>
+<li>Boolean - data that determines if something is true or false</li>
+</ul>
+</li>
+<li>A list of data can be stored as a variable<ul>
+<li>more organized</li>
+<li>can be indexed</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Assignments">Assignments<a class="anchor-link" href="#Assignments"> </a></h3><ul>
+<li>Operators that allows a program to change the value represented by a variable</li>
+<li>Used to assign values to variables</li>
+<li>=<ul>
+<li>Assigns value of the right side to the left side</li>
+<li>a=b</li>
+<li>Outcome: b</li>
+<li>+=<ul>
+<li>Add right side operand with left side operand and then assign to left operand</li>
+<li>a+=b<ul>
+<li>Outcome: a+b</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>-=<ul>
+<li>Subtract right operand from left operand and then assign to left operand: True if both operands are equal</li>
+<li>a-=b<ul>
+<li>Outcome: a-b</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>same thing for *= and /=</li>
+</ul>
+</li>
+</ul>
+<h3 id="Data-Abstraction">Data Abstraction<a class="anchor-link" href="#Data-Abstraction"> </a></h3><ul>
+<li>Method used in coding to represent data in a useful form, by taking away aspects of data that aren't being used in the situation</li>
+<li>Variables and lists are primary tools in data abstraction</li>
+<li>Provides a separation between the abstract properties of a data type and the concrete details of its representation</li>
+<li>Lists and Strings<ul>
+<li>List = ordered sequence of elements</li>
+<li>Element = individual value in a list that is assigned to a unique index</li>
+<li>Index = a way to reference the elements in a list or string using natural numbers; each element of a string is referenced by an index</li>
+</ul>
+</li>
+<li>Example of a list with colors</li>
+</ul>
+<table>
+<thead><tr>
+<th>Index</th>
+<th>Element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Green</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Blue</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Purple</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Pink</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>At index 1, the element is green, at index 2, the element is blue, etc...</li>
+</ul>
+<h3 id="Managing-Lists">Managing Lists<a class="anchor-link" href="#Managing-Lists"> </a></h3><ul>
+<li><p>3 Types of List Operations</p>
+<ul>
+<li>Assigning values to a list at certain indices</li>
+<li>Creating an empty list and assigning it to a variable</li>
+<li>Assigning a copy of one list to another list (setting one list equal to another list)</li>
+</ul>
+</li>
+<li><p>Managing complexity</p>
+<ul>
+<li>Helps improve readability</li>
+<li>Reduces the need for new variables as more data is collected</li>
+<li>Can easily update data</li>
+<li>Can easily convert data to different forms
+Practice</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">colorList</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;pink&quot;</span><span class="p">,</span> <span class="s2">&quot;purple&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;brown&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">colorList</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>green
+red
+pink
+purple
+blue
+brown
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Homework">Homework<a class="anchor-link" href="#Homework"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">originalAlphabet</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;j&#39;</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;q&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">]</span> <span class="c1"># All 26 letters of the alphabet</span>
+<span class="n">secretAlphabet</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># All letters of  the alphabet after it has been shifted</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Soham Kamat&#39;s Ceaser Cipher Encoder&quot;</span><span class="p">)</span> <span class="c1"># Message explaining what the code does</span>
+<span class="n">userShift</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please, tell me how much you&#39;d like to shift the alphabet (1-25): &quot;</span><span class="p">))</span> <span class="c1"># Asks what shift you want</span>
+<span class="n">userMessage</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please, enter a message you&#39;d like to encrypt: &quot;</span><span class="p">)</span> <span class="c1"># Asks what message you want encrypted</span>
+<span class="n">userMessage</span> <span class="o">=</span> <span class="n">userMessage</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1"># Makes all letters lowercase</span>
+<span class="n">userMessage</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">userMessage</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="n">encrypted</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">while</span> <span class="n">userShift</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">26</span><span class="p">):</span> <span class="c1"># Makes sure shift is in range 1-25</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please, enter a valid selection.&quot;</span><span class="p">)</span>
+    <span class="n">userShift</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please, tell me how much you&#39;d like to shift the alphabet (1-25): &quot;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">shift</span> <span class="ow">in</span> <span class="n">originalAlphabet</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">userShift</span><span class="p">]:</span> <span class="c1"># Shifts the alphabet by the above value</span>
+    <span class="n">secretAlphabet</span> <span class="o">=</span> <span class="n">originalAlphabet</span><span class="p">[</span><span class="n">userShift</span><span class="p">:]</span> <span class="o">+</span> <span class="n">originalAlphabet</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">userShift</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">originalAlphabet</span><span class="p">)</span> <span class="c1"># Prints the actual Alphabet</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">secretAlphabet</span><span class="p">)</span> <span class="c1"># Prints the shifted Alphabet</span>
+
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">userMessage</span><span class="p">:</span> <span class="c1"># repeats for every character in the inputted message</span>
+    <span class="k">if</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">originalAlphabet</span><span class="p">:</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="n">originalAlphabet</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+        <span class="n">encrypted</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">secretAlphabet</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">encrypted</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">userMessage</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">encrypted</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Soham Kamat&#39;s Ceaser Cipher Encoder
+[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;, &#39;j&#39;, &#39;k&#39;, &#39;l&#39;, &#39;m&#39;, &#39;n&#39;, &#39;o&#39;, &#39;p&#39;, &#39;q&#39;, &#39;r&#39;, &#39;s&#39;, &#39;t&#39;, &#39;u&#39;, &#39;v&#39;, &#39;w&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;]
+[&#39;n&#39;, &#39;o&#39;, &#39;p&#39;, &#39;q&#39;, &#39;r&#39;, &#39;s&#39;, &#39;t&#39;, &#39;u&#39;, &#39;v&#39;, &#39;w&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;, &#39;j&#39;, &#39;k&#39;, &#39;l&#39;, &#39;m&#39;]
+[&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39; &#39;, &#39;w&#39;, &#39;o&#39;, &#39;r&#39;, &#39;l&#39;, &#39;d&#39;]
+uryyb jbeyq
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Soham360/csp-fastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/csp-fastpages/jupyter/week%2014/2022/11/28/1_2.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/csp-fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/csp-fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/csp-fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Soham Kamat&#39;s GitHub FastPage</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

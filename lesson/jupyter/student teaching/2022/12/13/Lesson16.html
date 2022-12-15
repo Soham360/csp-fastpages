@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Unit 3 Sections 16 | Soham Kamat</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Unit 3 Sections 16" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Lesson about simulations and what they’re used for" />
+<meta property="og:description" content="Lesson about simulations and what they’re used for" />
+<link rel="canonical" href="https://soham360.github.io/csp-fastpages/lesson/jupyter/student%20teaching/2022/12/13/Lesson16.html" />
+<meta property="og:url" content="https://soham360.github.io/csp-fastpages/lesson/jupyter/student%20teaching/2022/12/13/Lesson16.html" />
+<meta property="og:site_name" content="Soham Kamat" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-13T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unit 3 Sections 16" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-13T00:00:00-06:00","datePublished":"2022-12-13T00:00:00-06:00","description":"Lesson about simulations and what they’re used for","headline":"Unit 3 Sections 16","mainEntityOfPage":{"@type":"WebPage","@id":"https://soham360.github.io/csp-fastpages/lesson/jupyter/student%20teaching/2022/12/13/Lesson16.html"},"url":"https://soham360.github.io/csp-fastpages/lesson/jupyter/student%20teaching/2022/12/13/Lesson16.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/csp-fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://soham360.github.io/csp-fastpages/feed.xml" title="Soham Kamat" /><link rel="shortcut icon" type="image/x-icon" href="/csp-fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/csp-fastpages/">Soham Kamat</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/csp-fastpages/CollegeBoard/">CollegeBoard</a><a class="page-link" href="/csp-fastpages/_pages/Submenu.html">Submenu</a><a class="page-link" href="/csp-fastpages/Vocabulary/">Vocabulary</a><a class="page-link" href="/csp-fastpages/about/">About Me</a><a class="page-link" href="/csp-fastpages/Notes/">Notes</a><a class="page-link" href="/csp-fastpages/search/">Search</a><a class="page-link" href="/csp-fastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Unit 3 Sections 16</h1><p class="page-description">Lesson about simulations and what they're used for</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-13T00:00:00-06:00" itemprop="datePublished">
+        Dec 13, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      9 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/csp-fastpages/categories/#lesson">lesson</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/csp-fastpages/categories/#jupyter">jupyter</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/csp-fastpages/categories/#Student Teaching">Student Teaching</a>
+        
+      
+      </p>
+    
+
+    
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#First-Order-of-Business:-Get-your-notebook">First Order of Business: Get your notebook </a></li>
+<li class="toc-entry toc-h1"><a href="#So,-what-is-a-simulation-anyway?">So, what is a simulation anyway? </a></li>
+<li class="toc-entry toc-h1"><a href="#Big-Question">Big Question </a></li>
+<li class="toc-entry toc-h1"><a href="#Next-Big-Question">Next Big Question </a></li>
+<li class="toc-entry toc-h1"><a href="#Simulation-1:">Simulation 1: </a></li>
+<li class="toc-entry toc-h1"><a href="#Simulation-2:">Simulation 2: </a></li>
+<li class="toc-entry toc-h1"><a href="#Simulations-in-the-wild">Simulations in the wild </a></li>
+<li class="toc-entry toc-h1"><a href="#HW-!!!">HW !!! </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-12-13-Lesson16.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="First-Order-of-Business:-Get-your-notebook">
+<a class="anchor" href="#First-Order-of-Business:-Get-your-notebook" aria-hidden="true"><span class="octicon octicon-link"></span></a>First Order of Business: Get your notebook<a class="anchor-link" href="#First-Order-of-Business:-Get-your-notebook"> </a>
+</h1>
+<ul>
+<li>
+<p>Open a terminal in vscode, run command: cd _notebooks, type 'wget' and paste this link into said terminal and run it</p>
+</li>
+<li>
+<p>Take notes wherever you please, but you will be graded on participating</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="So,-what-is-a-simulation-anyway?">
+<a class="anchor" href="#So,-what-is-a-simulation-anyway?" aria-hidden="true"><span class="octicon octicon-link"></span></a>So, what is a simulation anyway?<a class="anchor-link" href="#So,-what-is-a-simulation-anyway?"> </a>
+</h1>
+<ul>
+<li>
+<p>A simulation is a tested scenario used for viewing results/outputs to prepare for them in real world situations</p>
+</li>
+<li>
+<p>These can be used for games like dice rolling, spinners, etc</p>
+</li>
+<li>
+<p>These can be used for practical things such as building structures, testing car crashes, and other things before engaging in them in the real world</p>
+</li>
+<li>
+<p>These simulations can have the option of obeying real world physics (Gravity, collision) or they can go against these norms since this is a fictitious scenario, and couldn't happen in real life</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Big-Question">
+<a class="anchor" href="#Big-Question" aria-hidden="true"><span class="octicon octicon-link"></span></a>Big Question<a class="anchor-link" href="#Big-Question"> </a>
+</h1>
+<ul>
+<li>
+<p>Which of the following simulations could be the LEAST useful?</p>
+</li>
+<li>
+<p>A retailer trying to identify which products sold the most</p>
+</li>
+<li>A restaurant determining the efficiency of robots </li>
+<li>An insurance company studying the rain impact of cars </li>
+<li>A sports bike company studying design changes to their new bike design </li>
+</ul>
+<ul>
+<li>If you guessed a bike company, you're wrong, because the retail simulation was the right answer. Simulating robots in food service, studying rain impact on vehicles, and new bike design can contribute a lot more to society in comparison to seeing what products sell more than others. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Next-Big-Question">
+<a class="anchor" href="#Next-Big-Question" aria-hidden="true"><span class="octicon octicon-link"></span></a>Next Big Question<a class="anchor-link" href="#Next-Big-Question"> </a>
+</h1>
+<p>If you were making a simulation for making a new train station, which of the following would be true about this simulation?</p>
+<ul>
+<li>It could reveal potential problems/safety issues before construction starts </li>
+<li>It cannot be used to test the train station in different weather </li>
+<li>Simulation will add high costs to projects </li>
+<li>Simulation is not needed because this train station already exists  </li>
+</ul>
+<ul>
+<li>Potential Saftey was the right answer, because you need somewhere to test the safety and ethicness of what you're about to do before you start building it. Otherwise, let's just say you'll have a special plaque for FBI's Most Wanted</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Simulation-1:">
+<a class="anchor" href="#Simulation-1:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulation 1:<a class="anchor-link" href="#Simulation-1:"> </a>
+</h1>
+<p>Both programs below do the same thing. Given a height and a weight, they calculate how long it will take for a object to fall to the ground in a vacuum subjected to normal Earth levels of gravity.</p>
+<p>However, the second one is a simulation. It calculates the distance the object has fallen every 0.1 seconds. This is useful for if you wanted a visual representation of a falling object, which pure math can't do as smoothly.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">height</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"height in meters?"</span><span class="p">))</span>
+
+<span class="n">weight</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"weight in pounds?"</span><span class="p">)</span>
+
+<span class="n">stuff</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">height</span> <span class="o">/</span> <span class="mf">9.8</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"It will take"</span><span class="p">,</span> <span class="n">stuff</span><span class="p">,</span><span class="s2">"seconds for an object that weighs"</span><span class="p">,</span><span class="n">weight</span><span class="p">,</span><span class="s2">"pounds"</span><span class="p">,</span><span class="s2">"to fall "</span><span class="p">,</span><span class="n">height</span><span class="p">,</span><span class="s2">"meters in a vacuum"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>It will take 1.0 seconds for an object that weighs 9999999 pounds to fall  4.9 meters in a vacuum
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">false</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">while</span> <span class="n">false</span><span class="p">:</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="mf">0.1</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="mf">9.8</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">d</span> <span class="o">&gt;=</span> <span class="n">height</span><span class="p">:</span>
+        <span class="n">false</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="c1">#print(d) # if you want to print the distance every time it calculates it. Too long to output to a terminal, but this could be useful to display graphically. </span>
+    <span class="c1">#print(t)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1.0999999999999999
+5.928999999999999
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Simulation-2:">
+<a class="anchor" href="#Simulation-2:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulation 2:<a class="anchor-link" href="#Simulation-2:"> </a>
+</h1>
+<ul>
+<li>
+<p>This simulation is made in order to simulate movement on a 2d plane vs a 3d plane.</p>
+</li>
+<li>
+<p>How it works: we have multiple variables, if statements and equations under a while command in order to randomly generate steps on a 2d plane. Once it reaches the set destination, it will say that the man made it home after x amount of steps.</p>
+</li>
+<li>
+<p>For the 3D plane, it takes a lot longer due to how big and open the 3d environment is, so there are more if statements in the 3d plane</p>
+</li>
+</ul>
+<p>(explain further)</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">nights</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">turn</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">stopped</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">turns</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">nights</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">):</span>
+    <span class="n">step</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">-</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">-</span><span class="mi">1</span>
+
+    <span class="n">turn</span> <span class="o">=</span> <span class="n">turn</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">nights</span> <span class="o">=</span> <span class="n">nights</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"The Man Has Made It Home After "</span><span class="p">,</span> <span class="n">turn</span><span class="p">,</span> <span class="s2">"Turns"</span><span class="p">)</span>
+        <span class="n">turns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">turn</span><span class="p">)</span>
+        <span class="n">turn</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">turn</span><span class="o">/</span><span class="mi">1000</span> <span class="o">%</span> <span class="mi">1000</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"("</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="s2">")"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">turn</span> <span class="o">&gt;</span> <span class="mi">10000000</span><span class="p">):</span>
+        <span class="n">stopped</span> <span class="o">=</span> <span class="n">stopped</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">turn</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">nights</span> <span class="o">=</span> <span class="n">nights</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Caped"</span><span class="p">)</span>
+
+<span class="n">average</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">turns</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">turns</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Avaerage"</span><span class="p">,</span> <span class="n">average</span><span class="p">,</span> <span class="s2">"Ones that when't too long "</span><span class="p">,</span> <span class="n">stopped</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The Man Has Made It Home After  26092 Turns
+The Man Has Made It Home After  16 Turns
+The Man Has Made It Home After  18 Turns
+The Man Has Made It Home After  55150 Turns
+The Man Has Made It Home After  14 Turns
+The Man Has Made It Home After  5136 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  6 Turns
+( 651 -279 )
+( 1218 -624 )
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/soham/vscode/csp-fastpages/_notebooks/2022-12-13-Simulations.ipynb Cell 10</span> in <span class="ansi-cyan-fg">&lt;cell line: 9&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2022-12-13-Simulations.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span> turns = []
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2022-12-13-Simulations.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8'&gt;9&lt;/a&gt;</span> while (nights &lt; 100):
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2022-12-13-Simulations.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9'&gt;10&lt;/a&gt;</span>     step = random.randrange(4)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2022-12-13-Simulations.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span>     if step == 0:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2022-12-13-Simulations.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span>         x = x+1
+
+File <span class="ansi-green-fg">/usr/lib/python3.8/random.py:215</span>, in <span class="ansi-cyan-fg">Random.randrange</span><span class="ansi-blue-fg">(self, start, stop, step, _int)</span>
+<span class="ansi-green-intense-fg ansi-bold">    213</span> if stop is None:
+<span class="ansi-green-intense-fg ansi-bold">    214</span>     if istart &gt; 0:
+<span class="ansi-green-fg">--&gt; 215</span>         return self._randbelow(istart)
+<span class="ansi-green-intense-fg ansi-bold">    216</span>     raise ValueError("empty range for randrange()")
+<span class="ansi-green-intense-fg ansi-bold">    218</span> # stop argument supplied.
+
+File <span class="ansi-green-fg">/usr/lib/python3.8/random.py:257</span>, in <span class="ansi-cyan-fg">Random._randbelow_with_getrandbits</span><span class="ansi-blue-fg">(self, n)</span>
+<span class="ansi-green-intense-fg ansi-bold">    255</span> r = getrandbits(k)          # 0 &lt;= r &lt; 2**k
+<span class="ansi-green-intense-fg ansi-bold">    256</span> while r &gt;= n:
+<span class="ansi-green-fg">--&gt; 257</span>     r = getrandbits(k)
+<span class="ansi-green-intense-fg ansi-bold">    258</span> return r
+
+<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">nights</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">turn</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">stopped</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">turns</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">nights</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">):</span>
+    <span class="c1">#random movement</span>
+    <span class="n">step</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">-</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">-</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">z</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">z</span><span class="o">-</span><span class="mi">1</span>
+    <span class="c1">#Turn counter</span>
+    <span class="n">turn</span> <span class="o">=</span> <span class="n">turn</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="c1">#Goal check</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">z</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">nights</span> <span class="o">=</span> <span class="n">nights</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"The Bird Has Made It Home After "</span><span class="p">,</span> <span class="n">turn</span><span class="p">,</span> <span class="s2">"Turns"</span><span class="p">)</span>
+        <span class="n">turns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">turn</span><span class="p">)</span>
+        <span class="n">turn</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">turn</span><span class="o">/</span><span class="mi">1000</span> <span class="o">%</span> <span class="mi">1000</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"("</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="s2">") "</span><span class="p">,</span><span class="s2">"| "</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+    <span class="c1">#Too long Stoper</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">turn</span> <span class="o">&gt;</span> <span class="mi">10000000</span><span class="p">):</span>
+        <span class="n">stopped</span> <span class="o">=</span> <span class="n">stopped</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">turn</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">nights</span> <span class="o">=</span> <span class="n">nights</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Caped"</span><span class="p">)</span>
+
+<span class="n">average</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">turns</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">turns</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Avaerage"</span><span class="p">,</span> <span class="n">average</span><span class="p">,</span><span class="s2">"Ones that when't too long "</span><span class="p">,</span> <span class="n">stopped</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>( -637 -442 )  |  583
+( 424 -434 )  |  818
+( -420 628 )  |  650
+( 120 1197 )  |  1415
+( 170 1667 )  |  1121
+( 853 2449 )  |  582
+( 589 3205 )  |  466
+( 1045 3870 )  |  223
+( 540 4370 )  |  1116
+( 116 4888 )  |  1338
+Caped
+The Bird Has Made It Home After  4 Turns
+The Bird Has Made It Home After  6 Turns
+The Bird Has Made It Home After  2 Turns
+The Bird Has Made It Home After  2 Turns
+( -118 -992 )  |  -812
+( -248 -989 )  |  -531
+( -706 -2230 )  |  204
+( 52 -2707 )  |  641
+( 40 -2787 )  |  25
+( 523 -2173 )  |  -1206
+( 872 -1278 )  |  -1832
+( 434 -1119 )  |  -1873
+( -177 -1486 )  |  -1771
+( -53 -824 )  |  -1487
+Caped
+The Bird Has Made It Home After  2 Turns
+The Bird Has Made It Home After  472 Turns
+( 636 265 )  |  -673
+( 141 59 )  |  -1048
+( -685 -607 )  |  -1468
+( -1221 -1058 )  |  -2115
+( -2175 -1433 )  |  -1258
+( -1535 -1305 )  |  -504
+( -1048 -1606 )  |  -880
+( -1720 -2659 )  |  -1831
+( -1526 -2373 )  |  -2219
+( -1543 -2978 )  |  -1711
+Caped
+The Bird Has Made It Home After  6 Turns
+( -937 -487 )  |  622
+( -334 -266 )  |  -116
+( -458 129 )  |  835
+( 207 -224 )  |  727
+( -553 -473 )  |  604
+( -792 -208 )  |  0
+( -1738 -268 )  |  -830
+( -1746 320 )  |  -1574
+( -2228 -455 )  |  -1885
+( -2109 -1727 )  |  -1330
+Caped
+( 50 -1655 )  |  -203
+( 39 -2156 )  |  109
+( 106 -1324 )  |  694
+( -708 -1909 )  |  411
+( -402 -2528 )  |  -590
+( -252 -2895 )  |  -1741
+( -724 -3127 )  |  -2419
+( -1507 -2834 )  |  -2665
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Simulations-in-the-wild">
+<a class="anchor" href="#Simulations-in-the-wild" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulations in the wild<a class="anchor-link" href="#Simulations-in-the-wild"> </a>
+</h1>
+<p>Simulations are used extremely frequently in real life applications. One of the most common examples of simulations are video games. A games physics engine can accurately simulate objects colliding</p>
+<p>Another example is Blender, the software used in 3d animations class, here at Del Norte. Blender is made up of many small simulations, but one big one it uses is simulating the way light bounces off of and interacts with objects.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="HW-!!!">
+<a class="anchor" href="#HW-!!!" aria-hidden="true"><span class="octicon octicon-link"></span></a>HW !!!<a class="anchor-link" href="#HW-!!!"> </a>
+</h1>
+<p>Create a simulation. It can be anything, just has to simulate something.</p>
+<p>Some ideas:</p>
+<ul>
+<li>Two objects colliding</li>
+<li>Gravity on other planets</li>
+</ul>
+<p>AND</p>
+<p>Find an example of a simulation in a software/game you use, screenshot, and explain how it is a simulation</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># Dictionary to simulate the vending machine's inventory</span>
+<span class="n">vending_machine</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"Coke"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">"Sprite"</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="s2">"Water"</span><span class="p">:</span> <span class="mi">10</span>
+<span class="p">}</span>
+
+<span class="c1"># Function to dispense a drink from the vending machine</span>
+<span class="k">def</span> <span class="nf">dispense_drink</span><span class="p">(</span><span class="n">drink</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">vending_machine</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">drink</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span> <span class="c1"># Check if the drink is in the vending machine's inventory</span>
+        <span class="k">if</span> <span class="n">vending_machine</span><span class="p">[</span><span class="n">drink</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># Check if the drink is in stock</span>
+            <span class="n">vending_machine</span><span class="p">[</span><span class="n">drink</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span> <span class="c1"># Dispense the drink and decrement the stock</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s2">"Here is your </span><span class="si">{</span><span class="n">drink</span><span class="si">}</span><span class="s2">"</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">"Sorry, that drink is currently out of stock."</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">"Sorry, we don't carry that drink."</span>
+
+<span class="c1"># Simulate a customer purchasing a random drink</span>
+<span class="n">drink</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">vending_machine</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span> <span class="c1"># Choose a random drink from the vending machine's inventory</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">dispense_drink</span><span class="p">(</span><span class="n">drink</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Here is your Coke
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://github.com/Soham360/csp-fastpages/blob/master/images/GTA5SuperJumpScreenshot.jpg?raw=true" alt="GTA5"></p>
+<p>Grand Theft Auto V uses simulations to model the behaviors and interactions of pedestrians, traffic, and other objects in the game world. The game's physics engine simulates the movement and collision of objects, and its weather system simulates the effects of weather on the game world.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Soham360/csp-fastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/csp-fastpages/lesson/jupyter/student%20teaching/2022/12/13/Lesson16.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/csp-fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/csp-fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/csp-fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Soham Kamat&#39;s GitHub FastPage</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -397,8 +397,11 @@ PROCEDURE Dice(n)
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> <span class="c1"># Fill in the blank</span>
 
 <span class="k">def</span> <span class="nf">Dice</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-
+    <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="o">!=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+    <span class="k">return</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
     
 <span class="n">Dice</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># Will output a range of __ to __</span>
 </pre></div>
@@ -529,6 +532,20 @@ Odd Numbers: [99, 13, 57, 85, 1, 59]
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>37980
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -552,6 +569,21 @@ Odd Numbers: [99, 13, 57, 85, 1, 59]
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>   3
+8 x - 12 x + 24
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 

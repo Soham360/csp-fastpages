@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -135,8 +135,12 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Hacks">Hacks </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#--Come-up-with-one-situation-in-which-a-computer-runs-into-an-undecidable-problem.-Explain-why-it-is-considered-an-undecidable-problem.">- Come up with one situation in which a computer runs into an undecidable problem. Explain why it is considered an undecidable problem. </a></li>
-<li class="toc-entry toc-h2"><a href="#3.17-Homework">3.17 Homework </a></li>
+<li class="toc-entry toc-h2"><a href="#3.17-Homework">3.17 Homework </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Binary-Search">Binary Search </a></li>
+<li class="toc-entry toc-h3"><a href="#Linear-Search">Linear Search </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#3.18-Homework:">3.18 Homework: </a>
 <ul>
 <li class="toc-entry toc-h5"><a href="#Homeworks,-hacks,-and-classwork(filled-in-blanks)-for-both-3.17-and-3.18-are-due-on-Thursday-at-9:00-pm.--0.1-points-for-each-day-late.">Homeworks, hacks, and classwork(filled in blanks) for both 3.17 and 3.18 are due on Thursday at 9:00 pm. -0.1 points for each day late. </a></li>
@@ -449,9 +453,13 @@ False
 <h3 id="Hacks">
 <a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
 </h3>
-<h2 id="--Come-up-with-one-situation-in-which-a-computer-runs-into-an-undecidable-problem.-Explain-why-it-is-considered-an-undecidable-problem.">
-<a class="anchor" href="#--Come-up-with-one-situation-in-which-a-computer-runs-into-an-undecidable-problem.-Explain-why-it-is-considered-an-undecidable-problem." aria-hidden="true"><span class="octicon octicon-link"></span></a>- Come up with one situation in which a computer runs into an undecidable problem. Explain why it is considered an undecidable problem.<a class="anchor-link" href="#--Come-up-with-one-situation-in-which-a-computer-runs-into-an-undecidable-problem.-Explain-why-it-is-considered-an-undecidable-problem."> </a>
-</h2>
+<ul>
+<li>Come up with one situation in which a computer runs into an undecidable problem. Explain why it is considered an undecidable problem.<ul>
+<li>The halting problem, in which a computer tries to determine whether a given program will run forever or eventually stop, is an example of an undecidable problem. This is because it has been proven that no algorithm can accurately predict the behavior of all possible programs, and there are certain programs that cannot be predicted to either halt or run indefinitely. This means that in some cases, a computer may be unable to solve a problem because it is undecidable.</li>
+</ul>
+</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -510,6 +518,21 @@ False
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Found element after 5000 loops in 185 microseconds
+Your number was found at 4999
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -553,7 +576,7 @@ False
 
 <span class="n">lt</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10001</span><span class="p">))</span> <span class="c1"># list with numbers 1-10000</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="mi">149</span> <span class="c1"># replace with an integer between 1 and 10000 (I suggest big numbers like 500, 2000, so on)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">4250</span> <span class="c1"># replace with an integer between 1 and 10000 (I suggest big numbers like 500, 2000, so on)</span>
 
 <span class="n">binary_search</span><span class="p">(</span><span class="n">lt</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="c1"># runs procedure</span>
 </pre></div>
@@ -562,9 +585,49 @@ False
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Element found after 13 loops in 5 microseconds
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4249</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Binary-Search">
+<a class="anchor" href="#Binary-Search" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Search<a class="anchor-link" href="#Binary-Search"> </a>
+</h3>
+<p><img src="https://github.com/Soham360/csp-fastpages/blob/master/images/binarysearch.png?raw=true" alt="binary"></p>
+<h3 id="Linear-Search">
+<a class="anchor" href="#Linear-Search" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linear Search<a class="anchor-link" href="#Linear-Search"> </a>
+</h3>
+<p><img src="https://github.com/Soham360/csp-fastpages/blob/master/images/linearsearch.png?raw=true" alt="linear"></p>
+<p>Linear search is significantly faster than Binary search as shown in the images above. The time it took for Linear search to complete was at max 6 ms while the binary search took almost half a second to complete.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">

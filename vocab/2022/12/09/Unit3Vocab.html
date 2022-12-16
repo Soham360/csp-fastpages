@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -238,9 +238,7 @@ window.onload = wrap_img;
 <ul>
 <li>Expressions<ul>
 <li>Comparison Operators - operators that compare values and return true or false</li>
-<li>Booleans Expressions and Selection - </li>
-<li>Booleans Expressions and Iteration - </li>
-<li>Truth Tables - </li>
+<li>Truth Tables - A truth table is a way of summarising and checking the logic of a circuit. The table shows all possible combinations of inputs and, for each combination, the output that the circuit will produce.</li>
 </ul>
 </li>
 </ul>
@@ -283,7 +281,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Characters - </li>
+<li>Characters - a display unit of information equivalent to one alphabetic letter or symbo (char)</li>
 </ul>
 
 </div>
@@ -326,7 +324,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Strings - </li>
+<li>Strings - A string is generally considered a data type and is often implemented as an array data structure of bytes (or words) that stores a sequence of elements, typically characters, using some character encoding.</li>
 </ul>
 
 </div>
@@ -368,7 +366,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Length - </li>
+<li>Length - length of a string</li>
 </ul>
 
 </div>
@@ -410,7 +408,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Concatenation - </li>
+<li>Concatenation - combining 2  or more strings</li>
 </ul>
 
 </div>
@@ -454,7 +452,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Upper - </li>
+<li>Upper - converts the string to uppercase</li>
 </ul>
 
 </div>
@@ -496,7 +494,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Lower - </li>
+<li>Lower - converts the string to lowercase</li>
 </ul>
 
 </div>
@@ -538,7 +536,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Traversing Strings - </li>
+<li>Traversing Strings - accessing all the elements of the string one after the other by using the subscript</li>
 </ul>
 
 </div>
@@ -593,7 +591,7 @@ d
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Python If - </li>
+<li>Python If - a statement with an if condition</li>
 </ul>
 
 </div>
@@ -621,7 +619,7 @@ d
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Elif - </li>
+<li>Elif - when the if condition is not met, it comes here. Used when you want to add multiple other conditions</li>
 </ul>
 
 </div>
@@ -649,7 +647,7 @@ d
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Else conditionals - </li>
+<li>Else conditionals - when the if condition is not met, it comes here.</li>
 </ul>
 
 </div>
@@ -677,7 +675,7 @@ d
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Nested Selection Statements - </li>
+<li>Nested Selection Statements - selection statements that are nested within themselves</li>
 </ul>
 
 </div>
@@ -727,7 +725,7 @@ d
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Python For - </li>
+<li>Python For - a condition that repeats multiple times</li>
 </ul>
 
 </div>
@@ -774,7 +772,7 @@ d
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>While loops with Range - </li>
+<li>While loops with Range - while loop that uses the range() function</li>
 </ul>
 
 </div>
@@ -823,7 +821,7 @@ d
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>with List - </li>
+<li>with List - Lists are used to store multiple items in a single variable. </li>
 </ul>
 
 </div>
@@ -871,17 +869,57 @@ Number at index 4: 5
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Combining loops with conditionals to Break, Continue - </li>
+<li>Combining loops with conditionals to Break, Continue - For certain conditions, the loop will terminate exectution</li>
 </ul>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="c1"># Output: 1 3 5 7 9</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+3
+5
+7
+9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Procedural Abstraction - </li>
+<li>Procedural Abstraction - when we write code sections (called "procedures" or in Java, "static methods") which are generalised by having variable parameters.</li>
 </ul>
 
 </div>
@@ -927,7 +965,7 @@ Number at index 4: 5
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Python Def procedures - </li>
+<li>Python Def procedures - A procedure allows us to group a block of code under a name, known as a procedure name</li>
 </ul>
 
 </div>
@@ -974,7 +1012,7 @@ Number at index 4: 5
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Parameters - </li>
+<li>Parameters - values that are passed through a function</li>
 </ul>
 
 </div>
@@ -1018,7 +1056,7 @@ Number at index 4: 5
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Return Values - </li>
+<li>Return Values - a value that a function returns to the calling script or function when it completes its task</li>
 </ul>
 
 </div>

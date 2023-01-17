@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -400,7 +400,93 @@ Test 4, make a dictionary
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>17
+<pre>18
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">species</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
+        
+    <span class="k">def</span> <span class="nf">make_sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+    
+<span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">breed</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">species</span><span class="o">=</span><span class="s2">"Dog"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">breed</span> <span class="o">=</span> <span class="n">breed</span>
+        
+    <span class="k">def</span> <span class="nf">make_sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Woof!"</span><span class="p">)</span>
+        
+<span class="k">class</span> <span class="nc">Cat</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">breed</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">species</span><span class="o">=</span><span class="s2">"Cat"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">breed</span> <span class="o">=</span> <span class="n">breed</span>
+        
+    <span class="k">def</span> <span class="nf">make_sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Meow!"</span><span class="p">)</span>
+        
+<span class="k">class</span> <span class="nc">Parrot</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">breed</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">species</span><span class="o">=</span><span class="s2">"Parrot"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">breed</span> <span class="o">=</span> <span class="n">breed</span>
+        
+    <span class="k">def</span> <span class="nf">make_sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Polly want a cracker!"</span><span class="p">)</span>
+    
+<span class="k">class</span> <span class="nc">Horse</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">breed</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">species</span><span class="o">=</span><span class="s2">"Horse"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">breed</span> <span class="o">=</span> <span class="n">breed</span>
+        
+    <span class="k">def</span> <span class="nf">make_sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Neigh!"</span><span class="p">)</span>
+        
+<span class="n">dog1</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">"Fido"</span><span class="p">,</span> <span class="s2">"Golden Retriever"</span><span class="p">)</span>
+<span class="n">dog2</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">"Buddy"</span><span class="p">,</span> <span class="s2">"Labrador Retriever"</span><span class="p">)</span>
+<span class="n">cat1</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">(</span><span class="s2">"Fluffy"</span><span class="p">,</span> <span class="s2">"Persian"</span><span class="p">)</span>
+<span class="n">cat2</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">(</span><span class="s2">"Whiskers"</span><span class="p">,</span> <span class="s2">"Siamese"</span><span class="p">)</span>
+<span class="n">parrot1</span> <span class="o">=</span> <span class="n">Parrot</span><span class="p">(</span><span class="s2">"Polly"</span><span class="p">,</span> <span class="s2">"African Grey"</span><span class="p">)</span>
+<span class="n">horse1</span> <span class="o">=</span> <span class="n">Horse</span><span class="p">(</span><span class="s2">"Thunder"</span><span class="p">,</span> <span class="s2">"Mustang"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dog1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">dog1</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
+<span class="n">dog1</span><span class="o">.</span><span class="n">make_sound</span><span class="p">()</span>
+<span class="n">cat2</span><span class="o">.</span><span class="n">make_sound</span><span class="p">()</span>
+<span class="n">parrot1</span><span class="o">.</span><span class="n">make_sound</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">horse1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">horse1</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Fido Dog
+Woof!
+Meow!
+Polly want a cracker!
+Thunder Horse
 </pre>
 </div>
 </div>

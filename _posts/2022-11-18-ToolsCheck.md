@@ -1,6 +1,7 @@
 ---
 toc: true
 layout: post
+comments: true
 description: Evidence of my tools working in VSCode
 categories: [Markdown, Week 13]
 title: Trimester 2 Tools Check

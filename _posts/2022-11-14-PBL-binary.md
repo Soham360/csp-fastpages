@@ -1,6 +1,7 @@
 ---
 title: Binary Math
 layout: default
+comments: true
 description: A Binary Math illustrative application using HTML, Liquid, and JavaScript.
 permalink: /frontend/binary
 image: /images/binary.png

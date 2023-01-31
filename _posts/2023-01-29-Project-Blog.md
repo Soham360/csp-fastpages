@@ -1,6 +1,6 @@
 ---
 toc: true
-comments: false
+comments: true
 title: Project Blog
 layout: post
 description: My Project Blog for APCSP Trimester 2

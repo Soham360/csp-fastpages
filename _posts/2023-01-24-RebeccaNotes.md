@@ -1,6 +1,6 @@
 ---
 toc: true
-comments: false
+comments: true
 title: 1/24/23 Tutorial Notes
 layout: post
 description: My Notes from the tutorial on 1/24/23

@@ -53,10 +53,16 @@ Creative Commons, Open Source are free terminologies!  However, businesses will 
 
 # Blog Post Reflection
 1. When you create a GitHub repository it requests a license type.  Review the license types in relationship to this Tech Talk and make some notes in your personal blog.
-    - 
-    - 
-    - 
+    - MIT License
+        - The software can be utilized, copied, altered, and distributed with permission.
+        - There are limited restrictions on the software's usage, enabling it to be employed in both commercial and non-commercial endeavors.
+        - The license permits anyone to use, modify, and distribute the software for any purpose, including commercial purposes, as long as the original copyright and license notifications are maintained.
+    - GPL License
+        - Users of the software are granted the liberty to utilize, modify, and distribute it for any purpose, either without charge or for a fee.
+        - The source code of the software must be provided to anyone who obtains a copy of it.
+        - There is no discrimination in the use and distribution of the software.
 2. In your blog, summarize the discussions and personal analysis on Software Licenses/Options, Digital Rights, and other Legal and Ethical thoughts from this College Board topic.
+    - 
     - 
     - 
     - 

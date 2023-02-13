@@ -62,8 +62,12 @@ Creative Commons, Open Source are free terminologies!  However, businesses will 
         - The source code of the software must be provided to anyone who obtains a copy of it.
         - There is no discrimination in the use and distribution of the software.
 2. In your blog, summarize the discussions and personal analysis on Software Licenses/Options, Digital Rights, and other Legal and Ethical thoughts from this College Board topic.
-    - 
-    - 
-    - 
-    - 
+    - Software licenses establish the guidelines and rules for the utilization, alteration, and distribution of software. Consideration of digital rights, such as privacy and intellectual property rights, is crucial in addressing ethical considerations. For instance, in the music industry, licensing prevents music piracy and ensures artists receive credit for their work.
+    - This is significant for software developers as it gives them control over their creations and safeguards their rights to prevent others from misappropriating their data.
+    - The intersection of software licenses, digital rights, and legal and ethical considerations is a complex and multifaceted topic that impacts the creation, distribution, and use of software.
 3. Make a license for your personal (blog) and Team repositories for the CPT project.  Be sure to have a license for both Team GitHub repositories (frontend/backend).  Document license(s) you picked and why.  FYI, frontend, since it is built on GitHub pages may come with a license and restrictions.  Document in blog how team made license choice and process of update.
+    - I chose to use the MIT License for my personal fastpages because it allows for greater flexibility in the use of the software. It is easier to distribute code, which can be beneficial to other users. I chose the GPL License for the group repositories because it forces users who obtain a copy of it to provide the source code of the software.
+
+[My Fastpages License (MIT License)](https://github.com/Soham360/csp-fastpages/blob/master/LICENSE)
+[Group Flask Repository (GPL License)]()
+[Group Github Pages Repository (GPL License)](https://github.com/tanayp327/reciPies/blob/gh-pages/LICENSE)

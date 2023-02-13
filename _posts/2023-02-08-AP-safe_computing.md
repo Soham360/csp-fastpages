@@ -35,9 +35,18 @@ As we create a Web Site and post information we are adding to the Searchable PII
 * After a Virus or being compromised by Phishing it is advised to review all of you PII vulnerabilities.
 
 ## Blog Post Reflection:
-1. Describe PII you have seen on project in CompSci Principles.   
-1. What are your feelings about PII and your personal exposure?
-1. Describe good and bad passwords?  What is another step that is used to assist in authentication.
-1. Try to describe Symmetric and Asymmetric encryption.  
-1. Provide an example of encryption we used in AWS deployment.
-1. Describe a phishing scheme you have learned about ***the hard way***.  Describe some other phishing techniques.
+1. Describe PII you have seen on project in CompSci Principles.
+    - Projects that include PII on a project in CSP is seen on the login page. When people login to a site on our website, their information includes their name and their email.
+2. What are your feelings about PII and your personal exposure?
+    - I think PIIs have the potential to be dangerous because people are able to stalk you online and I don’t want to be stalked. However, PII’s are necessary for login and user experience so it is important to be sure that the information you are giving is to a secure website where your information will not be stolen.
+3. Describe good and bad passwords?  What is another step that is used to assist in authentication.
+    - A good password is one that can not be guessed by other people and does not include any personal information.
+    - A bad password is 1234567890 or something that can be easily guessed.
+4. Try to describe Symmetric and Asymmetric encryption.
+    - Symmetric Encryption: Method of encryption where the same key is used for both encryption and decryption; is fast and efficient (SECRET KEY)
+    - Asymmetric Encryption: encryption that uses two different keys for encryption and decryption. The public key, is used for encrypting the data and shared widely, and the private key, is used for decrypting the data and must be kept confidential.
+5. Provide an example of encryption we used in AWS deployment.
+    - AES-256 encryption
+6. Describe a phishing scheme you have learned about ***the hard way***.  Describe some other phishing techniques.
+    - A phishing scheme I seen recently is where an unknown number texts you about a guaranteed way to make a lot of money using cryptocurrencies and asks you to click the link they have included. They say this link adds you to a giveaway where the winner gets to know the secret method to make the money. In reality the link just steals your information and the giveaway is fake.
+    - Other phishing include malicious websites, voice mail messages, or email.

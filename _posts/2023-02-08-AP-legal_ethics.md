@@ -2,7 +2,7 @@
 toc: true
 comments: true
 title: Big Idea 5.5 Legal and Ethical Concerns
-layout: post
+layout: base
 description: This tech talk discusses legal and ethics in computing
 categories: [Week 22]
 ---

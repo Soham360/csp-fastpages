@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: base
+layout: post
 description: Week 8 Notes
 categories: [Markdown, Week 8, Collegeboard]
 title: 4.1 Collegeboard Notes

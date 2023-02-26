@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: base
+layout: post
 description: A minimal example of using markdown with fastpages.
 categories: [Markdown]
 title: An Example Markdown Post

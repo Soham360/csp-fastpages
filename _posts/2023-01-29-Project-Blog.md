@@ -2,7 +2,7 @@
 toc: true
 comments: true
 title: Project Blog
-layout: base
+layout: post
 description: My Project Blog for APCSP Trimester 2
 categories: [Week 20]
 ---

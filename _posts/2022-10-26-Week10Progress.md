@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: base
+layout: post
 description: Progress on Flask WebPage Week 10
 categories: [Markdown, Week 10]
 title: Week 10 Flask Progress

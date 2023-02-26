@@ -2,7 +2,7 @@
 toc: true
 comments: true
 title: Big Idea 5.4 Crowdsourcing
-layout: base
+layout: post
 description: This tech talk discusses crowdsourcing
 categories: [Week 21]
 ---

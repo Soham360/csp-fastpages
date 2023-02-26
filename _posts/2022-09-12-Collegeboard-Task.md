@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: base
+layout: post
 description: This is my Collegeboard Task. More will be added as the weeks go by.
 categories: [Markdown, Week 3]
 title: Collegeboard Task

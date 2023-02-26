@@ -2,7 +2,7 @@
 toc: true
 comments: true
 title: 1/24/23 Tutorial Notes
-layout: base
+layout: post
 description: My Notes from the tutorial on 1/24/23
 categories: [Week 20]
 ---

@@ -2,7 +2,7 @@
 toc: true
 comments: true
 title: Big Idea 5.3 Computing Bias
-layout: base
+layout: post
 description: This tech talk discusses bias in computing
 categories: [Week 21]
 ---

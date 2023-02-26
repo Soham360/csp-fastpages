@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: base
+layout: post
 description: Note on Collegeboard videos on Collaboration
 categories: [Markdown, Week 4]
 title: Collegeboard Collaboration Notes

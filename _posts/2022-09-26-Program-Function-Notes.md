@@ -2,7 +2,7 @@
 toc: true
 comments: true
 title: Unit 1.2 Program Function and Purpose Notes
-layout: base
+layout: post
 description: These are my notes on the program purpose, Collegeboard Unit 1.2
 categories: [Week 5, Collegeboard]
 ---

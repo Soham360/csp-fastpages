@@ -1,0 +1,27 @@
+---
+toc: true
+comments: true
+title: MCQ3 Corrections and Reflection
+layout: post
+description: My Corrections and Reflection after taking the Collegeboard MCQ3 Test
+categories: [Week 24]
+---
+
+# My Score
+![]({{ site.baseurl }}/images/QuizResults3.png "MCQ3 Results")
+
+
+# MCQ3 Corrections
+![]({{ site.baseurl }}/images/Question21.png "Question 21")
+For this question, you were supposed to determine if the programmer's conclusion that their program works as intended was correct. I believed that it was correct but unfortunately, I was wrong. I thought Option A was correct because 0+1+4+5=10 and I thought the program was just adding all of the numbers in the list together. The program was actually setting the starting value to the first value in the list and then adding all of the numbers together. This means the first number was added twice and this is incorrect. This means the correct answer is Option C because if the test case was [9, 1, 4, 5], the program would display 28 but the correct sum would be 19.
+
+![]({{ site.baseurl }}/images/Question23.png "Question 23")
+
+
+![]({{ site.baseurl }}/images/Question48.png "Question 48")
+
+
+![]({{ site.baseurl }}/images/Question49.png "Question 49")
+
+
+# MCQ3 Reflection

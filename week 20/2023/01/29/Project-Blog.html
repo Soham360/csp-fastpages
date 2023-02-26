@@ -70,36 +70,81 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <h1 id="overview">Overview</h1>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Project Blog</h1><p class="page-description">My Project Blog for APCSP Trimester 2</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-01-29T00:00:00-06:00" itemprop="datePublished">
+        Jan 29, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/csp-fastpages/categories/#Week 20">Week 20</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#overview">Overview</a></li>
+<li class="toc-entry toc-h1"><a href="#purpose-and-function">Purpose and Function</a></li>
+<li class="toc-entry toc-h1"><a href="#data-abstraction">Data Abstraction</a></li>
+<li class="toc-entry toc-h1"><a href="#managing-complexity">Managing Complexity</a></li>
+<li class="toc-entry toc-h1"><a href="#procedural-abstraction">Procedural Abstraction</a></li>
+<li class="toc-entry toc-h1"><a href="#algorithmic-implementation">Algorithmic Implementation</a></li>
+<li class="toc-entry toc-h1"><a href="#testing">Testing</a></li>
+<li class="toc-entry toc-h1"><a href="#create-performance-task">Create Performance Task</a></li>
+<li class="toc-entry toc-h1"><a href="#code-plan">Code Plan</a></li>
+<li class="toc-entry toc-h1"><a href="#video-plan">Video Plan</a></li>
+</ul><h1 id="overview">
+<a class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h1>
 <p>My job in Team ReciPies is to create a place where users can add reviews on the recipes. This will probably be a place to rate the recipe out of 5 stars and also write a comment about the recipe.</p>
 
-<h1 id="purpose-and-function">Purpose and Function</h1>
+<h1 id="purpose-and-function">
+<a class="anchor" href="#purpose-and-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>Purpose and Function</h1>
 <p>Purpose: Show users which recipes are the best, worst, easy to follow, hard to follow, etc.
 Function: Below the recipe, there will be a text box along with 5 gray stars. You would write your review in the text box and click the stars to give it a rating. Once the stars have been clicked, they will turn gold. This will be saved in the database that contains the recipe.</p>
 
-<h1 id="data-abstraction">Data Abstraction</h1>
+<h1 id="data-abstraction">
+<a class="anchor" href="#data-abstraction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Abstraction</h1>
 <p>The rating along with the comment will be sent through a JSON file. The information will likely be stored using key/value pairs.</p>
 
-<h1 id="managing-complexity">Managing Complexity</h1>
+<h1 id="managing-complexity">
+<a class="anchor" href="#managing-complexity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Managing Complexity</h1>
 <p>Using key/value pairs to store the rating and the comment will be managing complexity because the rating could be stored as the value while the comment is stored as the key.</p>
 
-<h1 id="procedural-abstraction">Procedural Abstraction</h1>
+<h1 id="procedural-abstraction">
+<a class="anchor" href="#procedural-abstraction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Procedural Abstraction</h1>
 <p>The process for submitting a review will be fairly simple. First you will have to be logged in. Then, you would have to write a review. Next, you would have to leave a rating out of 5 stars. Finally, the review will be sent to the admins (us) where we can approve of it or deny it. This final step will be automated in the future.</p>
 
-<h1 id="algorithmic-implementation">Algorithmic Implementation</h1>
+<h1 id="algorithmic-implementation">
+<a class="anchor" href="#algorithmic-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithmic Implementation</h1>
 <p>Sequencing will be used when displaying the all of the recipes to sort them from highest rating to lowest rating. This is important because it allows users to see which recipes are good and which recipes are bad.</p>
 
-<h1 id="testing">Testing</h1>
+<h1 id="testing">
+<a class="anchor" href="#testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing</h1>
 <p>I’ll have two tests to see the functionality of my feature.</p>
 <ol>
   <li>I’ll test to see if when I submit my review, it shows up in the database or the list.</li>
   <li>I’ll test to see if I’m able to view reviews sent from one device on another device.</li>
 </ol>
 
-<h1 id="create-performance-task">Create Performance Task</h1>
+<h1 id="create-performance-task">
+<a class="anchor" href="#create-performance-task" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create Performance Task</h1>
 <p>Each peron in our group is creating a feature for our recipe website so each person’s CPT will be about their feature. All 4 features will work together and be incorporated into a larger N@TM project which is a website that suggests recipes and allows a user to filter through them and leave reviews.</p>
 
-<h1 id="code-plan">Code Plan</h1>
+<h1 id="code-plan">
+<a class="anchor" href="#code-plan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Plan</h1>
 <p>My recipe review feature is fairly complex and will be coded with HTML/CSS/Python or JavaScript</p>
 <ol>
   <li>The user logs into the website</li>
@@ -110,8 +155,20 @@ Function: Below the recipe, there will be a text box along with 5 gray stars. Yo
   <li>They submit and after the comment has been approved, it will be visible</li>
 </ol>
 
-<h1 id="video-plan">Video Plan</h1>
+<h1 id="video-plan">
+<a class="anchor" href="#video-plan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Video Plan</h1>
 <p>For the video, I plan to scroll through our catalogue of recipes and select one. Then, I’ll show other user’s reviews for that recipe. Finally, I would leave a review and show it being visible even after reloading the tab.</p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Soham360/csp-fastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/csp-fastpages/week%2020/2023/01/29/Project-Blog.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">

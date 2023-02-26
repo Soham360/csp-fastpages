@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 comments: true
 description: This is a blog post about Night At The Museum
 categories: [Markdown, Week 11]

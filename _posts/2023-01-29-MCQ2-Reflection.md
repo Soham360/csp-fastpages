@@ -2,7 +2,7 @@
 toc: true
 comments: true
 title: MCQ2 Corrections and Reflection
-layout: post
+layout: base
 description: My Corrections and Reflection after taking the Collegeboard MCQ2 Test
 categories: [Week 20]
 ---

@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 comments: true
 description: Evidence of my tools working in VSCode
 categories: [Markdown, Week 13]

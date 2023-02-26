@@ -1,7 +1,7 @@
 ---
 toc: true
 comments: true
-layout: post
+layout: base
 description: Extra Credit Seminar 12/13/22
 categories: [Markdown, Week 15]
 title: Extra Credit Seminar

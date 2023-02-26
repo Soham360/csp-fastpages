@@ -2,7 +2,7 @@
 toc: true
 comments: true
 title: Big Idea 5.6 Safe Computing
-layout: post
+layout: base
 description: This tech talk discusses safe computing
 categories: [Week 22]
 ---

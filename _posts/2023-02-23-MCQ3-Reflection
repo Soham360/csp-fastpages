@@ -16,10 +16,10 @@ categories: [Week 24]
 For this question, you were supposed to determine if the programmer's conclusion that their program works as intended was correct. I believed that it was correct but unfortunately, I was wrong. I thought Option A was correct because 0+1+4+5=10 and I thought the program was just adding all of the numbers in the list together. The program was actually setting the starting value to the first value in the list and then adding all of the numbers together. This means the first number was added twice and this is incorrect. This means the correct answer is Option C because if the test case was [9, 1, 4, 5], the program would display 28 but the correct sum would be 19.
 
 ![]({{ site.baseurl }}/images/Question23.png "Question 23")
-
+For this question, you were supposed to explain why a computer program got 0 when adding 5 and 3. I wasn't sure how to attempt this question so I just guessed Option D. What happened was when you convert 3 to binary, you get 011 and when you convert 5 to binary, you get 101. When you add them, you get 8 which is expressed as 1000 in binary. However the program can only handle the last 3 bits, 000. 000 in binary is equal to 0 and this is how the error occurred. There were too many bits for the program to handle and there was an "overflow of integers". This is why the answer is Option A.
 
 ![]({{ site.baseurl }}/images/Question48.png "Question 48")
-
+For this question, you were supposed to select 2 answers. I correctly selected Option A but incorrectly selected Option C. I thought, because a simulation has the same environment every time it is run, it would also have the same output every time. This is incorrect. The correct answer was Option B
 
 ![]({{ site.baseurl }}/images/Question49.png "Question 49")
 

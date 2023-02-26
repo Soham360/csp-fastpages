@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 description: My goals for APCSP 2022-2023
 comments: true
 categories: [Markdown, Week 0]

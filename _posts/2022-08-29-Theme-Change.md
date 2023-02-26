@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 description: Post with screenshots for the HTML Hacks
 categories: [Markdown, Week 2]
 title: HTML Screenshot Hacks

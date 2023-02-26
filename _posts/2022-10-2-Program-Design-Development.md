@@ -2,7 +2,7 @@
 toc: true
 comments: true
 title: Program Design and Development Notes
-layout: post
+layout: base
 description: These are my notes on the program purpose, Collegeboard Unit 1.3
 categories: [Week 6, Collegeboard]
 ---

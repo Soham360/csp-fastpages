@@ -2,10 +2,11 @@
 toc: true
 layout: post
 comments: true
-description: This is a blog post about Night At The Museum
+description: This is a blog post about Night At The Museum for Trimester 1
 categories: [Markdown, Week 11]
-title: Night At The Museum Post
+title: Night At The Museum Trimester 1
 ---
+
 ## Night At The Museum
 Night and the Museum usually takes place towards the end of the trimester. This is an even in which students in art and craft classes can show off their work and final projects. The classes showing off their work during this event include 3D Animation, AP Studio Art, Drawing and Painting, Ceramics, APCSP, APCSA, and more. In the Computer Science classes, teams present their final project, while in Drawing and Painting, students show off their best art piece. 3D Animation students also presented their digital artworks while Ceramics students presented their sculptures. I thought this event was really fun because I could see what my friends did in their classes while they could see what I did in mine. A lot of the projects were really creative and I was very impressed.
 

@@ -47,7 +47,7 @@ This program manages complexity by adding the input to a table so it is easier t
 ![]({{ site.baseurl }}/images/usingscript.png)
 
 ### 3.d.ii.
-
+The function is a function that reads the users input and adds it to a database.
 
 ### 3.d.iii.
-
+The function is then called so it executes and reads the user's input and adds it to a database.

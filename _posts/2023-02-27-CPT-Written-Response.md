@@ -30,30 +30,21 @@ The inputs of the program are the rating, the comment, and the user's name. The 
 ![]({{ site.baseurl }}/images/getrequest.png)
 
 ### 3.b.iii.
-The variable im using to represent this list is "body". "body" refers to the table and its contents. Later in the image above, "body"
+The variable im using to represent this list is "body". "body" refers to the table and its contents. Later in the image above, "body" is POSTed to the database.
 
 ### 3.b.iv.
-
-
-### 3.b.v.
-
+There are 4 variables in this code. They are uid which is the username, rname which is the recipe name, comment is the short review of the recipe, and rating which is a rating out of 10.
 
 ## 3c.
 ### 3.c.i.
-
+![]({{ site.baseurl }}/images/managingcomplexity.png)
 
 ### 3.c.ii.
-
-
-### 3.c.iii.
-
-
-### 3.c.iv.
-
+This program manages complexity by adding the input to a table so it is easier to read and understand. This table also includes an "Edit" and a "Delete" button to account for CRUD.
 
 ## 3d.
 ### 3.d.i.
-
+![]({{ site.baseurl }}/images/usingscript.png)
 
 ### 3.d.ii.
 

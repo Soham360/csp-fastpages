@@ -13,14 +13,12 @@
 <link rel="canonical" href="https://soham360.github.io/csp-fastpages/2023/03/09/AP-unit2-3.html" />
 <meta property="og:url" content="https://soham360.github.io/csp-fastpages/2023/03/09/AP-unit2-3.html" />
 <meta property="og:site_name" content="Soham Kamat" />
-<meta property="og:image" content="https://soham360.github.io/csp-fastpages/images/python.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-03-09T00:00:00-06:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://soham360.github.io/csp-fastpages/images/python.png" />
+<meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Unit 2.3 Extracting Information from Data, Pandas" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-09T00:00:00-06:00","datePublished":"2023-03-09T00:00:00-06:00","description":"Data connections, trends, and correlation. Pandas is introduced as it could be valuable for PBL, data validation, as well as understanding College Board Topics.","headline":"Unit 2.3 Extracting Information from Data, Pandas","image":"https://soham360.github.io/csp-fastpages/images/python.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soham360.github.io/csp-fastpages/2023/03/09/AP-unit2-3.html"},"url":"https://soham360.github.io/csp-fastpages/2023/03/09/AP-unit2-3.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-09T00:00:00-06:00","datePublished":"2023-03-09T00:00:00-06:00","description":"Data connections, trends, and correlation. Pandas is introduced as it could be valuable for PBL, data validation, as well as understanding College Board Topics.","headline":"Unit 2.3 Extracting Information from Data, Pandas","mainEntityOfPage":{"@type":"WebPage","@id":"https://soham360.github.io/csp-fastpages/2023/03/09/AP-unit2-3.html"},"url":"https://soham360.github.io/csp-fastpages/2023/03/09/AP-unit2-3.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/csp-fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://soham360.github.io/csp-fastpages/feed.xml" title="Soham Kamat" /><link rel="shortcut icon" type="image/x-icon" href="/csp-fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -81,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      15 min read
     
 </span></p>
 
@@ -197,7 +195,7 @@ window.onload = wrap_img;
 <li>
 <a href="https://pandas.pydata.org/docs/getting_started/index.html">From Pandas Overview</a> -- When working with tabular data, such as data stored in spreadsheets or databases, pandas is the right tool for you. pandas will help you to explore, clean, and process your data. In pandas, a data table is called a DataFrame.</li>
 </ul>
-<p><img src="/myfiles/images/copied_from_nb/images/table_dataframe.png" alt="DataFrame"></p>
+<p><img src="https://github.com/Soham360/csp-fastpages/blob/master/images/table_dataframe.png?raw=true" alt="DataFrame"></p>
 
 </div>
 </div>
@@ -255,6 +253,32 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>   Student ID Year in School   GPA
+0         123             12  3.57
+1         246             10  4.00
+2         578             12  2.78
+3         469             11  3.45
+4         324         Junior  4.75
+5         313             20  3.33
+6         145             12  2.95
+7         167             10  3.90
+8         235      9th Grade  3.15
+9         nil              9  2.80
+10        469             11  3.45
+11        456             10  2.75
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -297,6 +321,46 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     GPA
+0   3.57
+1   4.00
+2   2.78
+3   3.45
+4   4.75
+5   3.33
+6   2.95
+7   3.90
+8   3.15
+9   2.80
+10  3.45
+11  2.75
+
+Student ID  GPA
+       123 3.57
+       246 4.00
+       578 2.78
+       469 3.45
+       324 4.75
+       313 3.33
+       145 2.95
+       167 3.90
+       235 3.15
+       nil 2.80
+       469 3.45
+       456 2.75
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -328,6 +392,46 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>   Student ID Year in School   GPA
+11        456             10  2.75
+2         578             12  2.78
+9         nil              9  2.80
+6         145             12  2.95
+8         235      9th Grade  3.15
+5         313             20  3.33
+3         469             11  3.45
+10        469             11  3.45
+0         123             12  3.57
+7         167             10  3.90
+1         246             10  4.00
+4         324         Junior  4.75
+
+   Student ID Year in School   GPA
+4         324         Junior  4.75
+1         246             10  4.00
+7         167             10  3.90
+0         123             12  3.57
+3         469             11  3.45
+10        469             11  3.45
+5         313             20  3.33
+8         235      9th Grade  3.15
+6         145             12  2.95
+9         nil              9  2.80
+2         578             12  2.78
+11        456             10  2.75
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -351,6 +455,28 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>   Student ID Year in School   GPA
+0         123             12  3.57
+1         246             10  4.00
+3         469             11  3.45
+4         324         Junior  4.75
+5         313             20  3.33
+7         167             10  3.90
+8         235      9th Grade  3.15
+10        469             11  3.45
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -379,6 +505,24 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>  Student ID Year in School   GPA
+4        324         Junior  4.75
+
+   Student ID Year in School   GPA
+11        456             10  2.75
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -416,8 +560,8 @@ window.onload = wrap_img;
 
 <span class="c1">#the data can be stored as a python dictionary</span>
 <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">"calories"</span><span class="p">:</span> <span class="p">[</span><span class="mi">420</span><span class="p">,</span> <span class="mi">380</span><span class="p">,</span> <span class="mi">390</span><span class="p">],</span>
-  <span class="s2">"duration"</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">45</span><span class="p">]</span>
+  <span class="s2">"calories"</span><span class="p">:</span> <span class="p">[</span><span class="mi">420</span><span class="p">,</span> <span class="mi">380</span><span class="p">,</span> <span class="mi">390</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">697</span><span class="p">],</span>
+  <span class="s2">"duration"</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
 <span class="p">}</span>
 <span class="c1">#stores the data in a data frame</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"-------------Dict_to_DF------------------"</span><span class="p">)</span>
@@ -427,11 +571,38 @@ window.onload = wrap_img;
 <span class="nb">print</span><span class="p">(</span><span class="s2">"----------Dict_to_DF_labels--------------"</span><span class="p">)</span>
 
 <span class="c1">#or with the index argument, you can label rows.</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"day1"</span><span class="p">,</span> <span class="s2">"day2"</span><span class="p">,</span> <span class="s2">"day3"</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"day1"</span><span class="p">,</span> <span class="s2">"day2"</span><span class="p">,</span> <span class="s2">"day3"</span><span class="p">,</span> <span class="s2">"day4"</span><span class="p">,</span> <span class="s2">"day5"</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>-------------Dict_to_DF------------------
+   calories  duration
+0       420        50
+1       380        40
+2       390        45
+3       500        98
+4       697        35
+----------Dict_to_DF_labels--------------
+      calories  duration
+day1       420        50
+day2       380        40
+day3       390        45
+day4       500        98
+day5       697        35
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -467,6 +638,27 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>-------Examine Selected Rows---------
+      calories  duration
+day1       420        50
+day3       390        45
+--------Examine Single Row-----------
+calories    420
+duration     50
+Name: day1, dtype: int64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -490,6 +682,29 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
+Index: 3 entries, day1 to day3
+Data columns (total 2 columns):
+ #   Column    Non-Null Count  Dtype
+---  ------    --------------  -----
+ 0   calories  3 non-null      int64
+ 1   duration  3 non-null      int64
+dtypes: int64(2)
+memory usage: 180.0+ bytes
+None
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -527,6 +742,43 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>--Duration Top 10---------
+     Duration  Pulse  Maxpulse  Calories
+69        300    108       143    1500.2
+79        270    100       131    1729.0
+109       210    137       184    1860.4
+60        210    108       160    1376.0
+106       180     90       120     800.3
+90        180    101       127     600.1
+65        180     90       130     800.4
+61        160    110       137    1034.4
+62        160    109       135     853.0
+67        150    107       130     816.0
+--Duration Bottom 10------
+     Duration  Pulse  Maxpulse  Calories
+68         20    106       136     110.4
+100        20     95       112      77.7
+89         20     83       107      50.3
+135        20    136       156     189.0
+94         20    150       171     127.4
+95         20    151       168     229.4
+139        20    141       162     222.4
+64         20    110       130     131.4
+112        15    124       139     124.2
+93         15     80       100      50.5
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -575,6 +827,26 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>  country_name       cases     deaths
+0          USA  82,649,779  1,018,316
+1        India  43,057,545    522,193
+2       Brazil  30,345,654    662,663
+3       France  28,244,977    145,020
+4      Germany  24,109,433    134,624
+5           UK  21,933,206    173,352
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -701,6 +973,51 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Titanic Data
+Index(['survived', 'pclass', 'sex', 'age', 'sibsp', 'parch', 'fare',
+       'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town',
+       'alive', 'alone'],
+      dtype='object')
+     survived  pclass     sex   age  sibsp  parch   class     fare  \
+0           0       3    male  22.0      1      0   Third   7.2500   
+1           1       1  female  38.0      1      0   First  71.2833   
+2           1       3  female  26.0      0      0   Third   7.9250   
+3           1       1  female  35.0      1      0   First  53.1000   
+4           0       3    male  35.0      0      0   Third   8.0500   
+..        ...     ...     ...   ...    ...    ...     ...      ...   
+886         0       2    male  27.0      0      0  Second  13.0000   
+887         1       1  female  19.0      0      0   First  30.0000   
+888         0       3  female   NaN      1      2   Third  23.4500   
+889         1       1    male  26.0      0      0   First  30.0000   
+890         0       3    male  32.0      0      0   Third   7.7500   
+
+     embark_town  
+0    Southampton  
+1      Cherbourg  
+2    Southampton  
+3    Southampton  
+4    Southampton  
+..           ...  
+886  Southampton  
+887  Southampton  
+888  Southampton  
+889    Cherbourg  
+890   Queenstown  
+
+[891 rows x 9 columns]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -744,6 +1061,46 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     survived  pclass  sex   age  sibsp  parch      fare  alone  embarked_C  \
+0           0       3    1  22.0      1      0    7.2500      0         0.0   
+1           1       1    0  38.0      1      0   71.2833      0         1.0   
+2           1       3    0  26.0      0      0    7.9250      1         0.0   
+3           1       1    0  35.0      1      0   53.1000      0         0.0   
+4           0       3    1  35.0      0      0    8.0500      1         0.0   
+..        ...     ...  ...   ...    ...    ...       ...    ...         ...   
+705         0       2    1  39.0      0      0   26.0000      1         0.0   
+706         1       2    0  45.0      0      0   13.5000      1         0.0   
+707         1       1    1  42.0      0      0   26.2875      1         0.0   
+708         1       1    0  22.0      0      0  151.5500      1         0.0   
+710         1       1    0  24.0      0      0   49.5042      1         1.0   
+
+     embarked_Q  embarked_S  
+0           0.0         1.0  
+1           0.0         0.0  
+2           0.0         1.0  
+3           0.0         1.0  
+4           0.0         1.0  
+..          ...         ...  
+705         0.0         1.0  
+706         0.0         1.0  
+707         1.0         0.0  
+708         0.0         1.0  
+710         0.0         0.0  
+
+[564 rows x 11 columns]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -794,6 +1151,31 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>survived       0.000000
+pclass         2.464072
+sex            0.844311
+age           31.073353
+sibsp          0.562874
+parch          0.398204
+fare          24.835902
+alone          0.616766
+embarked_C     0.185629
+embarked_Q     0.038922
+embarked_S     0.775449
+dtype: float64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -818,6 +1200,31 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>survived       1.000000
+pclass         1.878261
+sex            0.326087
+age           28.481522
+sibsp          0.504348
+parch          0.508696
+fare          50.188806
+alone          0.456522
+embarked_C     0.152174
+embarked_Q     0.034783
+embarked_S     0.813043
+dtype: float64
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -846,6 +1253,43 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>survived        1.0000
+pclass          3.0000
+sex             1.0000
+age            80.0000
+sibsp           4.0000
+parch           5.0000
+fare          512.3292
+alone           1.0000
+embarked_C      1.0000
+embarked_Q      1.0000
+embarked_S      1.0000
+dtype: float64
+survived      1.00
+pclass        1.00
+sex           0.00
+age           0.75
+sibsp         0.00
+parch         0.00
+fare          0.00
+alone         0.00
+embarked_C    0.00
+embarked_Q    0.00
+embarked_S    0.00
+dtype: float64
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -909,6 +1353,36 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>DecisionTreeClassifier Accuracy: 0.7588235294117647
+LogisticRegression Accuracy: 0.788235294117647
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/usr/local/lib/python3.8/dist-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 

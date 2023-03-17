@@ -4,6 +4,35 @@ search_exclude: true
 image: images/logo.png
 ---
 
+<html>
+
+<body>
+
+  <div style="display: flex; flex-direction: column; width: 100%; justify-content: center; align-items: center;">
+    <h1 id="typewriter" style="text-align: center;"/>
+  </div>
+
+</body>
+
+<script>
+  var i = 0;
+  var txt = "Welcome to Soham's blog! 👑😎🤣😂😎🤩🫡🥱😛😜😝🤯🤠🤠🤠";
+
+  var speed = 150;
+  function typeWriter(x) {
+
+    if (i <= txt.length) {
+      document.getElementById("typewriter").innerHTML = txt.substring(0, i)
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+
+  }
+
+  typeWriter();
+
+</script>
+
 ### This site was made by Soham Kamat as a part of his APCSP class
 
 ![]({{ site.baseurl }}/images/indexlogo.png "index's logo")

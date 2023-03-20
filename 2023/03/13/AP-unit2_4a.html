@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      9 min read
     
 </span></p>
 
@@ -424,9 +424,9 @@ window.onload = wrap_img;
 </blockquote>
 <ul>
 <li>Comment on how these work?<ol>
-<li>Create All Tables from db Object</li>
-<li>User Object Constructors</li>
-<li>Try / Except </li>
+<li>Create All Tables from db Object - creates the tables using the information in the object</li>
+<li>User Object Constructors - Sets the restrictions for what the info within the object should be / how it should be formatted</li>
+<li>Try / Except - sets a procedure for what to do in case of an error</li>
 </ol>
 </li>
 </ul>
@@ -483,12 +483,12 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Created new uid toby
-Created new uid niko
-Created new uid lex
-Created new uid whit
-Created new uid indi
-Created new uid raven
+<pre>Records exist uid toby, or error.
+Records exist uid niko, or error.
+Records exist uid lex, or error.
+Records exist uid whit, or error.
+Records exist uid indi, or error.
+Records exist uid raven, or error.
 </pre>
 </div>
 </div>
@@ -510,8 +510,8 @@ Created new uid raven
 </blockquote>
 <ul>
 <li>Comment on purpose of following<ol>
-<li>User.query.filter_by</li>
-<li>user.password</li>
+<li>User.query.filter_by - filters by whatever the set filter is</li>
+<li>user.password - cross-references with the currently set password</li>
 </ol>
 </li>
 </ul>
@@ -562,10 +562,10 @@ Created new uid raven
 </blockquote>
 <ul>
 <li>Comment on purpose of following<ol>
-<li>user.find_by_uid() and try/except</li>
-<li>user = User(...)</li>
-<li>user.dob and try/except</li>
-<li>user.create() and try/except</li>
+<li>user.find_by_uid() and try/except - searches for a user by the uid is also set to handle error cases.</li>
+<li>user = User(...) - makes a new user object with the following properties</li>
+<li>user.dob and try/except - gets the user's birthday, handles error cases in terms of misinputs</li>
+<li>user.create() and try/except - makes a new user and adds to the user object, handles error cases using try and except.</li>
 </ol>
 </li>
 </ul>
@@ -629,9 +629,8 @@ Created new uid raven
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Invalid date 1234-56-78 require YYYY-mm-dd, date defaulted to 03-15-2023
-Created
- {'id': 7, 'name': 'tester', 'uid': 'test', 'dob': '03-15-2023', 'age': 0}
+<pre>Found
+ {'id': 9, 'name': 'soham', 'uid': 'soham', 'dob': '03-09-2007', 'age': 16}
 </pre>
 </div>
 </div>
@@ -653,8 +652,8 @@ Created
 </blockquote>
 <ul>
 <li>Comment on purpose of following<ol>
-<li>User.query.all</li>
-<li>json_ready assignment, google List Comprehension</li>
+<li>User.query.all - gets all certain instances of what is searched by the user</li>
+<li>json_ready assignment, google List Comprehension - makes a data structure that is ready to be set as a json</li>
 </ol>
 </li>
 </ul>
@@ -721,7 +720,13 @@ Created
   'uid': 'raven',
   'dob': '10-21-1921',
   'age': 101},
- {'id': 7, 'name': 'tester', 'uid': 'test', 'dob': '03-15-2023', 'age': 0}]</pre>
+ {'id': 7, 'name': 'tester', 'uid': 'test', 'dob': '03-15-2023', 'age': 0},
+ {'id': 8,
+  'name': 'soham',
+  'uid': 'sohamkamat',
+  'dob': '03-09-2007',
+  'age': 16},
+ {'id': 9, 'name': 'soham', 'uid': 'soham', 'dob': '03-09-2007', 'age': 16}]</pre>
 </div>
 
 </div>

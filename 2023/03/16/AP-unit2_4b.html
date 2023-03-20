@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      7 min read
     
 </span></p>
 
@@ -164,10 +164,22 @@ window.onload = wrap_img;
 <p>Uses PRAGMA statement to read schema.</p>
 </blockquote>
 <p>Describe Schema, here is resource <a href="https://www.sqlite.org/index.html">Resource</a>- What is a database schema?</p>
+
+<pre><code>- the categories of a table
+</code></pre>
 <ul>
-<li>What is the purpose of identity Column in SQL database?</li>
-<li>What is the purpose of a primary key in SQL database?</li>
-<li>What are the Data Types in SQL table?</li>
+<li>What is the purpose of identity Column in SQL database?<ul>
+<li>makes it easier to search through and access the data</li>
+</ul>
+</li>
+<li>What is the purpose of a primary key in SQL database?<ul>
+<li>to be unique to each row</li>
+</ul>
+</li>
+<li>What are the Data Types in SQL table?<ul>
+<li>strings, floats, booleans, integers, dictionaries, lists</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -240,10 +252,19 @@ window.onload = wrap_img;
 <p>Uses SQL SELECT statement to read data</p>
 </blockquote>
 <ul>
-<li>What is a connection object?  After you google it, what do you think it does?</li>
-<li>Same for cursor object?</li>
+<li>What is a connection object? After you google it, what do you think it does?<ul>
+<li>It helps people store their personal data in a sqlite table</li>
+</ul>
+</li>
+<li>Same for cursor object?<ul>
+<li>lets you have sqlite methods</li>
+</ul>
+</li>
 <li>Look at conn object and cursor object in VSCode debugger.  What attributes are in the object?</li>
-<li>Is "results" an object?  How do you know?</li>
+<li>Is "results" an object? How do you know?<ul>
+<li>Yes it is, because it stores data</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -319,10 +340,13 @@ window.onload = wrap_img;
 <p>Uses SQL INSERT to add row</p>
 <ul>
 <li>Compare create() in both SQL lessons.  What is better or worse in the two implementations?<ul>
-<li>OOP allows </li>
+<li>In the first lesson, the create function uses object oriented programming while the second one takes a more imperative approach, In OOP , large databases stay organized while in Imperative may become difficult to navigate and add to after a certain amount of data. However, imperative is easier to understand and can therefore be easier to work with at times.</li>
 </ul>
 </li>
-<li>Explain purpose of SQL INSERT.   Is this the same as User <code>__init__</code>?</li>
+<li>Explain purpose of SQL INSERT.   Is this the same as User <code>__init__</code>?<ul>
+<li>SQL INSERT inserts data into a specified schema of the table. User init initiallizes the dataset. They are not the same thing.</li>
+</ul>
+</li>
 </ul>
 </blockquote>
 
@@ -399,9 +423,18 @@ window.onload = wrap_img;
 <blockquote>
 <p>Uses SQL UPDATE to modify password</p>
 <ul>
-<li>What does the hacked part do?</li>
-<li>Explain try/except, when would except occur?</li>
-<li>What code seems to be repeated in each of these examples to point, why is it repeated?</li>
+<li>What does the hacked part do?<ul>
+<li>Makes sure the length of the password is more than 2 characters</li>
+</ul>
+</li>
+<li>Explain try/except, when would except occur?<ul>
+<li>When the function doesn't work properly, or in this case the updated password doesn't fit the requirements.</li>
+</ul>
+</li>
+<li>What code seems to be repeated in each of these examples to point, why is it repeated?<ul>
+<li>The conn and cursor being connected to the sqlite database are defined in each file. This is because without this the database won't exist.</li>
+</ul>
+</li>
 </ul>
 </blockquote>
 
@@ -482,8 +515,14 @@ window.onload = wrap_img;
 <blockquote>
 <p>Uses a delete function to remove a user based on a user input of the id.</p>
 <ul>
-<li>Is DELETE a dangerous operation?  Why?</li>
-<li>In the print statemements, what is the "f" and what does {uid} do?</li>
+<li>Is DELETE a dangerous operation?  Why?<ul>
+<li>Yes, it is dangerous because it doesn't ask for any user validation and deletes the user without asking for confirmation.</li>
+</ul>
+</li>
+<li>In the print statemements, what is the "f" and what does {uid} do?<ul>
+<li>the f in print statements automatically converts the variables to strings.</li>
+</ul>
+</li>
 </ul>
 </blockquote>
 
@@ -543,8 +582,14 @@ window.onload = wrap_img;
 <blockquote>
 <p>CRUD and Schema interactions from one location by running menu. Observe input at the top of VSCode, observe output underneath code cell.</p>
 <ul>
-<li>Why does the menu repeat?</li>
-<li>Could you refactor this menu?  Make it work with a List?</li>
+<li>Why does the menu repeat?<ul>
+<li>Menu repeats because it's getting called several times.</li>
+</ul>
+</li>
+<li>Could you refactor this menu?  Make it work with a List?<ul>
+<li>Yes, you could but would be less efficient.</li>
+</ul>
+</li>
 </ul>
 </blockquote>
 

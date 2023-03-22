@@ -8,7 +8,7 @@ categories: [Week 27]
 ---
 
 # My Score
-![]({{ site.baseurl }}/images/BI2.png "MCQ4 Results")
+![]({{ site.baseurl }}/images/MCQ4.png "MCQ4 Results")
 
 
 # MCQ4 Corrections

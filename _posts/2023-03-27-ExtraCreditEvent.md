@@ -72,7 +72,7 @@ Multiple research experiences at CSUSM.
 ---
 
 ## End of Class STEM activity
-[Link](https://www.youtube.com/shorts/trRqq9NwZCc)
+[Video](https://www.youtube.com/shorts/trRqq9NwZCc)
 
 ---
 

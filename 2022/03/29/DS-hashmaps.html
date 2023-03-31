@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Observing hashmaps with python dictionaries" />
 <meta property="og:description" content="Observing hashmaps with python dictionaries" />
-<link rel="canonical" href="https://soham360.github.io/csp-fastpages/2023/03/29/DS-hashmaps.html" />
-<meta property="og:url" content="https://soham360.github.io/csp-fastpages/2023/03/29/DS-hashmaps.html" />
+<link rel="canonical" href="https://soham360.github.io/csp-fastpages/2022/03/29/DS-hashmaps.html" />
+<meta property="og:url" content="https://soham360.github.io/csp-fastpages/2022/03/29/DS-hashmaps.html" />
 <meta property="og:site_name" content="Soham Kamat" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-03-29T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-03-29T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-29T00:00:00-05:00","datePublished":"2023-03-29T00:00:00-05:00","description":"Observing hashmaps with python dictionaries","headline":"Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions","mainEntityOfPage":{"@type":"WebPage","@id":"https://soham360.github.io/csp-fastpages/2023/03/29/DS-hashmaps.html"},"url":"https://soham360.github.io/csp-fastpages/2023/03/29/DS-hashmaps.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-03-29T00:00:00-05:00","datePublished":"2022-03-29T00:00:00-05:00","description":"Observing hashmaps with python dictionaries","headline":"Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions","mainEntityOfPage":{"@type":"WebPage","@id":"https://soham360.github.io/csp-fastpages/2022/03/29/DS-hashmaps.html"},"url":"https://soham360.github.io/csp-fastpages/2022/03/29/DS-hashmaps.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/csp-fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://soham360.github.io/csp-fastpages/feed.xml" title="Soham Kamat" /><link rel="shortcut icon" type="image/x-icon" href="/csp-fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,8 +73,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions</h1><p class="page-description">Observing hashmaps with python dictionaries</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-29T00:00:00-05:00" itemprop="datePublished">
-        Mar 29, 2023
+    <h1 class="post-title p-name" itemprop="name headline">Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions</h1><p class="page-description">Observing hashmaps with python dictionaries</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-03-29T00:00:00-05:00" itemprop="datePublished">
+        Mar 29, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -90,24 +90,24 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-justify-center">
           <div class="px-2">
 
-    <a href="https://github.com/Soham360/csp-fastpages/tree/master/_notebooks/2023-03-29-DS-hashmaps.ipynb" role="button" target="_blank">
+    <a href="https://github.com/Soham360/csp-fastpages/tree/master/_notebooks/2022-03-29-DS-hashmaps.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/Soham360/csp-fastpages/master?filepath=_notebooks%2F2023-03-29-DS-hashmaps.ipynb" target="_blank">
+    <a href="https://mybinder.org/v2/gh/Soham360/csp-fastpages/master?filepath=_notebooks%2F2022-03-29-DS-hashmaps.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/Soham360/csp-fastpages/blob/master/_notebooks/2023-03-29-DS-hashmaps.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/Soham360/csp-fastpages/blob/master/_notebooks/2022-03-29-DS-hashmaps.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
           <div class="px-2">
-  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FSoham360%2Fcsp-fastpages%2Fblob%2Fmaster%2F_notebooks%2F2023-03-29-DS-hashmaps.ipynb" target="_blank">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FSoham360%2Fcsp-fastpages%2Fblob%2Fmaster%2F_notebooks%2F2022-03-29-DS-hashmaps.ipynb" target="_blank">
       <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
   </a>
 </div>
@@ -126,7 +126,7 @@ window.onload = wrap_img;
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2023-03-29-DS-hashmaps.ipynb
+# file to edit: _notebooks/2022-03-29-DS-hashmaps.ipynb
 -->
 
 <div class="container" id="notebook-container">
@@ -597,7 +597,13 @@ The Man
 <li>
 <p>Create a diagram or comparison illustration (Canva).</p>
 <ul>
-<li>What are the pro and cons of using this data structure? </li>
+<li>What are the pro and cons of using this data structure? 
+| Pros | Cons |
+|-|-|
+|  |  |
+|  |  |
+|  |  |
+|  |  |</li>
 <li>Dictionary vs List</li>
 </ul>
 </li>
@@ -752,7 +758,7 @@ The song at position 15 is Epic Song (feat. Soham Kamat)
 
 
 
-  </div><a class="u-url" href="/csp-fastpages/2023/03/29/DS-hashmaps.html" hidden></a>
+  </div><a class="u-url" href="/csp-fastpages/2022/03/29/DS-hashmaps.html" hidden></a>
 </article>
 
       </div>

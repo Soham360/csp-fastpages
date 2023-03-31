@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions | Soham Kamat</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Observing hashmaps with python dictionaries" />
+<meta property="og:description" content="Observing hashmaps with python dictionaries" />
+<link rel="canonical" href="https://soham360.github.io/csp-fastpages/2023/03/29/DS-hashmaps.html" />
+<meta property="og:url" content="https://soham360.github.io/csp-fastpages/2023/03/29/DS-hashmaps.html" />
+<meta property="og:site_name" content="Soham Kamat" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-29T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-29T00:00:00-05:00","datePublished":"2023-03-29T00:00:00-05:00","description":"Observing hashmaps with python dictionaries","headline":"Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions","mainEntityOfPage":{"@type":"WebPage","@id":"https://soham360.github.io/csp-fastpages/2023/03/29/DS-hashmaps.html"},"url":"https://soham360.github.io/csp-fastpages/2023/03/29/DS-hashmaps.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/csp-fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://soham360.github.io/csp-fastpages/feed.xml" title="Soham Kamat" /><link rel="shortcut icon" type="image/x-icon" href="/csp-fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/csp-fastpages/">Soham Kamat</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/csp-fastpages/CollegeBoard/">CollegeBoard</a><a class="page-link" href="/csp-fastpages/_pages/Submenu.html">Submenu</a><a class="page-link" href="/csp-fastpages/Vocabulary/">Vocabulary</a><a class="page-link" href="/csp-fastpages/about/">About Me</a><a class="page-link" href="/csp-fastpages/Notes/">Notes</a><a class="page-link" href="/csp-fastpages/search/">Search</a><a class="page-link" href="/csp-fastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions</h1><p class="page-description">Observing hashmaps with python dictionaries</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-29T00:00:00-05:00" itemprop="datePublished">
+        Mar 29, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      13 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Soham360/csp-fastpages/tree/master/_notebooks/2023-03-29-DS-hashmaps.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/csp-fastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Soham360/csp-fastpages/master?filepath=_notebooks%2F2023-03-29-DS-hashmaps.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Soham360/csp-fastpages/blob/master/_notebooks/2023-03-29-DS-hashmaps.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FSoham360%2Fcsp-fastpages%2Fblob%2Fmaster%2F_notebooks%2F2023-03-29-DS-hashmaps.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#What-is-a-Hashtable/Hashmap?">What is a Hashtable/Hashmap? </a></li>
+<li class="toc-entry toc-h2"><a href="#What-is-Hashing-and-Collision?">What is Hashing and Collision? </a></li>
+<li class="toc-entry toc-h2"><a href="#What-is-a-Set?">What is a Set? </a></li>
+<li class="toc-entry toc-h2"><a href="#Dictionary-Example">Dictionary Example </a></li>
+<li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-29-DS-hashmaps.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-is-a-Hashtable/Hashmap?">
+<a class="anchor" href="#What-is-a-Hashtable/Hashmap?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is a Hashtable/Hashmap?<a class="anchor-link" href="#What-is-a-Hashtable/Hashmap?"> </a>
+</h2>
+<blockquote>
+<p>A hashtable is a data structure that with a collection of key-value pairs, where each key maps to a value, and the keys must be unique and hashable.</p>
+</blockquote>
+<ul>
+<li>In Python there is a built in hashtable known as a <strong>dictionary</strong>.</li>
+</ul>
+<blockquote>
+<p>The primary purpose of a hashtable is to provide efficient lookup, insertion, and deletion operations. When an element is to be inserted into the hashtable, a hash function is used to map the key to a specific index in the underlying array that is used to store the key-value pairs. The value is then stored at that index. When searching for a value, the hash function is used again to find the index where the value is stored.</p>
+<p>The key advantage of a hashtable over other data structures like arrays and linked lists is its average-case time complexity for lookup, insertion, and deletion operations.</p>
+</blockquote>
+<ul>
+<li>The typical time complexity of a hashtable is <strong>O(1)</strong>. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-is-Hashing-and-Collision?">
+<a class="anchor" href="#What-is-Hashing-and-Collision?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is Hashing and Collision?<a class="anchor-link" href="#What-is-Hashing-and-Collision?"> </a>
+</h2>
+<blockquote>
+<p>Hashing is the process of mapping a given key to a value in a hash table or hashmap, using a hash function. The hash function takes the key as input and produces a hash value or hash code, which is then used to determine the index in the underlying array where the value is stored. The purpose of hashing is to provide a quick and efficient way to access data, by eliminating the need to search through an entire data structure to find a value.</p>
+<p>However, it is possible for two different keys to map to the same hash value, resulting in a collision. When a collision occurs, there are different ways to resolve it, depending on the collision resolution strategy used.</p>
+<p>Python's dictionary implementation is optimized to handle collisions efficiently, and the performance of the dictionary is generally very good, even in the presence of collisions. However, if the number of collisions is very high, the performance of the dictionary can degrade, so it is important to choose a good hash function that minimizes collisions when designing a Python dictionary.</p>
+</blockquote>
+<h2 id="What-is-a-Set?">
+<a class="anchor" href="#What-is-a-Set?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is a Set?<a class="anchor-link" href="#What-is-a-Set?"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'1'</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>  
+
+<span class="c1"># What do you notice in the output?</span>
+<span class="c1">#</span>
+<span class="c1"># The output only contains unique characters. For example, if 1 appears in the set twice, it will only get printed once. Also if there is 1 and "1" in the set, both will get printed because the first 1 is a integer while the second "1" is a string.</span>
+
+<span class="c1"># Why do you think Sets are in the same tech talk as Hashmaps/Hashtables?</span>
+<span class="c1">#</span>
+<span class="c1"># Dictionaries cannot have duplicate keys either.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1, 2, 3, '1', 'b'}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dictionary-Example">
+<a class="anchor" href="#Dictionary-Example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dictionary Example<a class="anchor-link" href="#Dictionary-Example"> </a>
+</h2>
+<p>Below are just some basic features of a dictionary. As always, documentation is always the main source for all the full capablilties.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lover_album</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Lover"</span><span class="p">,</span>
+    <span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Taylor Swift"</span><span class="p">,</span>
+    <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2019</span><span class="p">,</span>
+    <span class="s2">"genre"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Pop"</span><span class="p">,</span> <span class="s2">"Synth-pop"</span><span class="p">],</span>
+    <span class="s2">"tracks"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">"I Forgot That You Existed"</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">"Cruel Summer"</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">"Lover"</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">"The Man"</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">"The Archer"</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="s2">"I Think He Knows"</span><span class="p">,</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="s2">"Miss Americana &amp; The Heartbreak Prince"</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s2">"Paper Rings"</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s2">"Cornelia Street"</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s2">"Death By A Thousand Cuts"</span><span class="p">,</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="s2">"London Boy"</span><span class="p">,</span>
+        <span class="mi">12</span><span class="p">:</span> <span class="s2">"Soon You'll Get Better (feat. Dixie Chicks)"</span><span class="p">,</span>
+        <span class="mi">13</span><span class="p">:</span> <span class="s2">"False God"</span><span class="p">,</span>
+        <span class="mi">14</span><span class="p">:</span> <span class="s2">"You Need To Calm Down"</span><span class="p">,</span>
+        <span class="mi">15</span><span class="p">:</span> <span class="s2">"Afterglow"</span><span class="p">,</span>
+        <span class="mi">16</span><span class="p">:</span> <span class="s2">"Me! (feat. Brendon Urie of Panic! At The Disco)"</span><span class="p">,</span>
+        <span class="mi">17</span><span class="p">:</span> <span class="s2">"It's Nice To Have A Friend"</span><span class="p">,</span>
+        <span class="mi">18</span><span class="p">:</span> <span class="s2">"Daylight"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># What data structures do you see?</span>
+<span class="c1">#</span>
+<span class="c1"># Strings, Integers, Lists, Dictionaries</span>
+
+<span class="c1"># Printing the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{'title': 'Lover', 'artist': 'Taylor Swift', 'year': 2019, 'genre': ['Pop', 'Synth-pop'], 'tracks': {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight'}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'tracks'</span><span class="p">))</span>
+<span class="c1"># or</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">[</span><span class="s1">'tracks'</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight'}
+{1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight'}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'tracks'</span><span class="p">)[</span><span class="mi">4</span><span class="p">])</span>
+<span class="c1"># or</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">[</span><span class="s1">'tracks'</span><span class="p">][</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The Man
+The Man
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lover_album</span><span class="p">[</span><span class="s2">"producer"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">'Taylor Swift'</span><span class="p">,</span> <span class="s1">'Jack Antonoff'</span><span class="p">,</span> <span class="s1">'Joel Little'</span><span class="p">,</span> <span class="s1">'Taylor Swift'</span><span class="p">,</span> <span class="s1">'Louis Bell'</span><span class="p">,</span> <span class="s1">'Frank Dukes'</span><span class="p">])</span>
+
+<span class="c1"># What can you change to make sure there are no duplicate producers?</span>
+<span class="c1">#</span>
+<span class="c1"># you can add set() around the value to remove duplicate producers</span>
+
+<span class="c1"># Printing the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{'title': 'Lover', 'artist': 'Taylor Swift', 'year': 2019, 'genre': ['Pop', 'Synth-pop', 'electropop'], 'tracks': {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight', 19: 'All Of The Girls You Loved Before'}, 'producer': {'Louis Bell', 'Frank Dukes', 'Jack Antonoff', 'Joel Little', 'Taylor Swift'}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lover_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="mi">19</span><span class="p">:</span> <span class="s2">"All Of The Girls You Loved Before"</span><span class="p">})</span>
+
+<span class="c1"># How would add an additional genre to the dictionary, like electropop? </span>
+<span class="c1"># </span>
+<span class="n">lover_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"electropop"</span><span class="p">)</span>
+
+<span class="c1"># Printing the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{'title': 'Lover', 'artist': 'Taylor Swift', 'year': 2019, 'genre': ['Pop', 'Synth-pop', 'electropop'], 'tracks': {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight', 19: 'All Of The Girls You Loved Before', 20: 'test'}, 'producer': {'Louis Bell', 'Frank Dukes', 'Jack Antonoff', 'Joel Little', 'Taylor Swift'}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># for k,v in lover_album.items(): # iterate using a for loop for key and value</span>
+<span class="c1">#     if k == "tracks":</span>
+<span class="c1">#         print("tracks:")</span>
+<span class="c1">#     print(str(k) + ": " + str(v))</span>
+
+<span class="c1"># Write your own code to print tracks in readable format</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span> <span class="p">,</span> <span class="s2">":"</span> <span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 : I Forgot That You Existed
+2 : Cruel Summer
+3 : Lover
+4 : The Man
+5 : The Archer
+6 : I Think He Knows
+7 : Miss Americana &amp; The Heartbreak Prince
+8 : Paper Rings
+9 : Cornelia Street
+10 : Death By A Thousand Cuts
+11 : London Boy
+12 : Soon You'll Get Better (feat. Dixie Chicks)
+13 : False God
+14 : You Need To Calm Down
+15 : Afterglow
+16 : Me! (feat. Brendon Urie of Panic! At The Disco)
+17 : It's Nice To Have A Friend
+18 : Daylight
+19 : All Of The Girls You Loved Before
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># def search():</span>
+<span class="c1">#     search = input("What would you like to know about the album?")</span>
+<span class="c1">#     if lover_album.get(search.lower()) == None:</span>
+<span class="c1">#         print("Invalid Search")</span>
+<span class="c1">#     else:</span>
+<span class="c1">#         print(lover_album.get(search.lower()))</span>
+
+<span class="c1"># search()</span>
+
+<span class="c1"># This is a very basic code segment, how can you improve upon this code?</span>
+<span class="k">def</span> <span class="nf">search_v2</span><span class="p">():</span>
+    <span class="n">search</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What would you like to know about the album? Type 'title' to get the title of the album. Type 'artist' to get the name of the artist. Type 'year' to get the album release date. Type 'genre' to get the genre of the album. Type 'tracks' to get the list of songs on the album. Type 'tracks number' to get a specific song from the album. Type 'producer' to get a list of producers on the album."</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"tracks number"</span><span class="p">:</span>
+         <span class="n">song</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Give a number for witch song you want from the album."</span><span class="p">)</span>
+         <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">[</span><span class="s1">'tracks'</span><span class="p">][</span><span class="nb">int</span><span class="p">(</span><span class="n">song</span><span class="p">)])</span>
+
+    <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"add track"</span><span class="p">:</span>
+        <span class="n">new_track</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Give a new track to add to the album."</span><span class="p">)</span>
+        <span class="n">lover_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="nb">len</span><span class="p">(</span><span class="n">lover_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span> <span class="n">new_track</span><span class="p">})</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">new_track</span><span class="p">,</span> <span class="s2">"was added to the album at position"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lover_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]))</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="s2">":"</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+    
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Invalid Search"</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"title"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"The name of this album is"</span><span class="p">,</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"title"</span><span class="p">))</span>
+
+        <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"artist"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"The artist who created this album is"</span><span class="p">,</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"artist"</span><span class="p">))</span>
+
+        <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"year"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"The year this album was released was"</span><span class="p">,</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"year"</span><span class="p">))</span>
+
+        <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"genre"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"The genres of this album are"</span><span class="p">,</span> <span class="s1">', '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"genre"</span><span class="p">)))</span>
+
+        <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"tracks"</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Here are the tracks from the album:"</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="s2">":"</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+        
+        <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"producer"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"The people who produced this album are"</span><span class="p">,</span> <span class="s1">', '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"producer"</span><span class="p">)))</span>
+        
+        <span class="n">search_v2</span><span class="p">()</span>
+
+<span class="n">search_v2</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>test song was added to the album at position 21
+1 : I Forgot That You Existed
+2 : Cruel Summer
+3 : Lover
+4 : The Man
+5 : The Archer
+6 : I Think He Knows
+7 : Miss Americana &amp; The Heartbreak Prince
+8 : Paper Rings
+9 : Cornelia Street
+10 : Death By A Thousand Cuts
+11 : London Boy
+12 : Soon You'll Get Better (feat. Dixie Chicks)
+13 : False God
+14 : You Need To Calm Down
+15 : Afterglow
+16 : Me! (feat. Brendon Urie of Panic! At The Disco)
+17 : It's Nice To Have A Friend
+18 : Daylight
+19 : All Of The Girls You Loved Before
+20 : test
+21 : test song
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h2>
+<ul>
+<li>Answer <em>ALL</em> questions in the code segments</li>
+<li>
+<p>Create a diagram or comparison illustration (Canva).</p>
+<ul>
+<li>What are the pro and cons of using this data structure? </li>
+<li>Dictionary vs List</li>
+</ul>
+</li>
+<li>
+<p>Expand upon the code given to you, possible improvements in comments</p>
+</li>
+<li>
+<p>Build your own album showing features of a python dictionary</p>
+</li>
+<li>
+<p>For Mr. Yeung's class: Justify your favorite Taylor Swift song, answer may effect seed</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">heros_and_villains_album</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Heros and Villains"</span><span class="p">,</span>
+    <span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Metro Boomin"</span><span class="p">,</span>
+    <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2022</span><span class="p">,</span>
+    <span class="s2">"genre"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Hip-Hop"</span><span class="p">,</span> <span class="s2">"Rap"</span><span class="p">],</span>
+    <span class="s2">"producers"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Metro Boomin"</span><span class="p">,</span> <span class="s2">"TM88"</span><span class="p">,</span> <span class="s2">"Johan Lenox"</span><span class="p">,</span> <span class="s2">"DaHeala"</span><span class="p">,</span> <span class="s2">"Allen Ritter"</span><span class="p">,</span> <span class="s2">"Honorable C.N.O.T.E."</span><span class="p">,</span> <span class="s2">"Oz"</span><span class="p">],</span>
+    <span class="s2">"tracks"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">"Trance (feat. Young Thug, Travis Scott)"</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">"Superhero (feat. Chris Brown, Future)"</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">"Feel The Fiyaaaah (feat. Takeoff, A$AP Rocky)"</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">"I Can't Save You (feat. Future, Don Toliver)"</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">"Metro Spider (feat. Young Thug)"</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="s2">"Niagara Falls (feat. 21 Savage, Travis Scott)"</span><span class="p">,</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="s2">"Lock On Me (feat. Future, Travis Scott)"</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s2">"Umbrella (feat. Young Nudy, 21 Savage)"</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s2">"Creepin' (feat. 21 Savage, The Weeknd)"</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s2">"Walk Em Down (feat. Mustafa the Poet, 21 Savage)"</span><span class="p">,</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="s2">"Raindrops (feat. Future, Don Toliver)"</span><span class="p">,</span>
+        <span class="mi">12</span><span class="p">:</span> <span class="s2">"All the Money (feat. Gunna)"</span><span class="p">,</span>
+        <span class="mi">13</span><span class="p">:</span> <span class="s2">"On Time (feat. John Legend)"</span><span class="p">,</span>
+        <span class="mi">14</span><span class="p">:</span> <span class="s2">"Around Me (feat. Don Toliver)"</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">search_v3</span><span class="p">():</span>
+    <span class="c1"># asks for what details you would like to know</span>
+    <span class="n">search</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What would you like to know about the album? Type 'title' to get the title of the album. Type 'artist' to get the name of the artist. Type 'year' to get the album release date. Type 'genre' to get the genre of the album. Type 'tracks' to get the list of songs on the album. Type 'tracks number' to get a specific song from the album. Type 'producers' to get a list of producers on the album."</span><span class="p">)</span>
+    <span class="c1"># if the input is blank, it stops the code</span>
+    <span class="k">if</span> <span class="n">search</span> <span class="o">!=</span> <span class="s2">""</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"tracks number"</span><span class="p">:</span>
+            <span class="c1"># asks for an input</span>
+            <span class="n">song</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Give a number for which song you want from the album."</span><span class="p">)</span>
+            <span class="c1"># if input is valid, prints the song name at that position. If it isn't valid, it exits and re-runs the function.</span>
+            <span class="k">if</span> <span class="n">song</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">heros_and_villains_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"The song at position"</span><span class="p">,</span> <span class="n">song</span><span class="p">,</span> <span class="s2">"is"</span><span class="p">,</span> <span class="n">heros_and_villains_album</span><span class="p">[</span><span class="s1">'tracks'</span><span class="p">][</span><span class="nb">int</span><span class="p">(</span><span class="n">song</span><span class="p">)])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">search_v3</span><span class="p">()</span>
+
+        <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"add track"</span><span class="p">:</span>
+            <span class="c1"># asks for an input</span>
+            <span class="n">new_track</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Give a new track to add to the album."</span><span class="p">)</span>
+            <span class="c1"># adds new track to the album</span>
+            <span class="n">heros_and_villains_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="nb">len</span><span class="p">(</span><span class="n">heros_and_villains_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span> <span class="n">new_track</span><span class="p">})</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">new_track</span><span class="p">,</span> <span class="s2">"was added to the album at position"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">heros_and_villains_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]))</span>
+        
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># checks if the input is not blank, but not valid either.</span>
+            <span class="k">if</span> <span class="n">heros_and_villains_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Invalid Search"</span><span class="p">)</span>
+
+            <span class="c1"># if the user is asking for the title, it prints it</span>
+            <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"title"</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"The name of this album is"</span><span class="p">,</span> <span class="n">heros_and_villains_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"title"</span><span class="p">))</span>
+
+            <span class="c1"># if the user is asking for the artist, it prints it</span>
+            <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"artist"</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"The artist who created this album is"</span><span class="p">,</span> <span class="n">heros_and_villains_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"artist"</span><span class="p">))</span>
+
+            <span class="c1"># if the user is asking for the year the album was released, it prints it</span>
+            <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"year"</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"The year this album was released was"</span><span class="p">,</span> <span class="n">heros_and_villains_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"year"</span><span class="p">))</span>
+
+            <span class="c1"># if the user is asking for the genres of the album, it prints it</span>
+            <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"genre"</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"The genres of this album are"</span><span class="p">,</span> <span class="s1">', '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">heros_and_villains_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"genre"</span><span class="p">)))</span>
+
+            <span class="c1"># if the user is asking for the tracks in the album, it prints it</span>
+            <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"tracks"</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"Here are the tracks from the album:"</span><span class="p">)</span>
+                    <span class="c1"># uses a for loop to print the keys (song position) and the values (song name)</span>
+                    <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">heros_and_villains_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="s2">":"</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+            
+            <span class="c1"># if the user is asking for the producers, it prints it</span>
+            <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"producers"</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"The people who produced this album are"</span><span class="p">,</span> <span class="s1">', '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">heros_and_villains_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"producers"</span><span class="p">)))</span>
+
+        <span class="c1"># repeats the function  </span>
+        <span class="n">search_v3</span><span class="p">()</span>
+
+<span class="n">search_v3</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The name of this album is Heros and Villains
+The artist who created this album is Metro Boomin
+The year this album was released was 2022
+The genres of this album are Hip-Hop, Rap
+Here are the tracks from the album:
+1 : Trance (feat. Young Thug, Travis Scott)
+2 : Superhero (feat. Chris Brown, Future)
+3 : Feel The Fiyaaaah (feat. Takeoff, A$AP Rocky)
+4 : I Can't Save You (feat. Future, Don Toliver)
+5 : Metro Spider (feat. Young Thug)
+6 : Niagara Falls (feat. 21 Savage, Travis Scott)
+7 : Lock On Me (feat. Future, Travis Scott)
+8 : Umbrella (feat. Young Nudy, 21 Savage)
+9 : Creepin' (feat. 21 Savage, The Weeknd)
+10 : Walk Em Down (feat. Mustafa the Poet, 21 Savage)
+11 : Raindrops (feat. Future, Don Toliver)
+12 : All the Money (feat. Gunna)
+13 : On Time (feat. John Legend)
+14 : Around Me (feat. Don Toliver)
+The people who produced this album are Metro Boomin, TM88, Johan Lenox, DaHeala, Allen Ritter, Honorable C.N.O.T.E., Oz
+Epic Song (feat. Soham Kamat) was added to the album at position 15
+The song at position 15 is Epic Song (feat. Soham Kamat)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/csp-fastpages/2023/03/29/DS-hashmaps.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/csp-fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://soham360.github.io/csp-fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/csp-fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Soham Kamat&#39;s GitHub FastPage</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

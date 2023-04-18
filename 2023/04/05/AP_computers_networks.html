@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      9 min read
     
 </span></p>
 
@@ -341,8 +341,17 @@ window.onload = wrap_img;
 <p>Watch both Daily videos for 4.2</p>
 </blockquote>
 <ul>
-<li>Complete the network activity, summarize your understanding of fault tolerance.</li>
+<li>Complete the network activity, summarize your understanding of fault tolerance.<blockquote>
+<p>Redundant - More than one path to a device.</p>
+</blockquote>
+</li>
 </ul>
+<blockquote>
+<p>Fault tolerance is when there is more than one path to each device in a network because it offers a “backup” option of something in the network goes down.</p>
+<p>Need redundancy for fault tolerance.</p>
+<p>Scalability is the ability to increase or decrease the number of devices in a network while maintaining its fault tolerance.</p>
+</blockquote>
+<p>Practice Questions:1. C) Data will only take one route from one device to another, no matter the number of routes available.    2. A) A connection from A to B</p>
 
 </div>
 </div>
@@ -359,6 +368,9 @@ window.onload = wrap_img;
 <ul>
 <li>
 <p>What is naturally Distributed in Frontend/Backend archeticture?</p>
+<ul>
+<li>The computing is naturally distributed in a frontend/backend architecture as both sides are typically located on different physical machines. This allows for better scalability, fault-tolerance, and performance, as each component can be scaled independently to handle the workload.</li>
+</ul>
 </li>
 <li>
 <p>Analyze this command in Docker:<code>ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a>&gt; Last week we discussed parallel computing on local machine.  There are many options.  Here is something to get parallel computing work with a tool called Ray.</p>
@@ -423,9 +435,9 @@ window.onload = wrap_img;
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
 <span class="ansi-green-intense-fg ansi-bold">/home/soham/vscode/csp-fastpages/_notebooks/2023-04-05-AP_computers_networks.ipynb Cell 7</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-05-AP_computers_networks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> import ray
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-05-AP_computers_networks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span> # define a simple function that takes a number and returns its square
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-05-AP_computers_networks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> def square(x):
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-05-AP_computers_networks.ipynb#W6sdnNjb2RlLXJlbW90ZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> import ray
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-05-AP_computers_networks.ipynb#W6sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span> # define a simple function that takes a number and returns its square
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-05-AP_computers_networks.ipynb#W6sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> def square(x):
 
 <span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'ray'</pre>
 </div>

@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -373,10 +373,17 @@ window.onload = wrap_img;
 </ul>
 </li>
 <li>
-<p>Analyze this command in Docker:<code>ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a>&gt; Last week we discussed parallel computing on local machine.  There are many options.  Here is something to get parallel computing work with a tool called Ray.</p>
+<p>Analyze this command in Docker:<code>ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a>    - What mainly catches my eye here as an option for parallel computing within the server is the “workers” parameter. The workers are the number of processes actually loading the application, so if there are multiple workers, there can be multiple processes loading the app in a parallel fashion. According to the article, something that I did not notice as a parallel computing process is the number of threads. This is a parameter that is not a part of the above command, but can be added.</p>
+<blockquote>
+<p>Last week we discussed parallel computing on local machine.  There are many options.  Here is something to get parallel computing work with a tool called Ray.</p>
+</blockquote>
 </li>
-<li>Review this <a href="https://www.anyscale.com/blog/writing-your-first-distributed-python-application-with-ray">article</a>...  Can you get parallel code on images to work more effectively?  I have not tried Ray.</li>
-<li>Code example from ChatGPT using squares.  This might be more interesting if nums we generated to be a lot bigger.</li>
+<li>
+<p>Review this <a href="https://www.anyscale.com/blog/writing-your-first-distributed-python-application-with-ray">article</a>...  Can you get parallel code on images to work more effectively?  I have not tried Ray.    - After reading the article, I think Ray is an application that is very useful for very large objects and running them efficiently in the form of parallel computing. It is imported as a separate python module, and when testing the running of certain programs, the processing time was significantly less (albeit for the programs tested in the article, it was a very minimal difference of 2-3 seconds), but can be much more significant if being compared for larger data sets in programs.</p>
+</li>
+<li>
+<p>Code example from ChatGPT using squares.  This might be more interesting if nums we generated to be a lot bigger.</p>
+</li>
 </ul>
 
 </div>

@@ -127,7 +127,7 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Why-SASS?">Why SASS?<a class="anchor-link" href="#Why-SASS?"> </a></h1><p>SASS is an improvement on CSS in that there are methods of abstraction. It is a <strong><em>__</em></strong> language that is <strong>_</strong> into CSS, which means that <strong><strong>__</strong></strong>, which is what your web browser can read.</p>
+<h1 id="Why-SASS?">Why SASS?<a class="anchor-link" href="#Why-SASS?"> </a></h1><p>SASS is an improvement on CSS in that there are methods of abstraction. It is a <strong>stylesheet</strong> language that is <strong>compiled</strong> into CSS, which means that <strong>Sass will translate the Sass code you wrote into CSS</strong>, which is what your web browser can read.</p>
 <h1 id="SASS-vs-SCSS">SASS vs SCSS<a class="anchor-link" href="#SASS-vs-SCSS"> </a></h1><p>As you learn about Sass, you might notice something called Scss. They are basically the same thing except that Scss uses curly braces and semicolons to distinguish between lines. Sass uses indentation and newlines instead.</p>
 <p>We will be teaching the Scss syntax because it is more commonly used.</p>
 
@@ -158,12 +158,13 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Mini-hack">Mini-hack<a class="anchor-link" href="#Mini-hack"> </a></h1><p>Write out the SASS equivalent for the following CSS code:</p>
 
-<pre><code>.a .b {
-    color: green;
-}
-
-.a .c {
+<pre><code>.a {
+    .b {
+        color: green;
+    }
+    .c {
     color: blue;
+    }
 }</code></pre>
 
 </div>

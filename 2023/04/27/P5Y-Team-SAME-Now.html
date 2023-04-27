@@ -149,7 +149,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Here-we-go!">Here we go!<a class="anchor-link" href="#Here-we-go!"> </a></h2><p>Establishing Class/User Data and making a new user</p>
-<p>In Python, classes are templates used to create objects, which are instances of those classes. Classes define the data elements (<strong>_</strong>) and methods that describe the behavior of the objects. Let's explore how to define a class and create objects in Python.</p>
+<p>In Python, classes are templates used to create objects, which are instances of those classes. Classes define the data elements (<strong><strong>_</strong></strong>) and methods that describe the behavior of the objects. Let's explore how to define a class and create objects in Python.</p>
 <p>Example: Defining a User class</p>
 
 </div>
@@ -162,7 +162,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
@@ -181,7 +181,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In this example, we define a User class with a constructor method <strong>init</strong> that takes username and email as arguments. The display_info method is used to print the user information.</p>
-<p>In the context of backend functionality, this class can be used to <strong><strong>, _</strong></strong>, and <strong>_</strong> user data. For example, when a new user signs up for an account, you could create a new User object with their username and email. This object can then be used to perform various operations, such as validating the user's input, storing the user's data in a database, or <strong><strong>__</strong></strong>.</p>
+<p>In the context of backend functionality, this class can be used to <strong><em>__</em></strong>, <strong><strong>_</strong></strong>, and <strong><strong>_</strong></strong> user data. For example, when a new user signs up for an account, you could create a new User object with their username and email. This object can then be used to perform various operations, such as validating the user's input, storing the user's data in a database, or <strong><strong><strong>__</strong></strong></strong>.</p>
 <p>Creating a new user:</p>
 
 </div>
@@ -194,11 +194,25 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">new_user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&quot;john_doe&quot;</span><span class="p">,</span> <span class="s2">&quot;john@example.com&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&quot;john_doe&quot;</span><span class="p">,</span> <span class="s2">&quot;john@example.com&quot;</span><span class="p">)</span>
 <span class="n">new_user</span><span class="o">.</span><span class="n">display_info</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Username: john_doe, Email: john@example.com
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -208,25 +222,24 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Lecture-Topics:">Lecture Topics:<a class="anchor-link" href="#Lecture-Topics:"> </a></h2><p>Establishing Class/User Data and making a new user</p>
-<p>In Python, classes are <strong>_</strong> used to create <strong>_</strong>, which are <strong>_</strong> of those classes. Classes define the data elements (attributes) and methods that describe the behavior of the objects. Let's explore how to define a class and create objects in Python.</p>
+<p>In Python, classes are <strong><strong>_</strong></strong> used to create <strong><strong>_</strong></strong>, which are <strong><strong>_</strong></strong> of those classes. Classes define the data elements (attributes) and methods that describe the behavior of the objects. Let's explore how to define a class and create objects in Python.</p>
 <p>Example: Defining a User class</p>
-<p>class User:
-    def <strong>init</strong>(self, username, email):
-        self.username = username
-        self.email = email</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
 
-<pre><code>def display_info(self):
-    print(f"Username: {self.username}, Email: {self.email}")
-
-</code></pre>
+    <span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Username: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">, Email: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">email</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
 <p>In this example, we define a User class with a constructor method <strong>init</strong> that takes username and email as arguments. The display_info method is used to print the user information.</p>
 <p>Creating a new user:</p>
-<p>python</p>
-<p>new_user = User("john_doe", "john@example.com")
-new_user.display_info()</p>
+<div class="highlight"><pre><span></span><span class="n">new_user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&quot;john_doe&quot;</span><span class="p">,</span> <span class="s2">&quot;john@example.com&quot;</span><span class="p">)</span>
+<span class="n">new_user</span><span class="o">.</span><span class="n">display_info</span><span class="p">()</span>
+</pre></div>
 <p>Here, we create a new User object, new_user, with a specified username and email. We then call the display_info method to display the user's information.</p>
 <p>Using property decorators (getter and setter)</p>
-<p><strong>_</strong> allow developers to access and modify instance data more concisely. The @property decorator creates a getter method, while the @attribute.setter decorator creates a setter method.</p>
+<p><strong><strong>_</strong></strong> allow developers to access and modify instance data more concisely. The @property decorator creates a getter method, while the @attribute.setter decorator creates a setter method.</p>
 <p>Example:</p>
 
 </div>
@@ -239,7 +252,7 @@ new_user.display_info()</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">employee_id</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_employee_id</span> <span class="o">=</span> <span class="n">employee_id</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
@@ -263,7 +276,7 @@ new_user.display_info()</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In this example, the Employee class has a name attribute, which is accessed and modified through the name property getter and setter methods. The _name attribute uses an underscore prefix, which is a convention to indicate it should not be accessed directly.</p>
-<p>In the context of backend functionality, this Employee class can be used to model employees within an application. You can create instances of this class to store and manage employee data, and the getter and setter methods can be used to access and modify employee information in a <strong><strong>___</strong></strong>.</p>
+<p>In the context of backend functionality, this Employee class can be used to model employees within an application. You can create instances of this class to store and manage employee data, and the getter and setter methods can be used to access and modify employee information in a <strong><strong><strong>___</strong></strong></strong>.</p>
 <p>Usage:</p>
 
 </div>
@@ -276,7 +289,7 @@ new_user.display_info()</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">employee</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="mi">1001</span><span class="p">,</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">employee</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="mi">1001</span><span class="p">,</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">employee</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>  <span class="c1"># Get the name using the getter method</span>
 
 <span class="n">employee</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Jane Doe&quot;</span>  <span class="c1"># Set the name using the setter method</span>
@@ -284,6 +297,21 @@ new_user.display_info()</p>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>John Doe
+Jane Doe
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -309,7 +337,7 @@ print(employee.name)</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_make</span> <span class="o">=</span> <span class="n">make</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
@@ -357,7 +385,7 @@ print(employee.name)</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Students can then practice creating instances of their Car class and using the getter and setter methods to access and modify the car attributes.</p>
-<p>In the context of <strong><strong>_</strong></strong>, this Car class can be used to model cars within an application. You can create instances of this class to store and manage car data, and the getter and setter methods can be used to access and modify car information in a controlled way.</p>
+<p>In the context of <strong><strong><strong>_</strong></strong></strong>, this Car class can be used to model cars within an application. You can create instances of this class to store and manage car data, and the getter and setter methods can be used to access and modify car information in a controlled way.</p>
 
 </div>
 </div>
@@ -366,14 +394,13 @@ print(employee.name)</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Overview">Overview<a class="anchor-link" href="#Overview"> </a></h3><p>WE COVERED:
 In conclusion, we have covered essential concepts in object-oriented programming using Python, including:</p>
-
-<pre><code>Defining classes and creating objects
-Property decorators (getter and setter)
-Class methods and static methods
-Inheritance and method overriding
-Working with multiple objects and class attributes
-
-</code></pre>
+<ul>
+<li>Defining classes and creating objects</li>
+<li>Property decorators (getter and setter)</li>
+<li>Class methods and static methods</li>
+<li>Inheritance and method overriding</li>
+<li>Working with multiple objects and class attributes</li>
+</ul>
 <p>These concepts provide a solid foundation for understanding how to model real-world entities using classes and objects in Python. By learning to work with classes, objects, and their methods, students can develop more efficient and modular code.</p>
 <p>As students become more comfortable with these concepts, they can explore more advanced topics, such as multiple inheritance, abstract classes, encapsulation, and polymorphism. Additionally, they can apply these principles to practical projects like web development with Flask and SQLite, as discussed earlier.</p>
 <p>Overall, mastering object-oriented programming will greatly enhance students' ability to develop complex and maintainable software systems.</p>
@@ -383,10 +410,10 @@ Working with multiple objects and class attributes
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Databases-and-SQlite">Databases and SQlite<a class="anchor-link" href="#Databases-and-SQlite"> </a></h1><p>SQLite is a ___ library that provides a relational database management system. Unlike other databases, such as MySQL or PostgreSQL, SQLite is embedded within an application, which means it does not require a separate server process to operate. This makes SQLite a great choice for small-scale applications or for use in situations where you don't want to set up a full database server.</p>
-<p>In this lesson, we will be demonstrating how to set up a SQLite database in Flask, which provides an easy-to-use interface for interacting with SQLite databases, and we'll walk through the process of setting up a new database, creating tables, and adding data. We'll also cover some basic SQL commands that you can use to interact with your database, including CREATE TABLE, INSERT, SELECT, UPDATE, and DELETE. By the end of this lesson, you'll have a good understanding of how to work with SQLite databases in Flask and be ready to start building your own <strong>__</strong>.</p>
-<h2 id="Setting-up-a-SQLite-database-in-Flask">Setting up a SQLite database in Flask<a class="anchor-link" href="#Setting-up-a-SQLite-database-in-Flask"> </a></h2><p>One of the key features of <strong>_</strong> is its ability to work seamlessly with <strong>_</strong>, including SQLite. A database is a collection of data stored in an organized manner that can be easily accessed, managed, and updated.</p>
-<h3 id="SQlite-databse-in-Flask">SQlite databse in Flask<a class="anchor-link" href="#SQlite-databse-in-Flask"> </a></h3>
+<h1 id="Databases-and-SQlite">Databases and SQlite<a class="anchor-link" href="#Databases-and-SQlite"> </a></h1><p>SQLite is a <strong>___</strong> library that provides a relational database management system. Unlike other databases, such as MySQL or PostgreSQL, SQLite is embedded within an application, which means it does not require a separate server process to operate. This makes SQLite a great choice for small-scale applications or for use in situations where you don't want to set up a full database server.</p>
+<p>In this lesson, we will be demonstrating how to set up a SQLite database in Flask, which provides an easy-to-use interface for interacting with SQLite databases, and we'll walk through the process of setting up a new database, creating tables, and adding data. We'll also cover some basic SQL commands that you can use to interact with your database, including CREATE TABLE, INSERT, SELECT, UPDATE, and DELETE. By the end of this lesson, you'll have a good understanding of how to work with SQLite databases in Flask and be ready to start building your own <strong><strong>__</strong></strong>.</p>
+<h2 id="Setting-up-a-SQLite-database-in-Flask">Setting up a SQLite database in Flask<a class="anchor-link" href="#Setting-up-a-SQLite-database-in-Flask"> </a></h2><p>One of the key features of <strong><strong>_</strong></strong> is its ability to work seamlessly with <strong><strong>_</strong></strong>, including SQLite. A database is a collection of data stored in an organized manner that can be easily accessed, managed, and updated.</p>
+<h3 id="SQlite-database-in-Flask">SQlite database in Flask<a class="anchor-link" href="#SQlite-database-in-Flask"> </a></h3>
 </div>
 </div>
 </div>
@@ -397,7 +424,7 @@ Working with multiple objects and class attributes
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
 <span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="c1"># Create a Flask application</span>
@@ -429,7 +456,7 @@ Working with multiple objects and class attributes
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Basic-SQL-commands-(create,-read,-update,-delete)">Basic SQL commands (create, read, update, delete)<a class="anchor-link" href="#Basic-SQL-commands-(create,-read,-update,-delete)"> </a></h2><p><strong>__</strong> is really useful because it helps people do a bunch of things with the data stored in databases. For example, they can use it to create new tables to organize data, add new data to a table, update data that's already there, or delete data that's no longer needed.</p>
+<h2 id="Basic-SQL-commands-(create,-read,-update,-delete)">Basic SQL commands (create, read, update, delete)<a class="anchor-link" href="#Basic-SQL-commands-(create,-read,-update,-delete)"> </a></h2><p><strong><strong>__</strong></strong> is really useful because it helps people do a bunch of things with the data stored in databases. For example, they can use it to create new tables to organize data, add new data to a table, update data that's already there, or delete data that's no longer needed.</p>
 <p>CRUD is an acronym that stands for the fundamental operations that can be performed on a database, which are Create, Read, Update, and Delete. A widely-used lightweight database management system is SQLite, which can be easily integrated with different programming languages.</p>
 <ul>
 <li><p>C: To create a new record in a database, you must first define the table structure that will store the data. This can be accomplished using SQL commands such as CREATE. Once the table is created, data can be added to it using the INSERT INTO command.</p>
@@ -459,7 +486,7 @@ Working with multiple objects and class attributes
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">def</span> <span class="nf">menu</span><span class="p">():</span>
     <span class="n">operation</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter: (C)reate (R)ead (U)pdate or (D)elete&quot;</span><span class="p">)</span>
@@ -487,12 +514,26 @@ Working with multiple objects and class attributes
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Perform Jupyter &#39;Run All&#39; prior to starting menu
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This block of code is a menu function that helps with <strong>_<em>, </em></strong>, <strong>_<em>, and </em></strong> (CRUD) tasks and displays the schema. The menu function acts as a control point that directs the program to call different functions based on what the user wants to do. When users enter their preferred action, the input is checked to see which function to use. The menu function is created with no arguments and is called repeatedly, displaying the menu options until the user decides to leave.</p>
+<p>This block of code is a menu function that helps with <strong><em>__</em></strong>, <strong>___</strong>, <strong><em>__</em></strong>, and <strong>___</strong> (CRUD) tasks and displays the schema. The menu function acts as a control point that directs the program to call different functions based on what the user wants to do. When users enter their preferred action, the input is checked to see which function to use. The menu function is created with no arguments and is called repeatedly, displaying the menu options until the user decides to leave.</p>
 <h3 id="Creating-a-Database">Creating a Database<a class="anchor-link" href="#Creating-a-Database"> </a></h3>
 </div>
 </div>
@@ -504,7 +545,7 @@ Working with multiple objects and class attributes
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">def</span> <span class="nf">create_database</span><span class="p">():</span>
     <span class="c1"># Connect to the database (will create it if it doesn&#39;t exist)</span>
@@ -547,7 +588,7 @@ Working with multiple objects and class attributes
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">def</span> <span class="nf">create</span><span class="p">():</span>
    <span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;instance/professors.db&#39;</span>
@@ -584,12 +625,26 @@ Working with multiple objects and class attributes
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>soham has been added to the list of coding professors.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The <strong>_</strong> function allows users to input information about a coding professor and store it in a SQLite database named 'professors.db'. This script prompts the user for the professor's name, field of expertise, rating out of 10, and any reviews or comments about the professor. It then establishes a connection to the SQLite database and creates a cursor object for executing SQL commands.</p>
+<p>The <strong><strong>_</strong></strong> function allows users to input information about a coding professor and store it in a SQLite database named 'professors.db'. This script prompts the user for the professor's name, field of expertise, rating out of 10, and any reviews or comments about the professor. It then establishes a connection to the SQLite database and creates a cursor object for executing SQL commands.</p>
 
 </div>
 </div>
@@ -607,7 +662,7 @@ Working with multiple objects and class attributes
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">def</span> <span class="nf">read</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
@@ -642,12 +697,31 @@ Working with multiple objects and class attributes
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>List of coding professors:
+Name: soham
+Field of expertise: basketball
+Rating: 10.0
+Reviews: amazing
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This code demonstrates how to read data from a SQLite database using Python and the <strong>_</strong>. The first step is to establish a connection to the database and create a cursor object to execute SQL commands. Then, a SELECT query is executed to fetch all records from the "professors" table. If there are any records, the code iterates through each record and prints out the name, field of expertise, rating, and reviews for each coding professor. If there are no records in the table, a message indicating so is printed.</p>
+<p>This code demonstrates how to read data from a SQLite database using Python and the <strong><strong>_</strong></strong>. The first step is to establish a connection to the database and create a cursor object to execute SQL commands. Then, a SELECT query is executed to fetch all records from the "professors" table. If there are any records, the code iterates through each record and prints out the name, field of expertise, rating, and reviews for each coding professor. If there are no records in the table, a message indicating so is printed.</p>
 
 </div>
 </div>
@@ -665,7 +739,7 @@ Working with multiple objects and class attributes
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;instance/professors.db&#39;</span>
@@ -710,12 +784,27 @@ Working with multiple objects and class attributes
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter the new information for the professor:
+soham&#39;s record has been updated.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is an implementation of an update function for the professors database using the sqlite3 module in Python. The function first establishes a connection to the database file 'instance/professors.db' and creates a cursor object to execute <strong><strong> commands. It prompts the user to enter the name of the professor to update and retrieves the corresponding record from the database using a SELECT statement with a WHERE clause to match the professor's name. If the professor is found in the database, the user is prompted to enter new information for the professor's field of expertise, rating, and reviews. The function then executes an </strong></strong> statement with the new information to update the record in the database.</p>
+<p>This is an implementation of an update function for the professors database using the sqlite3 module in Python. The function first establishes a connection to the database file 'instance/professors.db' and creates a cursor object to execute <strong><em>__</em></strong> commands. It prompts the user to enter the name of the professor to update and retrieves the corresponding record from the database using a SELECT statement with a WHERE clause to match the professor's name. If the professor is found in the database, the user is prompted to enter new information for the professor's field of expertise, rating, and reviews. The function then executes an <strong><em>__</em></strong> statement with the new information to update the record in the database.</p>
 
 </div>
 </div>
@@ -733,7 +822,7 @@ Working with multiple objects and class attributes
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 
 <span class="k">def</span> <span class="nf">delete</span><span class="p">():</span>
@@ -769,12 +858,26 @@ Working with multiple objects and class attributes
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>soham has been deleted from the list of coding professors.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This code is a Python function for <em>__</em> a record from a SQLite database. The function prompts the user to input the name of the professor they want to delete. It then uses a SQL query to search for the professor in the database. If the professor is found, the user is prompted to confirm the deletion. If the user confirms, the function executes a SQL command to delete the record from the database. The function also prints a message confirming that the professor has been deleted from the list of coding professors. If the professor is not found in the database, the function prints a message indicating that the professor is not in the list.</p>
+<p>This code is a Python function for <strong><em>__</em></strong> a record from a SQLite database. The function prompts the user to input the name of the professor they want to delete. It then uses a SQL query to search for the professor in the database. If the professor is found, the user is prompted to confirm the deletion. If the user confirms, the function executes a SQL command to delete the record from the database. The function also prints a message confirming that the professor has been deleted from the list of coding professors. If the professor is not found in the database, the function prints a message indicating that the professor is not in the list.</p>
 
 </div>
 </div>
@@ -799,7 +902,7 @@ Working with multiple objects and class attributes
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="c1"># specify the name of the database file</span>
 <span class="n">db_file</span> <span class="o">=</span> <span class="s2">&quot;&lt;fill in the name of the database file here&gt;.db&quot;</span>

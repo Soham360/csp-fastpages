@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -1003,6 +1003,60 @@ TypeError: Identifier &#39;myObject&#39; has already been declared
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Guess</span> <span class="nx">the</span> <span class="nb">Number</span> <span class="nx">Game</span><span class="o">&lt;</span><span class="err">/title&gt;</span>
+  <span class="o">&lt;</span><span class="err">/head&gt;</span>
+  <span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Guess</span> <span class="nx">the</span> <span class="nb">Number</span> <span class="nx">Game</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+    <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">I</span><span class="s1">&#39;m thinking of a number between 1 and 100. Can you guess it?&lt;/p&gt;</span>
+<span class="s1">    &lt;input type=&quot;text&quot; id=&quot;guess&quot;&gt;</span>
+<span class="s1">    &lt;button onclick=&quot;checkGuess()&quot;&gt;Guess&lt;/button&gt;</span>
+<span class="s1">    &lt;p id=&quot;message&quot;&gt;&lt;/p&gt;</span>
+
+<span class="s1">    &lt;script&gt;</span>
+<span class="s1">      // Generate a random number between 1 and 100</span>
+<span class="s1">      const randomNumber = Math.floor(Math.random() * 100) + 1;</span>
+
+<span class="s1">      // Function to check the user&#39;</span><span class="nx">s</span> <span class="nx">guess</span>
+      <span class="kd">function</span> <span class="nx">checkGuess</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">guessInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;guess&quot;</span><span class="p">);</span>
+        <span class="kr">const</span> <span class="nx">guess</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">guessInput</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+        <span class="kr">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">guess</span><span class="p">)</span> <span class="o">||</span> <span class="nx">guess</span> <span class="o">&lt;</span> <span class="mf">1</span> <span class="o">||</span> <span class="nx">guess</span> <span class="o">&gt;</span> <span class="mf">100</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&quot;Please enter a valid number between 1 and 100.&quot;</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">===</span> <span class="nx">randomNumber</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&quot;Congratulations! You guessed the correct number!&quot;</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">&lt;</span> <span class="nx">randomNumber</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&quot;Too low! Try again.&quot;</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">&gt;</span> <span class="nx">randomNumber</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&quot;Too high! Try again.&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Clear the input field</span>
+        <span class="nx">guessInput</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="o">&lt;</span><span class="err">/script&gt;</span>
+  <span class="o">&lt;</span><span class="err">/body&gt;</span>
+<span class="o">&lt;</span><span class="err">/html&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 

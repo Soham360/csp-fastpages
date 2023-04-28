@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      24 min read
+      25 min read
     
 </span></p>
 
@@ -439,13 +439,13 @@ person {'name': 'Sri Kotturi', 'age': 16, 'score': 90.0, 'langs': ['Python', 'Ja
 <h1 id="Selection">
 <a class="anchor" href="#Selection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Selection<a class="anchor-link" href="#Selection"> </a>
 </h1>
-<p>Selection refers to the process of <strong>__</strong> in a program based on certain conditions. It is normally done with conditional statements.</p>
+<p>Selection refers to the process of <strong>making decisions</strong> in a program based on certain conditions. It is normally done with conditional statements.</p>
 <h2 id="Conditionals">
 <a class="anchor" href="#Conditionals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conditionals<a class="anchor-link" href="#Conditionals"> </a>
 </h2>
 <p>What is a conditional?:</p>
 <ul>
-<li>Statement that allows code to execute different instructions if a certain condition is <strong><strong>_</strong></strong>
+<li>Statement that allows code to execute different instructions if a certain condition is <strong>true or false</strong>
 </li>
 <li>Allows program to make decisions based on data and input</li>
 </ul>
@@ -514,7 +514,7 @@ person {'name': 'Sri Kotturi', 'age': 16, 'score': 90.0, 'langs': ['Python', 'Ja
 <a class="anchor" href="#Elif" aria-hidden="true"><span class="octicon octicon-link"></span></a>Elif<a class="anchor-link" href="#Elif"> </a>
 </h3>
 <ul>
-<li>The elif statement can check <strong>___</strong> conditions in a sequence, and execute a certain block of code if any of the conditions are true. </li>
+<li>The elif statement can check <strong>multiple</strong> conditions in a sequence, and execute a certain block of code if any of the conditions are true. </li>
 <li>
 <p>If (condition) then (consequence A), elif (condition) then (consequence B), else (consequence C)</p>
 </li>
@@ -571,7 +571,7 @@ person {'name': 'Sri Kotturi', 'age': 16, 'score': 90.0, 'langs': ['Python', 'Ja
 </h2>
 <p>What is a nested conditional?:</p>
 <ul>
-<li>Conditional statement inside another <strong>___</strong> statement</li>
+<li>Conditional statement inside another <strong>conditional</strong> statement</li>
 <li>Allows to check for more complex condition where one condition depends on another</li>
 </ul>
 <h3 id="Nested-Conditional-Statements">
@@ -631,7 +631,7 @@ x is divisible by 3
 <h2 id="Indentation">
 <a class="anchor" href="#Indentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Indentation<a class="anchor-link" href="#Indentation"> </a>
 </h2>
-<p>When using conditionals and nested conditionals in Python, it is important to pay attention to the <strong><strong><strong>___</strong></strong></strong> in the code. The code inside the if, elif, and else blocks must be indented so they are nested wihtin the outer statements. This way, Python knows which code belongs to which block.</p>
+<p>When using conditionals and nested conditionals in Python, it is important to pay attention to the <strong>level of indentation</strong> in the code. The code inside the if, elif, and else blocks must be indented so they are nested within the outer statements. This way, Python knows which code belongs to which block.</p>
 
 </div>
 </div>
@@ -643,13 +643,13 @@ x is divisible by 3
 <a class="anchor" href="#Binary-Search" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Search<a class="anchor-link" href="#Binary-Search"> </a>
 </h2>
 <p>What is binary search and what is it used for?:</p>
-<hr>
 <ul>
+<li><strong>Searching algorithm</strong></li>
 <li>Find and select a specific element in a sorted list of elements</li>
 </ul>
 <p>How does binary search work?:</p>
 <ul>
-<li>Repeatedly divides the search interval in half to find the middle element and <strong>__</strong> the middle value to the target value, if not the same then it continues on to either the lower or upper half</li>
+<li>Repeatedly divides the search interval in half to find the middle element and <strong>compares</strong> the middle value to the target value, if not the same then it continues on to either the lower or upper half</li>
 <li>Eliminate half of the remaining search interval elements each time</li>
 <li>Efficient way to search for element in large dataset</li>
 </ul>
@@ -756,7 +756,32 @@ I guessed your number 37!
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">rock_paper_scissors</span><span class="p">():</span>
+    <span class="n">possible_actions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"rock"</span><span class="p">,</span> <span class="s2">"paper"</span><span class="p">,</span> <span class="s2">"scissors"</span><span class="p">]</span>
+    <span class="n">userGuess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Choose rock, paper, or scissors."</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">userGuess</span> <span class="o">!=</span> <span class="s2">"rock"</span> <span class="ow">or</span> <span class="s2">"paper"</span> <span class="ow">or</span> <span class="s2">"scissors"</span><span class="p">:</span>
+        <span class="n">userGuess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Choose rock, paper, or scissors."</span><span class="p">)</span>
+    <span class="n">computerGuess</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">possible_actions</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">userGuess</span> <span class="o">==</span> <span class="s2">"rock"</span> <span class="ow">and</span> <span class="n">computerGuess</span><span class="o">==</span><span class="s2">"paper"</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Is your number </span><span class="si">{</span><span class="n">guess</span><span class="si">}</span><span class="s2">?"</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter 'higher', 'lower', or 'yes': "</span><span class="p">)</span>
+
+        <span class="c1"># conditional statements to check target number and guess</span>
+        <span class="k">if</span> <span class="n">response</span> <span class="o">==</span> <span class="s1">'yes'</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"I guessed your number </span><span class="si">{</span><span class="n">guess</span><span class="si">}</span><span class="s2">!"</span><span class="p">)</span>
+            <span class="k">break</span>
+        <span class="k">elif</span> <span class="n">response</span> <span class="o">==</span> <span class="s1">'higher'</span><span class="p">:</span>
+            <span class="n">low</span> <span class="o">=</span> <span class="n">guess</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">response</span> <span class="o">==</span> <span class="s1">'lower'</span><span class="p">:</span>
+            <span class="n">high</span> <span class="o">=</span> <span class="n">guess</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Invalid input, please enter 'higher', 'lower', or 'yes'."</span><span class="p">)</span>
+
+<span class="n">rock_paper_scissors</span><span class="p">()</span>
 </pre></div>
 
     </div>

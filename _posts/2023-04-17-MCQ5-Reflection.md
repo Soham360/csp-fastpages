@@ -10,7 +10,7 @@ categories: [Week 29]
 # My Score
 ![]({{ site.baseurl }}/images/MCQ5.png "MCQ5 Results")
 
-# MCQ4 Corrections
+# MCQ5 Corrections
 ![]({{ site.baseurl }}/images/Question60.png "Question 60")
 For this question, you were supposed to determine the ways in which a programmer can use abstraction to manage the complexity of a program. I answered Option A and Option C. Option A was correct but unfortunately, Option C was incorrect. I answered this because it was a difficult question. I knew it could not be Option B because replacing longer variable names with shorter variable names to reduce typing errors seemed like an edge-case issue. This meant the last answer must be Option C or Option D. I answered Option C because it seemed more broad and I thought it included Option D in it. This is why I answered this. I realize now that Option D is correct because creating a list of names is an example of a data abstraction that may make it easier for a programmer to manage the complexity of a program.
 

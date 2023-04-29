@@ -278,17 +278,53 @@ window.onload = wrap_img;
 <ol>
 <li>b. A scripting language that has many styling operations</li>
 <li>a. They are very similar in their function, but their syntax is slightly different</li>
-<li></li>
-<li>a. Systematically Arranged Sample Sheets</li>
-<li></li>
-<li></li>
+<li>a. SASS has more functions than CSS</li>
+<li>b. Syntactically Awesome Style Sheets.</li>
+<li>d. compute</li>
+<li>b. extend</li>
+<li>b. Directive</li>
 </ol>
 </li>
 <li><p>Use SASS to create something that uses either extend or mixin. (0.9)</p>
 </li>
-<li><p>Extra credit: Research other SASS features and blog about what you learned or add to your SASS project with any extra features not covered in this lesson. More points will be given if both are done.</p>
-</li>
 </ol>
+<div class="highlight"><pre><span></span><span class="k">@mixin</span><span class="nf"> button-style</span> <span class="p">{</span>
+  <span class="nt">display</span><span class="nd">:</span> <span class="nt">inline-block</span><span class="o">;</span>
+  <span class="nt">padding</span><span class="nd">:</span> <span class="nt">10px</span> <span class="nt">20px</span><span class="o">;</span>
+  <span class="nt">font-size</span><span class="nd">:</span> <span class="nt">16px</span><span class="o">;</span>
+  <span class="nt">color</span><span class="nd">:</span> <span class="nn">#fff</span><span class="o">;</span>
+  <span class="nt">background-color</span><span class="nd">:</span> <span class="nn">#007bff</span><span class="o">;</span>
+  <span class="nt">border-radius</span><span class="nd">:</span> <span class="nt">5px</span><span class="o">;</span>
+  <span class="nt">cursor</span><span class="nd">:</span> <span class="nt">pointer</span><span class="o">;</span>
+  <span class="nt">text-decoration</span><span class="nd">:</span> <span class="nt">none</span><span class="o">;</span>
+  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nt">background-color</span><span class="nd">:</span> <span class="nn">#0056b3</span><span class="o">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.button</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> button-style</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.button-large</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> button-style</span><span class="p">;</span>
+  <span class="nt">font-size</span><span class="nd">:</span> <span class="nt">20px</span><span class="o">;</span>
+  <span class="nt">padding</span><span class="nd">:</span> <span class="nt">15px</span> <span class="nt">30px</span><span class="o">;</span>
+<span class="p">}</span>
+</pre></div>
+<ol>
+<li>Extra credit: Research other SASS features and blog about what you learned or add to your SASS project with any extra features not covered in this lesson. More points will be given if both are done.</li>
+</ol>
+<ul>
+<li>Variables<ul>
+<li>One of the most useful features of SASS is the ability to define variables. Variables allow you to store and reuse values throughout your stylesheet, which can save you a lot of time and make your code more consistent.</li>
+</ul>
+</li>
+<li>Control Directives<ul>
+<li>SASS also offers control directives that allow you to write conditional statements and loops within your stylesheets. Control directives can be useful when you need to apply different styles based on specific conditions or when you need to generate styles dynamically.</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>

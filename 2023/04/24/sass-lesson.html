@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      4 min read
     
 </span></p>
 
@@ -149,7 +149,12 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Nesting">Nesting<a class="anchor-link" href="#Nesting"> </a></h1><p>Take notes here</p>
+<h1 id="Nesting">Nesting<a class="anchor-link" href="#Nesting"> </a></h1><ul>
+<li>CSS selectors can share the same element.</li>
+<li>SASS provides a feature called nesting to write styling code in an HTML hierarchy.</li>
+<li>SASS nesting makes code cleaner and more readable.</li>
+<li>SASS nesting reduces repetition in code.</li>
+</ul>
 
 </div>
 </div>
@@ -173,14 +178,31 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Extend/Inheritance">Extend/Inheritance<a class="anchor-link" href="#Extend/Inheritance"> </a></h1><p>What are some similarities that the buttons share? What are the differences?</p>
-<p>Take notes here</p>
+<ul>
+<li>Buttons have common properties such as clickability, shape, size, border, gradient, and font.</li>
+<li>Each design category of buttons has distinct options.</li>
+</ul>
+<p>Notes</p>
+<ul>
+<li>SASS allows for code reuse using @extend.</li>
+<li>Buttons on the homepage have similarities and differences in their styling.</li>
+<li>In CSS, specifying properties for each button selector would be necessary.</li>
+<li>SASS can create a placeholder class using %class-name.</li>
+<li>Code from the placeholder class can be called with @extend %class-name.</li>
+</ul>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Mixin">Mixin<a class="anchor-link" href="#Mixin"> </a></h1><p>Take notes here</p>
+<h1 id="Mixin">Mixin<a class="anchor-link" href="#Mixin"> </a></h1><ul>
+<li>The article discusses using mixins in SASS for creating reusable code templates.</li>
+<li>Mixins are similar to extends, but they can take parameters to create dynamic styling.</li>
+<li>In the example of button styling, a @mixin at rule is created with two colors as parameters.</li>
+<li>The mixin can be called using @include and passing in the desired colors.</li>
+<li>Mixins can also contain styling rules that do not take in variables.</li>
+</ul>
 
 </div>
 </div>
@@ -188,20 +210,61 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Mini-hack">Mini-hack<a class="anchor-link" href="#Mini-hack"> </a></h1><p>Write out a mixin in SASS that takes in a color and a font size as the parameter. Within the mixin, set the background color and font color to the color parameter, and set the font size to the font size parameter. Then create a selector that calls the mixin, and pass in a color and font size of your choice as the arguments.</p>
+<div class="highlight"><pre><span></span><span class="k">@mixin</span><span class="nf"> myMixin</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$fontSize</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">background-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+  <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+  <span class="nt">font-size</span><span class="nd">:</span> <span class="err">$</span><span class="nt">fontSize</span><span class="o">;</span>
+<span class="p">}</span>
+
+<span class="nc">.my-selector</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> myMixin</span><span class="p">(</span><span class="mh">#FF5733</span><span class="o">,</span> <span class="mi">16</span><span class="kt">px</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Function">Function<a class="anchor-link" href="#Function"> </a></h1><p>Take notes here</p>
+<h1 id="Function">Function<a class="anchor-link" href="#Function"> </a></h1><ul>
+<li>A toggle button can be created to change the SASS of a website, in the example below, it changes the theme.</li>
+<li>SASS functions have a specific syntax: @function name(parameters) { //code @return value; }.</li>
+<li>A function can be created to invert RGB colors, subtracting each RGB value from 255.</li>
+<li>The invert function is called by specifying its name with parentheses and arguments inside them.</li>
+</ul>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Import">Import<a class="anchor-link" href="#Import"> </a></h1><p>Take notes here</p>
+<p><p>Click the button below to toggle between light and dark mode:</p></p>
+<button onclick="invert()">Click me</button><script>
+    function sassHomepage() {
+        window.location.href = "/sassy_squad/sass";
+    }
+
+
+    function invert() {
+
+        document.getElementById("invert").classList.toggle("invert");
+        document.getElementById("bodyInvert").classList.toggle("bodyInvert");
+    }
+
+
+</script>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Import">Import<a class="anchor-link" href="#Import"> </a></h1><ul>
+<li>It is important to manage cluttered SASS files.</li>
+<li>Splitting the code into multiple files and then importing them into one file is very useful.</li>
+<li>To create a separate file, a directory called _sass is to be created.</li>
+<li>Recommended to create another SASS file for the specific code to be separated.</li>
+<li>Import statement "@import 'file-name'" can be used to import the separated file into the main SASS file.</li>
+</ul>
 
 </div>
 </div>

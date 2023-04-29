@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -903,10 +903,10 @@ false
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">minutesAwake</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;How many minutes have you been awake?&quot;</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">minutesAwake</span> <span class="o">&gt;</span> <span class="mf">180</span><span class="p">)</span> <span class="p">{</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">hoursAwake</span> <span class="o">=</span> <span class="mf">10</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">hoursAwake</span> <span class="o">&gt;</span> <span class="mf">4</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">cast</span> <span class="o">=</span> <span class="s2">&quot;Good afternoon.&quot;</span><span class="p">;</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">minutesAwake</span> <span class="o">&gt;</span> <span class="mf">400</span><span class="p">)</span> <span class="p">{</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">hoursAwake</span> <span class="o">&gt;</span> <span class="mf">8</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">cast</span> <span class="o">=</span> <span class="s2">&quot;Good night.&quot;</span><span class="p">;</span>
   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="nx">cast</span> <span class="o">=</span> <span class="s2">&quot;Good morning.&quot;</span><span class="p">;</span>
@@ -924,24 +924,12 @@ false
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-evalmachine.&lt;anonymous&gt;:1
-var minutesAwake = prompt(&#34;How many minutes have you been awake?&#34;);
-^
 
-TypeError: Identifier &#39;minutesAwake&#39; has already been declared
-    at evalmachine.&lt;anonymous&gt;:1:1
-    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
-    at Object.runInThisContext (vm.js:97:38)
-    at run ([eval]:1020:15)
-    at onRunRequest ([eval]:864:18)
-    at onMessage ([eval]:828:13)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:758:12)
-    at _combinedTickCallback (internal/process/next_tick.js:73:7)</pre>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Good afternoon.&#39;</pre>
 </div>
+
 </div>
 
 </div>
@@ -977,10 +965,22 @@ TypeError: Identifier &#39;minutesAwake&#39; has already been declared
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="JavaScript-in-HTML--Questions">JavaScript in HTML- Questions<a class="anchor-link" href="#JavaScript-in-HTML--Questions"> </a></h1><ol>
-<li>Where do you store the JavaScript Code?</li>
-<li>How do you import a JS file into HTML?</li>
-<li>What is onClick?</li>
-<li>What tag do you use to write JavaScript code?</li>
+<li>Where do you store the JavaScript Code?<ul>
+<li>JavaScript code can be stored in a separate .js file or directly in the HTML file using a <code>&lt;script&gt;</code> tag.</li>
+</ul>
+</li>
+<li>How do you import a JS file into HTML?<ul>
+<li>To import a JS file into an HTML file, you can use the <code>&lt;script&gt;</code> tag with the src attribute set to the URL of the JS file. For example, <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code> will import the script.js file.</li>
+</ul>
+</li>
+<li>What is onClick?<ul>
+<li>onClick is an event handler attribute that can be added to an HTML element to specify a JavaScript function to be executed when the element is clicked. For example, <code>&lt;button onClick="myFunction()"&gt;Click me&lt;/button&gt;</code> will call the myFunction() function when the button is clicked.</li>
+</ul>
+</li>
+<li>What tag do you use to write JavaScript code?<ul>
+<li>The <code>&lt;script&gt;</code> tag is used to write JavaScript code in an HTML file. For example, <code>&lt;script&gt;console.log("Hello, world!")&lt;/script&gt;</code> will output "Hello, world!" to the console.</li>
+</ul>
+</li>
 </ol>
 
 </div>
@@ -993,6 +993,18 @@ TypeError: Identifier &#39;minutesAwake&#39; has already been declared
 <li>Complete the code portions, questions, and prompts throughout the notebook</li>
 <li>Extra Credit: code a small JavaScript game </li>
 </ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Notes">Notes<a class="anchor-link" href="#Notes"> </a></h1><ul>
+<li>JavaScript variables can be declared with var, let, or const, and can hold any data type.</li>
+<li>There are eight JavaScript data types, including strings, numbers, BigInts, booleans, undefined, null, symbols, and objects.</li>
+<li>Conditional statements control behavior and decide whether or not pieces of code can run, using if, else, and else if.</li>
+<li>Const is used to declare variables whose value can only be initialized at the time of declaration and cannot be reassigned.</li>
+</ul>
 
 </div>
 </div>

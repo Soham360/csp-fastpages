@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      25 min read
+      31 min read
     
 </span></p>
 
@@ -168,7 +168,6 @@ window.onload = wrap_img;
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#Random-Values">Random Values </a></li>
-<li class="toc-entry toc-h2"><a href="#QUESTION:-Without-shuffling-the-card-order-of-the-deck,-can-you-think-of-a-way-that-the-aforementioned-random-module-functions-could-be-used-to-get-a-random-card-from-the-deck?-Do-so-in-the-code-cell-below.">QUESTION: Without shuffling the card order of the deck, can you think of a way that the aforementioned random module functions could be used to get a random card from the deck? Do so in the code cell below. </a></li>
 <li class="toc-entry toc-h2"><a href="#Simulation-Homework">Simulation Homework </a></li>
 </ul>
 </li>
@@ -212,18 +211,20 @@ window.onload = wrap_img;
 <a class="anchor" href="#Lists" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lists<a class="anchor-link" href="#Lists"> </a>
 </h2>
 <ul>
-<li>What are Lists?<ul>
+<li>
+<p>What are Lists?</p>
+<ul>
 <li>Lists are an ordered sequence of elements, where each element is a variable</li>
 <li>Unlike dictionaries, lists' keys are all integers that describe the order of the list</li>
 </ul>
 </li>
-</ul>
+<li>
 <p>Some examples of lists:</p>
 <ul>
 <li>Playlist of songs</li>
 <li>names of students in a class</li>
-<li>
-<p>contacts on your phone</p>
+<li>contacts on your phone</li>
+</ul>
 </li>
 <li>
 <p>Each element of a string is referenced by an index (which is a number) and they generally start 0 but for the AP Exam it starts at 1.</p>
@@ -251,7 +252,7 @@ window.onload = wrap_img;
 <p>Answer the following questions about the code block below:</p>
 <ul>
 <li>Why do you think lists are helpful? What word does College Board like to use to describe the function of lists?<ul>
-<li>Lists store data in them and are useful for storage. CollegeBoard likes to use ...........................................................</li>
+<li>Lists store data in them and are useful for storage. Collegeboard likes to use the word "abstraction" to describe the function of lists, as complex data structures are simplified.</li>
 </ul>
 </li>
 </ul>
@@ -336,7 +337,7 @@ person {'name': 'Sri Kotturi', 'age': 16, 'score': 90.0, 'langs': ['Python', 'Ja
 <p>What is the output of the cell below? What Mathematical Expressions do you see being used? (List them below.)</p>
 <ul>
 <li>The output of the cell below is 10.</li>
-<li>The mathematical expression I see being used is // which means floor division. If the output of (grade 1 + grade)/2 is a decimal, then it rounds down.</li>
+<li>The mathematical expression I see being used is + which adds two inputs. I also see // which means floor division. If the output of (grade 1 + grade)/2 is a decimal, then it rounds down.</li>
 </ul>
 
 </div>
@@ -758,33 +759,48 @@ I guessed your number 37!
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
-<span class="k">def</span> <span class="nf">rock_paper_scissors</span><span class="p">():</span>
-    <span class="n">possible_actions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"rock"</span><span class="p">,</span> <span class="s2">"paper"</span><span class="p">,</span> <span class="s2">"scissors"</span><span class="p">]</span>
-    <span class="n">userGuess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Choose rock, paper, or scissors."</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">userGuess</span> <span class="o">!=</span> <span class="s2">"rock"</span> <span class="ow">or</span> <span class="s2">"paper"</span> <span class="ow">or</span> <span class="s2">"scissors"</span><span class="p">:</span>
-        <span class="n">userGuess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Choose rock, paper, or scissors."</span><span class="p">)</span>
-    <span class="n">computerGuess</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">possible_actions</span><span class="p">)</span>
+<span class="n">user_action</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter a choice (rock, paper, scissors): "</span><span class="p">)</span>
+<span class="n">possible_actions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"rock"</span><span class="p">,</span> <span class="s2">"paper"</span><span class="p">,</span> <span class="s2">"scissors"</span><span class="p">]</span>
+<span class="n">computer_action</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">possible_actions</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">You chose </span><span class="si">{</span><span class="n">user_action</span><span class="si">}</span><span class="s2">, computer chose </span><span class="si">{</span><span class="n">computer_action</span><span class="si">}</span><span class="s2">.</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 
-    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">userGuess</span> <span class="o">==</span> <span class="s2">"rock"</span> <span class="ow">and</span> <span class="n">computerGuess</span><span class="o">==</span><span class="s2">"paper"</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Is your number </span><span class="si">{</span><span class="n">guess</span><span class="si">}</span><span class="s2">?"</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter 'higher', 'lower', or 'yes': "</span><span class="p">)</span>
-
-        <span class="c1"># conditional statements to check target number and guess</span>
-        <span class="k">if</span> <span class="n">response</span> <span class="o">==</span> <span class="s1">'yes'</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"I guessed your number </span><span class="si">{</span><span class="n">guess</span><span class="si">}</span><span class="s2">!"</span><span class="p">)</span>
-            <span class="k">break</span>
-        <span class="k">elif</span> <span class="n">response</span> <span class="o">==</span> <span class="s1">'higher'</span><span class="p">:</span>
-            <span class="n">low</span> <span class="o">=</span> <span class="n">guess</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="k">elif</span> <span class="n">response</span> <span class="o">==</span> <span class="s1">'lower'</span><span class="p">:</span>
-            <span class="n">high</span> <span class="o">=</span> <span class="n">guess</span> <span class="o">-</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"Invalid input, please enter 'higher', 'lower', or 'yes'."</span><span class="p">)</span>
-
-<span class="n">rock_paper_scissors</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">user_action</span> <span class="o">==</span> <span class="n">computer_action</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"You both chose </span><span class="si">{</span><span class="n">user_action</span><span class="si">}</span><span class="s2">. Try again!"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">user_action</span> <span class="o">==</span> <span class="s2">"rock"</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">computer_action</span> <span class="o">==</span> <span class="s2">"scissors"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Rock beats scissors! You win!"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Paper beats rock! You lose."</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">user_action</span> <span class="o">==</span> <span class="s2">"paper"</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">computer_action</span> <span class="o">==</span> <span class="s2">"rock"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Paper beats rock! You win!"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Scissors beats paper! You lose."</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">user_action</span> <span class="o">==</span> <span class="s2">"scissors"</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">computer_action</span> <span class="o">==</span> <span class="s2">"paper"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Scissors beats paper! You win!"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Rock beats scissors! You lose."</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+You chose rock, computer chose scissors.
+
+Rock beats scissors! You win!
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -798,31 +814,31 @@ I guessed your number 37!
 <a class="anchor" href="#Introduction-to-Algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to Algorithms<a class="anchor-link" href="#Introduction-to-Algorithms"> </a>
 </h1>
 <ul>
-<li>an algorithm is a <strong><strong>__</strong></strong> that describes how to solve a problem or perform a specific task using a computer program. </li>
+<li>an algorithm is a <strong>et of instructions</strong> that describes how to solve a problem or perform a specific task using a computer program. </li>
 <li>It is a precise sequence of computational steps that take an input and produce an output</li>
 </ul>
 <h2 id="How-do-Algorithms-relate-to-data-structures?">
 <a class="anchor" href="#How-do-Algorithms-relate-to-data-structures?" aria-hidden="true"><span class="octicon octicon-link"></span></a>How do Algorithms relate to data structures?<a class="anchor-link" href="#How-do-Algorithms-relate-to-data-structures?"> </a>
 </h2>
 <ul>
-<li>Algorithms often rely on specific data structures to <strong><strong><strong>__</strong></strong></strong>. </li>
+<li>Algorithms often rely on specific data structures to <strong>solve problems efficiently</strong>. </li>
 <li>Sorting algorithms require a data structure such as an array or a linked list to store and manipulate data.</li>
-<li>Searching algorithms such as binary search require data structures like <strong><strong>___</strong></strong> to organize and search through data.</li>
+<li>Searching algorithms such as binary search require data structures like <strong>arrays or trees</strong> to organize and search through data.</li>
 </ul>
 <h2 id="Important-Terms">
 <a class="anchor" href="#Important-Terms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Important Terms<a class="anchor-link" href="#Important-Terms"> </a>
 </h2>
 <p><strong>What is an algorithm?</strong></p>
 <ul>
-<li>it is a <strong>___</strong> set of instructions that accomplishes a specific task</li>
+<li>it is a <strong>finite</strong> set of instructions that accomplishes a specific task</li>
 </ul>
 <p><strong>Sequencing</strong></p>
 <ul>
-<li>means that there is an <strong>_</strong> in which to do things</li>
+<li>means that there is an <strong>order</strong> in which to do things</li>
 </ul>
 <p><strong>Selection</strong></p>
 <ul>
-<li>Helps to choose <strong><strong><strong>_</strong></strong></strong> based off of a decision that the programmer wants to make</li>
+<li>Helps to choose <strong>two different outcomes</strong> based off of a decision that the programmer wants to make</li>
 </ul>
 <p><strong>Iteration</strong></p>
 <ul>
@@ -832,10 +848,10 @@ I guessed your number 37!
 <a class="anchor" href="#Calling-and-Developing-Procedures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calling and Developing Procedures<a class="anchor-link" href="#Calling-and-Developing-Procedures"> </a>
 </h2>
 <ul>
-<li>A procedure is a <strong><strong>___</strong></strong> that performs a specific task.</li>
+<li>A procedure is a <strong>sequence of instructions</strong> that performs a specific task.</li>
 <li>To call a procedure, you need to know its name and any arguments it requires.</li>
 <li>When a procedure is called, the program jumps to its instruction and starts executing it.</li>
-<li>The arguments passed to a procedure can be used within the procedure to <strong><strong><strong><strong>__</strong></strong></strong></strong>.</li>
+<li>The arguments passed to a procedure can be used within the procedure to <strong>perform tasks or calculations</strong>.</li>
 <li>After the procedure has completed its task, it returns control back to the calling program.</li>
 </ul>
 
@@ -882,8 +898,8 @@ I guessed your number 37!
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>The result of the procedure can be <strong><strong><em>__</em></strong></strong>, printed to the screen, or used in any other way that is required by the program.</li>
-<li>Procedures can be defined within the same program <strong><strong>___</strong></strong>, and can be reused across multiple parts of the program.</li>
+<li>The result of the procedure can be <strong>stored in a variable</strong>, printed to the screen, or used in any other way that is required by the program.</li>
+<li>Procedures can be defined within the same program <strong>or in external files</strong>, and can be reused across multiple parts of the program.</li>
 <li>To avoid errors and improve code readability, it's important to define and call procedures with proper syntax and conventions that are appropriate for the programming language you're using.</li>
 </ul>
 
@@ -939,20 +955,21 @@ I guessed your number 37!
 <a class="anchor" href="#Algorithmic-Efficiency" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithmic Efficiency<a class="anchor-link" href="#Algorithmic-Efficiency"> </a>
 </h2>
 <ul>
-<li>Algorithmic efficiency refers to the amount of <strong><strong>__</strong></strong> needed to execute an algorithm.</li>
-<li>The efficiency of an algorithm can be measured in terms of its <strong><strong><strong><strong><strong><strong><strong>__</strong></strong></strong></strong></strong></strong></strong>.<ul>
+<li>Algorithmic efficiency refers to the amount of <strong>time and resources</strong> needed to execute an algorithm.</li>
+<li>The efficiency of an algorithm can be measured in terms of its <strong>time complexity and space complexity</strong>.<ul>
 <li>Time complexity refers to the amount of time required by an algorithm to complete its task as a function of its input size.</li>
-<li>Space complexity refers to the <strong><strong>___</strong></strong> required by an algorithm to complete its task as a function of its input size.</li>
-<li>can be analyzed using <strong><strong>__</strong></strong>, which provides an upper bound on the worst-case time and space complexity of the algorithm.</li>
+<li>Space complexity refers to the <strong>amount of memory</strong> required by an algorithm to complete its task as a function of its input size.</li>
+<li>can be analyzed using <strong>Big O notation</strong>, which provides an upper bound on the worst-case time and space complexity of the algorithm.</li>
 </ul>
 </li>
 </ul>
 <p>What is the time complexity of the following code:</p>
-
-<pre><code>- O(N)
-- O(N*log(N))
-- O(N * Sqrt(N))
-- O(N*N)</code></pre>
+<ul>
+<li>O(N)</li>
+<li>O(N*log(N))</li>
+<li>O(N * Sqrt(N))</li>
+<li>O(N*N)</li>
+</ul>
 
 </div>
 </div>
@@ -974,31 +991,17 @@ I guessed your number 37!
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb Cell 25</span> in <span class="ansi-cyan-fg">&lt;cell line: 2&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb#X33sdnNjb2RlLXJlbW90ZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> a = 0
-<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb#X33sdnNjb2RlLXJlbW90ZQ%3D%3D?line=1'&gt;2&lt;/a&gt;</span> for i in range(N):
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb#X33sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span>   for j in reversed(range(i, N)):
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb#X33sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span>     a = a + i + j
-
-<span class="ansi-red-fg">NameError</span>: name 'N' is not defined</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The time complexity will be O(N*N) because there is a nested for loop - or two for loops consecutively - which causes the time complexity of N to be squared.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1036,9 +1039,17 @@ I guessed your number 37!
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>n(n+1) n(n+1) because there are two for loops, and therefore n is iterated through twice. There is also the +1 becaue each time, a value is added by 1.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Efficiency can be improved by <strong><strong><strong>_</strong></strong></strong> or by using more efficient data structures and algorithms.<ul>
-<li>Some common techniques for improving efficiency include reducing the <strong><strong>___</strong></strong>, caching results, and <strong><strong>___</strong></strong>.</li>
+<li>Efficiency can be improved by <strong>optimizing algorithms</strong> or by using more efficient data structures and algorithms.<ul>
+<li>Some common techniques for improving efficiency include reducing the <strong>size of the input data</strong>, caching results, and <strong>parallelizing tasks</strong>.</li>
 <li>Understanding algorithmic efficiency is important in software development, as it can impact the performance of applications and their ability to scale with larger data sets.</li>
 </ul>
 </li>
@@ -1053,8 +1064,8 @@ I guessed your number 37!
 <h1 id="Iteration-and-Simulations">
 <a class="anchor" href="#Iteration-and-Simulations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iteration and Simulations<a class="anchor-link" href="#Iteration-and-Simulations"> </a>
 </h1>
-<p>Simulations are <strong><strong><strong><strong>_</strong></strong></strong></strong> or systems that use mathematical algorithms and computer programs simulate the real behavior and aspects of the subject being modeled.</p>
-<p>Simulations are most often used to model <strong><strong><strong>__</strong></strong></strong> that would be difficult to test in real life, such as modeling the spread of diseases in certain ecosystems or testing the functionality of a potential product before it is made.</p>
+<p>Simulations are <strong>models of real-world phenomena</strong> or systems that use mathematical algorithms and computer programs simulate the real behavior and aspects of the subject being modeled.</p>
+<p>Simulations are most often used to model <strong>complex or time-consuming things</strong> that would be difficult to test in real life, such as modeling the spread of diseases in certain ecosystems or testing the functionality of a potential product before it is made.</p>
 <p>In this lesson, we will be looking at lists, iteration, and random values through the lens of simulations.</p>
 <p><strong>PLEASE RUN THE CODE BELOW BEFORE INTERACTING WITH THE CODE SEGMENTS IN THIS SECTION!</strong></p>
 
@@ -1118,7 +1129,7 @@ I guessed your number 37!
 <a class="anchor" href="#For-Loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>For Loops<a class="anchor-link" href="#For-Loops"> </a>
 </h3>
 <p>For loops are probably the most well-known type of iterative loop used in code. Most of us know about the <code>for variable in list</code> format.</p>
-<p>One helpful tool not a lot of people know about is the <code>enumerate()</code> function. When used in conjunction with a for loop, you can always have <strong><strong>_</strong></strong> and value of each selected list entry.</p>
+<p>One helpful tool not a lot of people know about is the <code>enumerate()</code> function. When used in conjunction with a for loop, you can always have <strong>access to the index</strong> and value of each selected list entry.</p>
 
 </div>
 </div>
@@ -1141,6 +1152,27 @@ I guessed your number 37!
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This entry's index is 0, but its value is 3.
+The difference between the value and the index is 3.
+This entry's index is 1, but its value is 5.
+The difference between the value and the index is 4.
+This entry's index is 2, but its value is 68.
+The difference between the value and the index is 66.
+This entry's index is 3, but its value is 203.
+The difference between the value and the index is 200.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -1148,7 +1180,7 @@ I guessed your number 37!
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>QUESTION: How is the <code>key, num in enumerate(list)</code> format similar to the format used when applying a <code>for</code> loop to a dictionary?</p>
-<p>Answer: <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>__</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p>
+<p>Answer: <strong>When running a for loop to a dictionary, the loop iterates through the keys and values. Similarly, this format iterates through the index and the values, which is like the keys and values of dictionaries.</strong></p>
 <h4 id="List-Comprehension">
 <a class="anchor" href="#List-Comprehension" aria-hidden="true"><span class="octicon octicon-link"></span></a>List Comprehension<a class="anchor-link" href="#List-Comprehension"> </a>
 </h4>
@@ -1178,6 +1210,20 @@ I guessed your number 37!
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['Ace of Diamonds']
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1211,6 +1257,22 @@ I guessed your number 37!
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -1254,7 +1316,7 @@ I guessed your number 37!
 <h3 id="While-Loops">
 <a class="anchor" href="#While-Loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>While Loops<a class="anchor-link" href="#While-Loops"> </a>
 </h3>
-<p>While loops aren't used in the program, but they offer a <strong><strong><em>__</em></strong></strong> a set of instructions in a program. The procedure below the <code>while [condition]</code> line will occur until the condition is made not true.</p>
+<p>While loops aren't used in the program, but they offer a <strong>different way to repeat</strong> a set of instructions in a program. The procedure below the <code>while [condition]</code> line will occur until the condition is made not true.</p>
 <p><strong>Student Interaction</strong>: How could this <code>build</code> function be altered to function with a <strong>while loop</strong> within it?</p>
 
 </div>
@@ -1312,6 +1374,20 @@ I guessed your number 37!
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>It took 39 random generations to get 10.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -1322,7 +1398,7 @@ I guessed your number 37!
 <h2 id="Random-Values">
 <a class="anchor" href="#Random-Values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Random Values<a class="anchor-link" href="#Random-Values"> </a>
 </h2>
-<p>Because unpredictable randomness occurs in the real world, it's important to have a way to represent it. Simulations are <strong><strong><strong>_</strong></strong></strong>, which could be in the form of random number generation or other methods like <code>shuffle</code>.</p>
+<p>Because unpredictable randomness occurs in the real world, it's important to have a way to represent it. Simulations are <strong>able to use randomization</strong>, which could be in the form of random number generation or other methods like <code>shuffle</code>.</p>
 <p>Card decks are a great example of how random values can be used to represent real-world scenarios. In the card simulation, the <code>random</code> module's <code>shuffle</code> function is used to quite literally shuffle the deck, seen below.</p>
 
 </div>
@@ -1349,10 +1425,12 @@ I guessed your number 37!
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Often, random selection methods use functions like <code>______</code> or <code>________</code> as ways to select certain indexes in lists, or might use the random numbers in some other way.</p>
-<h2 id="QUESTION:-Without-shuffling-the-card-order-of-the-deck,-can-you-think-of-a-way-that-the-aforementioned-random-module-functions-could-be-used-to-get-a-random-card-from-the-deck?-Do-so-in-the-code-cell-below.">
-<a class="anchor" href="#QUESTION:-Without-shuffling-the-card-order-of-the-deck,-can-you-think-of-a-way-that-the-aforementioned-random-module-functions-could-be-used-to-get-a-random-card-from-the-deck?-Do-so-in-the-code-cell-below." aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>QUESTION:</strong> Without shuffling the card order of the deck, can you think of a way that the aforementioned <code>random</code> module functions could be used to get a random card from the deck? Do so in the code cell below.<a class="anchor-link" href="#QUESTION:-Without-shuffling-the-card-order-of-the-deck,-can-you-think-of-a-way-that-the-aforementioned-random-module-functions-could-be-used-to-get-a-random-card-from-the-deck?-Do-so-in-the-code-cell-below."> </a>
-</h2>
+<p>Often, random selection methods use functions like <strong><code>randint</code></strong> or <strong><code>randrange</code></strong> as ways to select certain indexes in lists, or might use the random numbers in some other way.</p>
+<p><strong>QUESTION:</strong> Without shuffling the card order of the deck, can you think of a way that the aforementioned <code>random</code> module functions could be used to get a random card from the deck? Do so in the code cell below.</p>
+<ul>
+<li>The <code>randint</code> function can be used to randomly generate an index from the deck.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -1384,10 +1462,22 @@ I guessed your number 37!
 <p>Now that you've learned about simulations and how they're used, it's time to apply that knowledge by creating a (basic) simulation of a real-world scenario. It can be something in nature, like the changes in the wildlife population of a certain area; it can be a game, like Uno (no blackjack though, that's taken); or it can be something completely random and unique.</p>
 <p>The simulation must include...</p>
 <ul>
-<li>Use of at least one random value</li>
-<li>At least one list or similar data type (dictionary, set, etc.)</li>
-<li>Efficient use of iteration (must support the purpose of the simualtion)</li>
-<li>Selection (use of conditionals)</li>
+<li>Use of at least one random value<ul>
+<li>The simulation uses a random value to simulate the dice roll.</li>
+</ul>
+</li>
+<li>At least one list or similar data type (dictionary, set, etc.)<ul>
+<li>The simulation uses a list to represent the game board.</li>
+</ul>
+</li>
+<li>Efficient use of iteration (must support the purpose of the simualtion)<ul>
+<li>The simulation uses iteration to determine the player's position on the board.</li>
+</ul>
+</li>
+<li>Selection (use of conditionals)<ul>
+<li>The simulation uses conditionals to determine the player's position on the board.</li>
+</ul>
+</li>
 </ul>
 <p>Do this in your student copy in the cell provided. This is worth 0.9 (or more with extra credit) out of the 3 possible points.</p>
 
@@ -1409,9 +1499,45 @@ I guessed your number 37!
 <span class="c1"># What kind of iteration happens in the real world?</span>
 <span class="c1"># What occurs repeatedly, even over a long period of time?</span>
 <span class="c1"># You could model the results of a disease spreading through a population without it taking IRL years.</span>
+
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># Set up the game board</span>
+<span class="n">board</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Start"</span><span class="p">,</span> <span class="s2">"Square 1"</span><span class="p">,</span> <span class="s2">"Square 2"</span><span class="p">,</span> <span class="s2">"Square 3"</span><span class="p">,</span> <span class="s2">"Square 4"</span><span class="p">,</span> <span class="s2">"Square 5"</span><span class="p">,</span> <span class="s2">"Finish"</span><span class="p">]</span>
+<span class="n">num_squares</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+<span class="n">player_pos</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Roll the dice and move the player</span>
+<span class="k">while</span> <span class="n">player_pos</span> <span class="o">&lt;</span> <span class="n">num_squares</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">roll</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"You rolled a"</span><span class="p">,</span> <span class="n">roll</span><span class="p">)</span>
+    <span class="n">player_pos</span> <span class="o">+=</span> <span class="n">roll</span>
+    <span class="k">if</span> <span class="n">player_pos</span> <span class="o">&gt;=</span> <span class="n">num_squares</span><span class="p">:</span>
+        <span class="n">player_pos</span> <span class="o">=</span> <span class="n">num_squares</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"You are now on"</span><span class="p">,</span> <span class="n">board</span><span class="p">[</span><span class="n">player_pos</span><span class="p">])</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Congratulations, you reached the finish!"</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>You rolled a 4
+You are now on Square 4
+You rolled a 3
+You are now on Finish
+Congratulations, you reached the finish!
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1424,7 +1550,7 @@ I guessed your number 37!
 <h1 id="Databases">
 <a class="anchor" href="#Databases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Databases<a class="anchor-link" href="#Databases"> </a>
 </h1>
-<p>We have already gone over databases in this class, but here is a refresher. A database contains data that's <strong><strong><em>__</em></strong></strong>. The information in this database can then be <strong>__</strong> from the database and can be used in a program.</p>
+<p>We have already gone over databases in this class, but here is a refresher. A database contains data that's <strong>stored in columns and rows</strong>. The information in this database can then be <strong>pulled</strong> from the database and can be used in a program.</p>
 <h2 id="Setting-Up-the-Database">
 <a class="anchor" href="#Setting-Up-the-Database" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting Up the Database<a class="anchor-link" href="#Setting-Up-the-Database"> </a>
 </h2>
@@ -1641,9 +1767,9 @@ I guessed your number 37!
 <p>Setters and Getters are important methods used when writing code for databases.</p>
 <ul>
 <li>
-<strong>Setter</strong>: a method that allows us to <strong>___</strong> the value of an attribute in a class.</li>
+<strong>Setter</strong>: a method that allows us to <strong>set or change</strong> the value of an attribute in a class.</li>
 <li>
-<strong>Getter</strong>: a method that allows us to <strong><em>__</em></strong> an attribute in a given class.</li>
+<strong>Getter</strong>: a method that allows us to <strong>access</strong> an attribute in a given class.</li>
 </ul>
 <h3 id="Setter-Example">
 <a class="anchor" href="#Setter-Example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setter Example<a class="anchor-link" href="#Setter-Example"> </a>
@@ -1708,7 +1834,7 @@ I guessed your number 37!
 <ul>
 <li>it acts as a messenger that allows programs to access data from the others </li>
 <li>it connects all information </li>
-<li>for a database, an api <strong><strong>_</strong></strong> the data requested in code for the user </li>
+<li>for a database, an api <strong>retrieves</strong> the data requested in code for the user </li>
 </ul>
 
 </div>
@@ -1813,6 +1939,22 @@ I guessed your number 37!
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Created user with username "Mr. Cards".
+Created user with username "Kard Kowntre".
+Created user with username "Un Bea Table".
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -1856,9 +1998,210 @@ I guessed your number 37!
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If you've already run the db.init_app(app) function while in this notebook,</span>
 <span class="c1"># don't do it again until you've closed it!</span>
+
+<span class="sd">""" database dependencies to support sqliteDB examples """</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">from</span> <span class="nn">__init__</span> <span class="kn">import</span> <span class="n">app</span><span class="p">,</span> <span class="n">db</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.exc</span> <span class="kn">import</span> <span class="n">IntegrityError</span>
+<span class="kn">from</span> <span class="nn">werkzeug.security</span> <span class="kn">import</span> <span class="n">generate_password_hash</span><span class="p">,</span> <span class="n">check_password_hash</span>
+
+
+<span class="sd">''' Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into Python shell and follow along '''</span>
+
+<span class="c1"># Define the Review class to manage actions in the 'reviews' table</span>
+<span class="c1"># -- Object Relational Mapping (ORM) is the key concept of SQLAlchemy</span>
+<span class="c1"># -- a.) db.Model is like an inner layer of the onion in ORM</span>
+<span class="c1"># -- b.) Review represents data we want to store, something that is built on db.Model</span>
+<span class="c1"># -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL</span>
+<span class="k">class</span> <span class="nc">Review</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">'reviews'</span>  <span class="c1"># table name is plural, class name is singular</span>
+
+    <span class="c1"># Define the Review schema with "vars" from object</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">_rname</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_comment</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Text</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_rating</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_uid</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>    
+
+    <span class="c1"># constructor of a Review object, initializes the instance variables within object (self)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rname</span><span class="p">,</span> <span class="n">comment</span><span class="p">,</span> <span class="n">rating</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rname</span> <span class="o">=</span> <span class="n">rname</span>    <span class="c1"># variables with self prefix become part of the object, </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_comment</span> <span class="o">=</span> <span class="n">comment</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rating</span> <span class="o">=</span> <span class="n">rating</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">=</span> <span class="n">uid</span>
+
+    <span class="c1"># a name getter method, extracts name from object</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">rname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rname</span>
+    
+    <span class="c1"># a setter function, allows name to be updated after initial object creation</span>
+    <span class="nd">@rname</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">rname</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rname</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rname</span> <span class="o">=</span> <span class="n">rname</span>
+
+    <span class="c1"># a comment getter method, extracts comment from object</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">comment</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_comment</span>
+    
+    <span class="c1"># a setter function, allows name to be updated after initial object creation</span>
+    <span class="nd">@comment</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">comment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">comment</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_comment</span> <span class="o">=</span> <span class="n">comment</span>  
+
+    <span class="c1"># a getter method, extracts rating from object</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">rating</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rating</span>
+    
+    <span class="c1"># a setter function, allows name to be updated after initial object creation</span>
+    <span class="nd">@rating</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">rating</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rating</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rating</span> <span class="o">=</span> <span class="n">rating</span>              
+    
+    <span class="c1"># a getter method, extracts uid from object</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">uid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span>
+    
+    <span class="c1"># a setter function, allows name to be updated after initial object creation</span>
+    <span class="nd">@uid</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">uid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">=</span> <span class="n">uid</span>
+        
+    <span class="c1"># check if uid parameter matches user id in object, return boolean</span>
+    <span class="k">def</span> <span class="nf">is_uid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">==</span> <span class="n">uid</span>
+    
+  
+    <span class="c1"># output content using str(object) in human readable form, uses getter</span>
+    <span class="c1"># output content using json dumps, this is ready for API response</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+    <span class="c1"># create/add a new record to the table</span>
+    <span class="c1"># returns self or None on error</span>
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># creates a reviewer object from Review(db.Model) class, passes initializers</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Inside create"</span><span class="p">)</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>  <span class="c1"># add prepares to persist person object to Reviews table</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>  <span class="c1"># SqlAlchemy "unit of work pattern" requires a manual commit</span>
+            <span class="k">return</span> <span class="bp">self</span>
+        <span class="k">except</span> <span class="n">IntegrityError</span><span class="p">:</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="c1"># read converts self to dictionary</span>
+    <span class="c1"># returns dictionary</span>
+    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># entry = db.session.query(Reviews).get(args["id"])</span>
+        <span class="c1"># print(id,self.rname,self.uid,self.comment,self.rating)</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">"id"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">"rname"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">rname</span><span class="p">,</span>
+            <span class="s2">"comment"</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">comment</span><span class="p">,</span>
+            <span class="s2">"rating"</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">rating</span><span class="p">,</span>
+            <span class="s2">"uid"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">uid</span>            
+        <span class="p">}</span>
+
+    <span class="c1"># CRUD update: updates comment, rating, uid</span>
+    <span class="c1"># returns self</span>
+    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="nb">id</span><span class="p">,</span><span class="n">comment</span><span class="p">,</span><span class="n">rating</span><span class="p">,</span><span class="n">uid</span><span class="p">):</span>
+        <span class="sd">"""only updates values with length"""</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"inside reviews.py update"</span><span class="p">)</span> 
+        <span class="n">entry</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Review</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"sent request to update record"</span><span class="p">,</span> <span class="n">entry</span><span class="p">)</span>  
+        <span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span><span class="n">comment</span><span class="p">,</span><span class="n">rating</span><span class="p">,</span><span class="n">uid</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">entry</span><span class="p">:</span> 
+                <span class="c1"># db.session.update(self)</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">comment</span> <span class="o">=</span> <span class="n">comment</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">rating</span> <span class="o">=</span> <span class="n">rating</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">uid</span> <span class="o">=</span> <span class="n">uid</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"updated record"</span><span class="p">,</span> <span class="n">entry</span><span class="p">)</span>
+                <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">entry</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">{</span><span class="s2">"error"</span><span class="p">:</span> <span class="s2">"entry not found"</span><span class="p">},</span> <span class="mi">404</span>                
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s2">"error"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"server error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">},</span> <span class="mi">500</span>            
+
+    <span class="c1"># CRUD delete: remove self</span>
+    <span class="c1"># None</span>
+    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+        <span class="c1"># print("inside reviews.py delete", id) </span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">entry</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Review</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">entry</span><span class="p">:</span> 
+                <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+                <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"deleted record"</span><span class="p">,</span> <span class="n">entry</span><span class="p">)</span>                
+                <span class="k">return</span> <span class="kc">None</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">{</span><span class="s2">"error"</span><span class="p">:</span> <span class="s2">"entry not found"</span><span class="p">},</span> <span class="mi">404</span>                
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s2">"error"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"server error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">},</span> <span class="mi">500</span>
+
+<span class="sd">"""Database Creation and Testing """</span>
+
+
+<span class="c1"># Builds working data for testing</span>
+<span class="k">def</span> <span class="nf">initReviews</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="sd">"""Create database and tables"""</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">init_app</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
+        <span class="sd">"""Tester data for table"""</span>
+        <span class="n">u1</span> <span class="o">=</span> <span class="n">Review</span><span class="p">(</span><span class="n">rname</span><span class="o">=</span><span class="s1">'Recipe1'</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s1">'Recipe1 comment'</span><span class="p">,</span> <span class="n">rating</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'toby'</span> <span class="p">)</span>
+        <span class="n">u2</span> <span class="o">=</span> <span class="n">Review</span><span class="p">(</span><span class="n">rname</span><span class="o">=</span><span class="s1">'Recipe2'</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s1">'Recipe2 comment'</span><span class="p">,</span> <span class="n">rating</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'niko'</span><span class="p">)</span>
+        <span class="n">u3</span> <span class="o">=</span> <span class="n">Review</span><span class="p">(</span><span class="n">rname</span><span class="o">=</span><span class="s1">'Recipe3'</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s1">'Recipe3 comment'</span><span class="p">,</span> <span class="n">rating</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'lex'</span><span class="p">)</span>
+        <span class="n">u4</span> <span class="o">=</span> <span class="n">Review</span><span class="p">(</span><span class="n">rname</span><span class="o">=</span><span class="s1">'Recipe4'</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s1">'Recipe4 comment'</span><span class="p">,</span> <span class="n">rating</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'whit'</span><span class="p">)</span>
+        <span class="n">u5</span> <span class="o">=</span> <span class="n">Review</span><span class="p">(</span><span class="n">rname</span><span class="o">=</span><span class="s1">'Recipe5'</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s1">'Recipe5 comment'</span><span class="p">,</span> <span class="n">rating</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'jm1021'</span><span class="p">)</span>
+
+        <span class="n">reviews</span> <span class="o">=</span> <span class="p">[</span><span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">u4</span><span class="p">,</span> <span class="n">u5</span><span class="p">]</span>
+
+        <span class="sd">"""Builds sample review/comment(s) data"""</span>
+        <span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">reviews</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">review</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+            <span class="k">except</span> <span class="n">IntegrityError</span><span class="p">:</span>
+                <span class="sd">'''fails with bad or duplicate data'''</span>
+                <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Records exist, duplicate email, or error: </span><span class="si">{</span><span class="n">review</span><span class="o">.</span><span class="n">uid</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb Cell 68</span> in <span class="ansi-cyan-fg">&lt;cell line: 11&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb#Y122sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span> import os, base64
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb#Y122sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8'&gt;9&lt;/a&gt;</span> import json
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb#Y122sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span> from __init__ import app, db
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb#Y122sdnNjb2RlLXJlbW90ZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span> from sqlalchemy.exc import IntegrityError
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb#Y122sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span> from werkzeug.security import generate_password_hash, check_password_hash
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named '__init__'</pre>
+</div>
+</div>
+
 </div>
 </div>
 

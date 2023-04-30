@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      31 min read
+      34 min read
     
 </span></p>
 
@@ -190,6 +190,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#Database-Homework">Database Homework </a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h1"><a href="#Proof">Proof </a></li>
 <li class="toc-entry toc-h1"><a href="#Grading">Grading </a></li>
 </ul><!--
 #################################################
@@ -2002,10 +2003,8 @@ Created user with username "Un Bea Table".
 <span class="sd">""" database dependencies to support sqliteDB examples """</span>
 <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">base64</span>
 <span class="kn">import</span> <span class="nn">json</span>
 
-<span class="kn">from</span> <span class="nn">__init__</span> <span class="kn">import</span> <span class="n">app</span><span class="p">,</span> <span class="n">db</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.exc</span> <span class="kn">import</span> <span class="n">IntegrityError</span>
 <span class="kn">from</span> <span class="nn">werkzeug.security</span> <span class="kn">import</span> <span class="n">generate_password_hash</span><span class="p">,</span> <span class="n">check_password_hash</span>
 
@@ -2157,7 +2156,6 @@ Created user with username "Un Bea Table".
 <span class="k">def</span> <span class="nf">initReviews</span><span class="p">():</span>
     <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
         <span class="sd">"""Create database and tables"""</span>
-        <span class="n">db</span><span class="o">.</span><span class="n">init_app</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
         <span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
         <span class="sd">"""Tester data for table"""</span>
         <span class="n">u1</span> <span class="o">=</span> <span class="n">Review</span><span class="p">(</span><span class="n">rname</span><span class="o">=</span><span class="s1">'Recipe1'</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s1">'Recipe1 comment'</span><span class="p">,</span> <span class="n">rating</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'toby'</span> <span class="p">)</span>
@@ -2172,10 +2170,138 @@ Created user with username "Un Bea Table".
         <span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">reviews</span><span class="p">:</span>
             <span class="k">try</span><span class="p">:</span>
                 <span class="n">review</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Created review with name "</span><span class="si">{</span><span class="n">review</span><span class="o">.</span><span class="n">uid</span><span class="si">}</span><span class="s1">".'</span><span class="p">)</span>
             <span class="k">except</span> <span class="n">IntegrityError</span><span class="p">:</span>
                 <span class="sd">'''fails with bad or duplicate data'''</span>
                 <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
                 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Records exist, duplicate email, or error: </span><span class="si">{</span><span class="n">review</span><span class="o">.</span><span class="n">uid</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Blueprint</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">jsonify</span>
+<span class="kn">from</span> <span class="nn">flask_restful</span> <span class="kn">import</span> <span class="n">Api</span><span class="p">,</span> <span class="n">Resource</span> <span class="c1"># used for REST API building</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">review_api</span> <span class="o">=</span> <span class="n">Blueprint</span><span class="p">(</span><span class="s1">'review_api'</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">,</span>
+                   <span class="n">url_prefix</span><span class="o">=</span><span class="s1">'/api/reviews'</span><span class="p">)</span>
+
+<span class="c1"># API docs https://flask-restful.readthedocs.io/en/latest/api.html</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">Api</span><span class="p">(</span><span class="n">review_api</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">ReviewAPI</span><span class="p">:</span>        
+    <span class="k">class</span> <span class="nc">_Create</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="sd">''' Read data for json body '''</span>
+            <span class="n">body</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_json</span><span class="p">()</span>
+            
+            <span class="sd">''' Avoid garbage in, error checking '''</span>
+            <span class="c1"># validate rname</span>
+            <span class="n">rname</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'rname'</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">rname</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">rname</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">{</span><span class="s1">'message'</span><span class="p">:</span> <span class="sa">f</span><span class="s1">'Name is missing, or is less than 2 characters'</span><span class="p">},</span> <span class="mi">200</span>
+            <span class="c1"># validate uid</span>
+            <span class="n">uid</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'uid'</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">uid</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">{</span><span class="s1">'message'</span><span class="p">:</span> <span class="sa">f</span><span class="s1">'Review ID is missing, or is less than 2 characters'</span><span class="p">},</span> <span class="mi">210</span>
+            <span class="n">comment</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'comment'</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">comment</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">comment</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">{</span><span class="s1">'message'</span><span class="p">:</span> <span class="sa">f</span><span class="s1">'Comment is missing, or is less than 2 characters'</span><span class="p">},</span> <span class="mi">220</span>            <span class="c1"># validate rname</span>
+            <span class="n">rating</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'rating'</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">rating</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">rating</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="nb">int</span><span class="p">(</span><span class="n">rating</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">{</span><span class="s1">'message'</span><span class="p">:</span> <span class="sa">f</span><span class="s1">'Rating is missing, or is out of range'</span><span class="p">},</span> <span class="mi">230</span>
+
+            <span class="sd">''' #1: Key code block, setup REVIEW OBJECT '''</span>
+            <span class="n">uo</span> <span class="o">=</span> <span class="n">Review</span><span class="p">(</span><span class="n">rname</span><span class="o">=</span><span class="n">rname</span><span class="p">,</span>
+                      <span class="n">comment</span><span class="o">=</span><span class="n">comment</span><span class="p">,</span>
+                      <span class="n">rating</span><span class="o">=</span><span class="n">rating</span><span class="p">,</span>
+                      <span class="n">uid</span><span class="o">=</span><span class="n">uid</span>
+                      <span class="p">)</span>
+            
+           
+            <span class="sd">''' #2: Key Code block to add review to database '''</span>
+            <span class="c1"># create review in database</span>
+            <span class="n">review</span> <span class="o">=</span> <span class="n">uo</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+            <span class="c1"># success returns json of review</span>
+            <span class="k">if</span> <span class="n">review</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">review</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+            <span class="c1"># failure returns error</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s1">'message'</span><span class="p">:</span> <span class="sa">f</span><span class="s1">'Processed </span><span class="si">{</span><span class="n">rname</span><span class="si">}</span><span class="s1">, either a format error or Review ID </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s1"> is duplicate'</span><span class="p">},</span> <span class="mi">240</span>
+
+    <span class="k">class</span> <span class="nc">_Read</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="n">reviews</span> <span class="o">=</span> <span class="n">Review</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>    <span class="c1"># read/extract all reviews from database</span>
+            <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">review</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">reviews</span><span class="p">]</span>  <span class="c1"># prepare output in json</span>
+            <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">json_ready</span><span class="p">)</span>  <span class="c1"># jsonify creates Flask response object, more specific to APIs than json.dumps</span>
+
+    <span class="k">class</span> <span class="nc">_Delete</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="n">body</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_json</span><span class="p">()</span>
+            <span class="nb">id</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'id'</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"inside review.py delete id"</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span>
+            <span class="n">review</span><span class="o">=</span><span class="n">Review</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">review</span><span class="p">:</span>
+                <span class="n">reviews</span> <span class="o">=</span> <span class="n">Review</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>    <span class="c1"># read/extract all reviews from database</span>
+                <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">review</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">reviews</span><span class="p">]</span>  <span class="c1"># prepare output in json</span>
+                <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">json_ready</span><span class="p">)</span>  <span class="c1"># jsonify creates Flask response object, more specific to APIs than json.dumps               </span>
+
+    <span class="k">class</span> <span class="nc">_Update</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"inside review.py put"</span><span class="p">)</span>
+            <span class="n">body</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_json</span><span class="p">()</span>
+            <span class="nb">id</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'id'</span><span class="p">)</span>
+            <span class="n">comment</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'comment'</span><span class="p">)</span>
+            <span class="n">rating</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'rating'</span><span class="p">)</span>
+            <span class="n">uid</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'uid'</span><span class="p">)</span>
+            <span class="c1"># self.id = id</span>
+            <span class="c1"># if len(comment) &gt; 0:</span>
+            <span class="c1">#     self.comment = comment</span>
+            <span class="c1"># if rating &gt;= 10:</span>
+            <span class="c1">#     self.rating = rating    </span>
+            <span class="c1"># if len(uid) &gt; 0:</span>
+            <span class="c1">#     self.uid = uid </span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"inside review.py update id"</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span>
+            <span class="n">review</span><span class="o">=</span><span class="n">Review</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span><span class="n">comment</span><span class="p">,</span><span class="n">rating</span><span class="p">,</span><span class="n">uid</span><span class="p">)</span>
+            <span class="c1"># review=Review.put(id, self.comment, self.rating, self.uid)</span>
+            <span class="k">if</span> <span class="n">review</span><span class="p">:</span>
+                <span class="n">reviews</span> <span class="o">=</span> <span class="n">Review</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>    <span class="c1"># read/extract all reviews from database</span>
+                <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">review</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">reviews</span><span class="p">]</span>  <span class="c1"># prepare output in json</span>
+                <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">json_ready</span><span class="p">)</span>  <span class="c1"># jsonify creates Flask response object, more specific to APIs than json.dumps</span>
+              
+    <span class="c1"># building RESTapi endpoint</span>
+    <span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">_Create</span><span class="p">,</span> <span class="s1">'/create'</span><span class="p">)</span>
+    <span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">_Read</span><span class="p">,</span> <span class="s1">'/'</span><span class="p">)</span>
+    <span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">_Update</span><span class="p">,</span> <span class="s1">'/update'</span><span class="p">)</span>
+    <span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">_Delete</span><span class="p">,</span> <span class="s1">'/delete'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">initReviews</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -2187,18 +2313,18 @@ Created user with username "Un Bea Table".
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb Cell 68</span> in <span class="ansi-cyan-fg">&lt;cell line: 11&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb#Y122sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span> import os, base64
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb#Y122sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8'&gt;9&lt;/a&gt;</span> import json
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb#Y122sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span> from __init__ import app, db
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb#Y122sdnNjb2RlLXJlbW90ZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span> from sqlalchemy.exc import IntegrityError
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/soham/vscode/csp-fastpages/_notebooks/2023-04-26-studenttemplate.ipynb#Y122sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span> from werkzeug.security import generate_password_hash, check_password_hash
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named '__init__'</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Inside create
+Created review with name "toby".
+Inside create
+Created review with name "niko".
+Inside create
+Created review with name "lex".
+Inside create
+Created review with name "whit".
+Inside create
+Created review with name "jm1021".
+</pre>
 </div>
 </div>
 
@@ -2208,6 +2334,55 @@ Created user with username "Un Bea Table".
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">menu</span><span class="p">():</span>
+    <span class="n">operation</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter: (C)reate (R)ead (U)pdate or (D)elete or (S)chema"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'c'</span><span class="p">:</span>
+        <span class="n">create</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'r'</span><span class="p">:</span>
+        <span class="n">read</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'u'</span><span class="p">:</span>
+        <span class="n">update</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'d'</span><span class="p">:</span>
+        <span class="n">delete</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'s'</span><span class="p">:</span>
+        <span class="n">schema</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="c1"># Escape Key</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Please enter c, r, u, or d"</span><span class="p">)</span> 
+    <span class="n">menu</span><span class="p">()</span> <span class="c1"># recursion, repeat menu</span>
+        
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">menu</span><span class="p">()</span> <span class="c1"># start menu</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Perform Jupyter 'Run All' prior to starting menu"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Proof">
+<a class="anchor" href="#Proof" aria-hidden="true"><span class="octicon octicon-link"></span></a>Proof<a class="anchor-link" href="#Proof"> </a>
+</h1>
+<p><img src="https://github.com/Soham360/csp-fastpages/blob/master/images/evidence.png?raw=true" alt="evidence"></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">

@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      11 min read
     
 </span></p>
 
@@ -665,6 +665,44 @@ Delete: Option for deleting every film, also takes in a name to delete that film
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://recipies.duckdns.org/api/users"</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">entries</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">entry</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"rname"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"rname"</span><span class="p">],</span>
+        <span class="s2">"uid"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"uid"</span><span class="p">],</span>
+        <span class="s2">"comment"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"comment"</span><span class="p">],</span>
+        <span class="s2">"rating"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"rating"</span><span class="p">],</span>
+    <span class="p">}</span>
+    <span class="n">entries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">entries</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 

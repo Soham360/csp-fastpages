@@ -12,7 +12,7 @@ categories: [Week 32]
 
 # MCQ7 Corrections
 ![]({{ site.baseurl }}/images/Question4.png "Question 4")
-For this question, you were supposed to 
+For this question, you were supposed to determine which of the following statements best explained the relationship between the Internet and the World Wide Web. I answered Option C because the World Wide Web has the word world in it so I thought the correct answer would be the one talking about the global network. I realize this is wrong because the Internet is a network of interconnected networks, but the World Wide Web is an information system that is accessed via the Internet. The correct answer is Option D because the Internet is the global system of interconnected computer networks that uses protocols to connect devices worldwide. The World Wide Web is an information system (of pages, programs, and files) that is accessible over the Internet.
 
 ![]({{ site.baseurl }}/images/Question23MCQ7.png "Question 23")
 For this question, you were supposed to determine which of the following statements about the Internet was true. I answered Option D because I thought the Internet used a centralized system to determine how packets are routed. I realize this is wrong because routing on the Internet is usually dynamic; it is not specified in advance, nor is it controlled from a central location. The correct answer is Option B because the Internet was designed to be scalable, using open protocols to easily connect additional computing devices to the network.

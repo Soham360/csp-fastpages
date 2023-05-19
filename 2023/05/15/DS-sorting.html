@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Sorting Algorithms | Soham Kamat</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Sorting Algorithms" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Working with Data Structures and manipulating data." />
+<meta property="og:description" content="Working with Data Structures and manipulating data." />
+<link rel="canonical" href="https://soham360.github.io/csp-fastpages/2023/05/15/DS-sorting.html" />
+<meta property="og:url" content="https://soham360.github.io/csp-fastpages/2023/05/15/DS-sorting.html" />
+<meta property="og:site_name" content="Soham Kamat" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-15T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sorting Algorithms" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-15T00:00:00-05:00","datePublished":"2023-05-15T00:00:00-05:00","description":"Working with Data Structures and manipulating data.","headline":"Sorting Algorithms","mainEntityOfPage":{"@type":"WebPage","@id":"https://soham360.github.io/csp-fastpages/2023/05/15/DS-sorting.html"},"url":"https://soham360.github.io/csp-fastpages/2023/05/15/DS-sorting.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/csp-fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://soham360.github.io/csp-fastpages/feed.xml" title="Soham Kamat" /><link rel="shortcut icon" type="image/x-icon" href="/csp-fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/csp-fastpages/">Soham Kamat</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/csp-fastpages/CollegeBoard/">CollegeBoard</a><a class="page-link" href="/csp-fastpages/_pages/Submenu.html">Submenu</a><a class="page-link" href="/csp-fastpages/Vocabulary/">Vocabulary</a><a class="page-link" href="/csp-fastpages/about/">About Me</a><a class="page-link" href="/csp-fastpages/Notes/">Notes</a><a class="page-link" href="/csp-fastpages/search/">Search</a><a class="page-link" href="/csp-fastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Sorting Algorithms</h1><p class="page-description">Working with Data Structures and manipulating data.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-05-15T00:00:00-05:00" itemprop="datePublished">
+        May 15, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Soham360/csp-fastpages/tree/master/_notebooks/2023-05-15-DS-sorting.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/csp-fastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Soham360/csp-fastpages/master?filepath=_notebooks%2F2023-05-15-DS-sorting.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Soham360/csp-fastpages/blob/master/_notebooks/2023-05-15-DS-sorting.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FSoham360%2Fcsp-fastpages%2Fblob%2Fmaster%2F_notebooks%2F2023-05-15-DS-sorting.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/csp-fastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Warm-Up">Warm Up </a></li>
+<li class="toc-entry toc-h1"><a href="#Explore">Explore </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Practice">Practice </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Sorting-Words">Sorting Words </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Discuss">Discuss </a></li>
+<li class="toc-entry toc-h2"><a href="#HACKS">HACKS </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-05-15-DS-sorting.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_notebooks/2023-05-15-DS-sorting.ipynb">wget link</a></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Random List"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Random List
+[71, 73, 13, 80, 48, 34, 35, 48, 53, 23]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Warm-Up">
+<a class="anchor" href="#Warm-Up" aria-hidden="true"><span class="octicon octicon-link"></span></a>Warm Up<a class="anchor-link" href="#Warm-Up"> </a>
+</h1>
+<blockquote>
+<p>Discuss with a partner... 
+What are some strategies you would use to sort this list? (Don't worry about writing code for now)</p>
+<ul>
+<li>Randomize until it is sorted. Find lowest/highest term and compare with other terms to get correct order.</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Explore">
+<a class="anchor" href="#Explore" aria-hidden="true"><span class="octicon octicon-link"></span></a>Explore<a class="anchor-link" href="#Explore"> </a>
+</h1>
+<p>Get into groups of 3</p>
+<p>We will be focusing on 4 algorithms today.</p>
+<p>We will look at the first one together, Bubble Sort</p>
+<p><img src="https://github.com/Soham360/csp-fastpages/blob/master/images/bubble-sort.png?raw=true" alt=""></p>
+<p>What is happening with this sort?</p>
+<p>In your groups you will each choose to be an expert on a sorting algorithm. Merge, Selection, and Insertion.
+Take about 5 minutes to read about your algorithm (Geek for Geeks linked below) and be ready to explain it to your other group members.</p>
+<p><a href="https://www.geeksforgeeks.org/merge-sort/#">Merge</a></p>
+<p><a href="https://www.geeksforgeeks.org/selection-sort/">Selection</a></p>
+<p><a href="https://www.geeksforgeeks.org/insertion-sort/">Insertion</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Practice">
+<a class="anchor" href="#Practice" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice<a class="anchor-link" href="#Practice"> </a>
+</h2>
+<p>[75, 17, 46, 80, 67, 45, 69, 79, 40, 0]</p>
+<p>How would you sort this list with...</p>
+<ul>
+<li>Bubble Sort<ul>
+<li>I would compare the first two numbers. If one is less than the other, I would put the lesser number a the front. Then i would move on to the second and third digits. I would continue this process multiple times until I know that the entire list is ordered correctly.</li>
+</ul>
+</li>
+<li>Selection Sort<ul>
+<li>I would start with the first number and swap that with the least number. Then I would find the second number and swap that with the second least number. I would continue this until I was complete. </li>
+</ul>
+</li>
+</ul>
+<p>[88, 39, 53, 39, 58, 43, 74, 81, 71, 51]</p>
+<p>How would you sort this list with...</p>
+<ul>
+<li>Merge Sort<ul>
+<li>I would split the entire list into groups of two numbers. Then I would sort each group of two. Then I would merge each group of two with another group of two. Then I would sort that group of four. I would continue this until my entire list was sorted.</li>
+</ul>
+</li>
+<li>Insertion Sort<ul>
+<li>I would sort the entire list until the lowest number is the first. Then I would continue this pattern until it goes from lowest to highest.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sorting-Words">
+<a class="anchor" href="#Sorting-Words" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sorting Words<a class="anchor-link" href="#Sorting-Words"> </a>
+</h1>
+<blockquote>
+<p>Sorting strings works in the same way as integers. Using your expertise algorithm, sort the following list of random words.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'words'</span><span class="p">)</span>  <span class="c1"># Download the word list (only required once)</span>
+
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">words</span>
+
+<span class="n">english_words</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">words</span><span class="p">()</span>
+<span class="c1">#print(len(english_words))  # Prints the number of words in the list</span>
+
+<span class="c1"># You can now use the 'english_words' list in your code</span>
+
+<span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">english_words</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">english_words</span><span class="p">))])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Random List"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Random List
+['spikehorn', 'revoluted', 'slutty', 'Anguillidae', 'dhan', 'pediatrics', 'breek', 'centiare', 'proparoxytonic', 'cingular']
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[nltk_data] Downloading package words to /home/soham/nltk_data...
+[nltk_data]   Package words is already up-to-date!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Discuss">
+<a class="anchor" href="#Discuss" aria-hidden="true"><span class="octicon octicon-link"></span></a>Discuss<a class="anchor-link" href="#Discuss"> </a>
+</h2>
+<p>Answer the following with your group.</p>
+<ul>
+<li>When should you use each algorithm? What makes an algorithm the right choice?</li>
+<li>Given the following lists, select the algorithm you believe is best for each, explain.<ul>
+<li>[0, 2, 6, 4, 8, 10]<ul>
+<li>Insertion Sort because it goes through each pair and compares them and swaps them. It would have to swap until the 3rd pair and after this swap, the list would be sorted properly.</li>
+</ul>
+</li>
+<li>[Elephant, Banana, Cat, Dog, Apple]<ul>
+<li>Selection Sort because it swaps the first item in the list with the lowest item. This means that Elephant would be swapped with Apple and after this change, the list would be sorted correctly.</li>
+</ul>
+</li>
+<li>[29, 13, 83, 47, 32, 78, 100, 60, 65, 15, 24, 9, 40, 68, 53, 8, 90, 58, 39, 32, 34, 91, 74, 94, 49, 87, 34, 87, 23, 17, 27, 2, 38, 58, 84, 15, 9, 46, 74, 40, 44, 8, 55, 28, 81, 92, 81, 88, 53, 38, 19, 21, 9, 54, 21, 67, 3, 41, 3, 74, 13, 71, 70, 45, 5, 36, 80, 64, 97, 86, 73, 74, 94, 79, 49, 32, 20, 68, 64, 69, 1, 77, 31, 56, 100, 80, 48, 75, 85, 93, 67, 57, 26, 56, 43, 53, 59, 28, 67, 50]<ul>
+<li>Merge Sort because you can easily split the list into pairs of numbers and the sorting of each pair runs in parallel which would reduce the time required to sort this list. </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="HACKS">
+<a class="anchor" href="#HACKS" aria-hidden="true"><span class="octicon octicon-link"></span></a>HACKS<a class="anchor-link" href="#HACKS"> </a>
+</h2>
+<blockquote>
+<p>Provided below is a Bubble Sort Algorithm sorting a list of dictionaries based off of selected key.</p>
+</blockquote>
+<ul>
+<li>
+<p>Now it's time to do some coding...</p>
+</li>
+<li>
+<p>Run code and then research and answer these questions...</p>
+<ul>
+<li>Is a list and/or dictionary in python considered a primitive or collection type?  Why?</li>
+<li>Is the list passed into bubble sort "pass-by-value" or "pass-by-reference? Describe why in relation to output.</li>
+</ul>
+</li>
+<li>
+<p>Implement new cell(s) and/or organize cells to do the following.</p>
+<ul>
+<li>Create your own list</li>
+<li>Use your expertise sorting algorithm (selection, insertion, merge). Note, I got my bubble sort from Geek for Geeks and made modifications. Each student in a group should have a unique algorithm.</li>
+<li>Test your list with my bubble sort</li>
+<li>Test my list with your new sort</li>
+<li>Research analysis on sorting:comparisons, swaps, time.  Build this into your hacks.    - Find a better way to print the data, key first, then other elements in viewable form.</li>
+</ul>
+</li>
+</ul>
+<p>Use the code below to help guide your adventure</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
+<span class="sd">* Creator: Nighthawk Coding Society</span>
+<span class="sd">Bubble Sort of a List with optimizations</span>
+<span class="sd">"""</span>
+
+<span class="c1"># bubble sorts a list of dictionaries, base off of provided key</span>
+<span class="k">def</span> <span class="nf">bubbleSort</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># list are indexed 0 to n-1, len is n</span>
+    
+    <span class="c1"># Traverse through list with i index</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">swapped</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># optimize code, so it exits if now swaps on inner loop</span>
+
+        <span class="c1"># Inner traversal using j index</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">):</span>  <span class="c1"># n-i as positions on right are in order in bubble</span>
+ 
+            <span class="c1"># Swap if the element KeyN is greater KeyN1</span>
+            <span class="n">keyN</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+            <span class="n">keyN1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">keyN</span> <span class="o">&gt;</span> <span class="n">keyN1</span><span class="p">:</span>
+                <span class="n">swapped</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>  <span class="c1"># single line swap</span>
+         
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">swapped</span><span class="p">:</span>  <span class="c1"># if no swaps on inner pass, list is sorted</span>
+            <span class="k">return</span>  <span class="c1"># exit function</span>
+    
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="c1"># list/dictionary sample</span>
+    <span class="n">list_of_people</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Risa"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">"city"</span><span class="p">:</span> <span class="s2">"New York"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">63</span><span class="p">,</span> <span class="s2">"city"</span><span class="p">:</span> <span class="s2">"Eugene"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Shekar"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">"city"</span><span class="p">:</span> <span class="s2">"San Francisco"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Ryan"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span> <span class="s2">"city"</span><span class="p">:</span> <span class="s2">"Los Angeles"</span><span class="p">}</span>
+    <span class="p">]</span>
+    
+    <span class="c1"># assuming uniform keys, pick 1st row as source of keys</span>
+    <span class="n">key_row</span> <span class="o">=</span> <span class="n">list_of_people</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># print list as defined</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Original"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">key_row</span><span class="p">:</span>  <span class="c1"># finds each key in the row</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="n">bubbleSort</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>  <span class="c1"># sort list of people</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Original
+[{'name': 'Risa', 'age': 18, 'city': 'New York'}, {'name': 'John', 'age': 63, 'city': 'Eugene'}, {'name': 'Shekar', 'age': 18, 'city': 'San Francisco'}, {'name': 'Ryan', 'age': 21, 'city': 'Los Angeles'}]
+name
+[{'name': 'John', 'age': 63, 'city': 'Eugene'}, {'name': 'Risa', 'age': 18, 'city': 'New York'}, {'name': 'Ryan', 'age': 21, 'city': 'Los Angeles'}, {'name': 'Shekar', 'age': 18, 'city': 'San Francisco'}]
+age
+[{'name': 'Risa', 'age': 18, 'city': 'New York'}, {'name': 'Shekar', 'age': 18, 'city': 'San Francisco'}, {'name': 'Ryan', 'age': 21, 'city': 'Los Angeles'}, {'name': 'John', 'age': 63, 'city': 'Eugene'}]
+city
+[{'name': 'John', 'age': 63, 'city': 'Eugene'}, {'name': 'Ryan', 'age': 21, 'city': 'Los Angeles'}, {'name': 'Risa', 'age': 18, 'city': 'New York'}, {'name': 'Shekar', 'age': 18, 'city': 'San Francisco'}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/csp-fastpages/2023/05/15/DS-sorting.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/csp-fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://soham360.github.io/csp-fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/csp-fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Soham Kamat&#39;s GitHub FastPage</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

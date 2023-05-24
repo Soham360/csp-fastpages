@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      12 min read
+      16 min read
     
 </span></p>
 
@@ -244,12 +244,24 @@ window.onload = wrap_img;
             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">"A"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">,</span> <span class="s2">"D"</span><span class="p">,</span> <span class="s2">"E"</span><span class="p">,</span> <span class="s2">"F"</span><span class="p">]</span> <span class="c1"># hexadecimal</span>
             <span class="p">]</span>
     
+    <span class="n">tree</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">'|'</span><span class="p">,</span> <span class="s1">'|'</span><span class="p">,</span> <span class="s1">'|'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="s1">' '</span><span class="p">],</span>
+    <span class="p">]</span>
 
     <span class="c1"># pack into a list of matrices with titles</span>
     <span class="n">matrices</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">[</span><span class="s2">"Keypad"</span><span class="p">,</span> <span class="n">keypad</span><span class="p">],</span> 
         <span class="p">[</span><span class="s2">"Keyboard"</span><span class="p">,</span> <span class="n">keyboard</span><span class="p">],</span> 
-        <span class="p">[</span><span class="s2">"Number Systems"</span><span class="p">,</span> <span class="n">numbers</span><span class="p">]</span>
+        <span class="p">[</span><span class="s2">"Number Systems"</span><span class="p">,</span> <span class="n">numbers</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">"Christmas Tree"</span><span class="p">,</span> <span class="n">tree</span><span class="p">]</span>
     <span class="p">]</span>
 
     <span class="c1"># loop 2D matrix with returning list in [key, value] arrangement</span>
@@ -329,6 +341,38 @@ For loop with shortcut (*) row expansion
 0 1 2 3 4 5 6 7 8 9
 0 1 2 3 4 5 6 7 8 9 A B C D E F
 
+Christmas Tree 9 x ~22
+Classic nested loops using ij indexes
+                  *                         
+                * * *                       
+              * * * * *                     
+            * * * * * * *                   
+          * * * * * * * * *                 
+        * * * * * * * * * * *               
+      * * * * * * * * * * * * *             
+    * * * * * * * * * * * * * * *          
+                | | |                     
+Enhanced nested for loops
+                  *                         
+                * * *                       
+              * * * * *                     
+            * * * * * * *                   
+          * * * * * * * * *                 
+        * * * * * * * * * * *               
+      * * * * * * * * * * * * *             
+    * * * * * * * * * * * * * * *          
+                | | |                     
+For loop with shortcut (*) row expansion
+                  *                        
+                * * *                      
+              * * * * *                    
+            * * * * * * *                  
+          * * * * * * * * *                
+        * * * * * * * * * * *              
+      * * * * * * * * * * * * *            
+    * * * * * * * * * * * * * * *         
+                | | |                    
+
 </pre>
 </div>
 </div>
@@ -348,7 +392,7 @@ For loop with shortcut (*) row expansion
 <blockquote>
 <p>Example below populate a 2D array.  Key concepts are ij loop and assignments.  Observe the object that is created in console.  Learn the basics of iteration through 2D array in JavaScript.</p>
 <ul>
-<li>Candy challenge:Work of pairs.  Create one of the Python examples (christmas tree, keyboard, ...). Use the element.append to output within the notebook.   As you work on JavaScript make sure your development enviornment is setup like JavaScript programmer.</li>
+<li>Candy challenge:Work of pairs.  Create one of the Python examples (christmas tree, keyboard, ...). Use the element.append to output within the notebook.   As you work on JavaScript make sure your development environment is setup like JavaScript programmer.</li>
 </ul>
 </blockquote>
 
@@ -382,6 +426,29 @@ For loop with shortcut (*) row expansion
 <span class="p">}</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr2D</span><span class="p">);</span>
 <span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">arr2D</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">keypad</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="kd">var</span> <span class="nx">rows1</span> <span class="o">=</span> <span class="mf">4</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">cols1</span> <span class="o">=</span> <span class="mf">3</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">rows1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">keypad</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">cols1</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">*</span> <span class="nx">cols1</span> <span class="o">+</span> <span class="nx">j</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="o">&lt;=</span> <span class="mf">9</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">keypad</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">num</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="o">==</span> <span class="mf">10</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">keypad</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="s2">" "</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="o">==</span> <span class="mf">11</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">keypad</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="o">==</span> <span class="mf">12</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">keypad</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="s2">" "</span><span class="p">;</span>
+            <span class="p">}</span>
+      <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">keypad</span><span class="p">);</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">"&lt;br&gt;"</span> <span class="o">+</span> <span class="nx">keypad</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -396,10 +463,10 @@ For loop with shortcut (*) row expansion
 
 
 
-<div id="210eaaa4-0727-46a5-892f-efbf1e449dbd"></div>
+<div id="456b154d-46fd-48e0-9fc7-4c66bdc0dd9f"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#210eaaa4-0727-46a5-892f-efbf1e449dbd');
+var element = $('#456b154d-46fd-48e0-9fc7-4c66bdc0dd9f');
 
 /*
 * Creator: Nighthawk Coding Society
@@ -419,6 +486,29 @@ for (var i = 0; i < rows; i++) {
 }
 console.log(arr2D);
 element.append(arr2D);
+
+var keypad = [];
+var rows1 = 4;
+var cols1 = 3;
+
+for (var i = 0; i < rows1; i++) {
+      keypad[i] = [];
+        for (var j = 0; j < cols1; j++) {
+            var num = i * cols1 + j + 1;
+            if (num <= 9) {
+                keypad[i][j] = num;
+            } else if (num == 10) {
+                keypad[i][j] = " ";
+            } else if (num == 11) {
+                keypad[i][j] = 0;
+            } else if (num == 12) {
+                keypad[i][j] = " ";
+            }
+      }
+}
+
+console.log(keypad);
+element.append("<br>" + keypad);
 
 </script>
 </div>
@@ -514,33 +604,41 @@ element.append(arr2D);
     <span class="sd">""" 2D array program logic """</span>
     <span class="c1"># cycles through 2D array backwards</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">monkeys</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Nursery Rhyme"</span><span class="p">)</span>  <span class="c1"># identification message</span>
 
         <span class="c1"># this print statement shows current count of Monkeys</span>
         <span class="c1"># concatenation (+) of the loop variable and string to form a countdown message</span>
-        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" little monkeys jumping on the bed..."</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" little monkey jumping on the bed..."</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" little monkeys jumping on the bed..."</span><span class="p">)</span>
 
         <span class="c1"># cycle through monkeys that are left in poem countdown</span>
         <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>  <span class="c1"># cycles through remaining monkeys in countdown</span>
 
             <span class="c1"># cycles through monkey part by part</span>
             <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">monkeys</span><span class="p">[</span><span class="n">row</span><span class="p">])):</span>
-                <span class="c1"># prints specific part of the monkey from the 2D cell</span>
-                <span class="nb">print</span><span class="p">(</span><span class="n">monkeys</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">+</span> <span class="s2">" "</span><span class="p">)</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">line</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">+=</span> <span class="p">((</span><span class="n">monkeys</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"     "</span><span class="p">))</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="n">line</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">monkeys</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"     "</span><span class="p">))</span>
+                
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># out of all the loops, prints finishing messages</span>
+            <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"No more monkeys jumping on the bed"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"0000000000000000000000000000000000"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"             THE END              "</span><span class="p">)</span>
 
-            <span class="c1"># this new line gives separation between stanza of poem</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\u001b</span><span class="s2">[0m"</span><span class="p">)</span>  <span class="c1"># reset color</span>
-            
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-
-    <span class="c1"># out of all the loops, prints finishing messages</span>
-    <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"No more monkeys jumping on the bed"</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"0000000000000000000000000000000000"</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"             THE END              "</span><span class="p">)</span>
-
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
@@ -556,32 +654,9 @@ element.append(arr2D);
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Nursery Rhyme
-4 little monkeys jumping on the bed...
-<span class="ansi-blue-fg"> 
-ʕ ͡° ͜ʖ ° ͡ʔ 
-  \_⍾_/   
-  ==3==   
-  _/ \_   
-</span>
-<span class="ansi-yellow-fg"> 
- ʕ(▀ ⍡ ▀)ʔ 
-  \_⎐_/  
-  &lt;-2-&gt;   
-  〈  〉  
-</span>
-<span class="ansi-green-fg"> 
- ʕ༼ ◕_◕ ༽ʔ  
-  \_⎏_/   
-  ++1++   
-   ⌋ ⌊    
-</span>
-<span class="ansi-red-fg"> 
-ʕง ͠° ͟ل͜ ͡°)ʔ  
-  \_⏄_/   
-  --0--    
-  ⎛   ⎞    
-</span>
+<pre>No more monkeys jumping on the bed
+0000000000000000000000000000000000
+             THE END              
 </pre>
 </div>
 </div>

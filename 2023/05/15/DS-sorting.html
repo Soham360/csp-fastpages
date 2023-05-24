@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      9 min read
     
 </span></p>
 
@@ -173,7 +173,7 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Random List
-[71, 73, 13, 80, 48, 34, 35, 48, 53, 23]
+[89, 94, 31, 85, 62, 37, 26, 37, 83, 46]
 </pre>
 </div>
 </div>
@@ -212,6 +212,9 @@ What are some strategies you would use to sort this list? (Don't worry about wri
 <p>We will look at the first one together, Bubble Sort</p>
 <p><img src="https://github.com/Soham360/csp-fastpages/blob/master/images/bubble-sort.png?raw=true" alt=""></p>
 <p>What is happening with this sort?</p>
+<ul>
+<li>It compares consecutive elements and sorts in a linear fashion.</li>
+</ul>
 <p>In your groups you will each choose to be an expert on a sorting algorithm. Merge, Selection, and Insertion.
 Take about 5 minutes to read about your algorithm (Geek for Geeks linked below) and be ready to explain it to your other group members.</p>
 <p><a href="https://www.geeksforgeeks.org/merge-sort/#">Merge</a></p>
@@ -305,7 +308,7 @@ Take about 5 minutes to read about your algorithm (Geek for Geeks linked below) 
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Random List
-['spikehorn', 'revoluted', 'slutty', 'Anguillidae', 'dhan', 'pediatrics', 'breek', 'centiare', 'proparoxytonic', 'cingular']
+['meriquinonic', 'reinstatement', 'unreverential', 'unproduceably', 'microgamy', 'gigmanity', 'Avaradrano', 'mephitical', 'wastland', 'lactase']
 </pre>
 </div>
 </div>
@@ -370,13 +373,19 @@ Take about 5 minutes to read about your algorithm (Geek for Geeks linked below) 
 <li>
 <p>Run code and then research and answer these questions...</p>
 <ul>
-<li>Is a list and/or dictionary in python considered a primitive or collection type?  Why?</li>
-<li>Is the list passed into bubble sort "pass-by-value" or "pass-by-reference? Describe why in relation to output.</li>
+<li>Is a list and/or dictionary in python considered a primitive or collection type?  Why?<ul>
+<li>A list and a dictionary are considered collection types rather than primitive types. They are implemented using more complex data structures and algorithms than the primitive types. For example, a list in Python is typically implemented as a dynamic array, while a dictionary is usually implemented using a hash table. These data structures and algorithms are more complex than those used to implement primitive types, which is why they are considered collection types.</li>
 </ul>
 </li>
-<li>
-<p>Implement new cell(s) and/or organize cells to do the following.</p>
+<li>Is the list passed into bubble sort "pass-by-value" or "pass-by-reference? Describe why in relation to output.<ul>
+<li>The list passed into bubble sort is passed by reference, not by value. When a variable is passed as an argument to a function, a reference to the object is passed, not a copy of the object itself.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <ul>
+<li>Implement new cell(s) and/or organize cells to do the following.<ul>
 <li>Create your own list</li>
 <li>Use your expertise sorting algorithm (selection, insertion, merge). Note, I got my bubble sort from Geek for Geeks and made modifications. Each student in a group should have a unique algorithm.</li>
 <li>Test your list with my bubble sort</li>
@@ -390,6 +399,104 @@ Take about 5 minutes to read about your algorithm (Geek for Geeks linked below) 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Elephant"</span><span class="p">,</span> <span class="s2">"Banana"</span><span class="p">,</span> <span class="s2">"Cat"</span><span class="p">,</span> <span class="s2">"Dog"</span><span class="p">,</span> <span class="s2">"Apple"</span><span class="p">]</span>
+<span class="n">arr3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">29</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+<span class="n">arr4</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"nike"</span><span class="p">,</span> <span class="s2">"Adidas"</span><span class="p">,</span> <span class="s2">"PUMA"</span><span class="p">,</span> <span class="s2">"Under Armor"</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">merge_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="c1"># checks if array has a length of 1 or less (already sorted)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">arr</span>
+    <span class="c1"># finds midpoint</span>
+    <span class="n">mid</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="c1"># splits into left half and right half</span>
+    <span class="n">left_half</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:</span><span class="n">mid</span><span class="p">]</span>
+    <span class="n">right_half</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">:]</span>
+    <span class="c1"># loops split until each half is sorted</span>
+    <span class="n">left_half</span> <span class="o">=</span> <span class="n">merge_sort</span><span class="p">(</span><span class="n">left_half</span><span class="p">)</span>
+    <span class="n">right_half</span> <span class="o">=</span> <span class="n">merge_sort</span><span class="p">(</span><span class="n">right_half</span><span class="p">)</span>
+    <span class="c1"># combines the sorted halves to get the full sorted list</span>
+    <span class="k">return</span> <span class="n">merge</span><span class="p">(</span><span class="n">left_half</span><span class="p">,</span> <span class="n">right_half</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">):</span>
+    <span class="c1"># empty list to store sorted elements</span>
+    <span class="n">merged</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># sets current index of each half to 0</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># compares the values in each half. If a value is lower than another value, the lower value is added to the merged list</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">)</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">right</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+            <span class="n">merged</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">merged</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="c1"># adds any remaining values from the halves to the merged list</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">):</span>
+        <span class="n">merged</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">right</span><span class="p">):</span>
+        <span class="n">merged</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+        <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">merged</span>
+
+<span class="c1"># prints merge sorted lists</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">merge_sort</span><span class="p">(</span><span class="n">arr1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">merge_sort</span><span class="p">(</span><span class="n">arr2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">merge_sort</span><span class="p">(</span><span class="n">arr3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">merge_sort</span><span class="p">(</span><span class="n">arr4</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 2, 4, 6, 8, 10]
+['Apple', 'Banana', 'Cat', 'Dog', 'Elephant']
+[1, 2, 3, 3, 5, 8, 8, 9, 9, 9, 13, 13, 15, 15, 17, 19, 20, 21, 21, 23, 24, 26, 27, 28, 28, 29, 31, 32, 32, 32, 34, 34, 36, 38, 38, 39, 40, 40, 41, 43, 44, 45, 46, 47, 48, 49, 49, 50, 53, 53, 53, 54, 55, 56, 56, 57, 58, 58, 59, 60, 64, 64, 65, 67, 67, 67, 68, 68, 69, 70, 71, 73, 74, 74, 74, 74, 75, 77, 78, 79, 80, 80, 81, 81, 83, 84, 85, 86, 87, 87, 88, 90, 91, 92, 93, 94, 94, 97, 100, 100]
+['Adidas', 'PUMA', 'Under Armor', 'nike']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">

@@ -28,7 +28,6 @@ permalink: /nitrotype/
   </style>
 </head>
 <body>
-  <h1>Typing Game</h1>
   <div id="game-container">
     <p id="word-display">Start typing...</p>
     <input type="text" id="input-field" autofocus>

@@ -1,11 +1,11 @@
 ---
 layout: page
+title: Typing Game
 permalink: /nitrotype/
 ---
 
 <html>
 <head>
-  <title>Typing Game</title>
   <style>
     body {
       text-align: center;

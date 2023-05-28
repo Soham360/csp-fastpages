@@ -9,7 +9,6 @@ permalink: /typinggame/
   <style>
     body {
       text-align: center;
-      font-family: Arial, sans-serif;
     }
     #game-container {
       width: 400px;

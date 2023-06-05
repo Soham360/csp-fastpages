@@ -53,4 +53,4 @@ Here is a picture of me showing a visitor my recipe review feature. Theres also 
 ![]({{ site.baseurl }}/images/Binary.png)
 ![]({{ site.baseurl }}/images/GeoGuesser.png)
 ![]({{ site.baseurl }}/images/Basketball.png)
-The APCSP and APCSA classrooms were very packed and full of students attempting to finish their assignments. However, there were also many other groups already done with theirs. I saw many different projects including an arcade, an F1 race betting site, and a fitness tracker. These were all very impressive and extremely hard to create.
+The APCSP and APCSA classrooms were very packed and full of students attempting to finish their assignments. However, there were also many other groups already done with theirs. I saw many different projects including binary gate project, GeoGuesser, and a Taylor Swift themed project. These were all very impressive and extremely hard to create.

@@ -14,9 +14,9 @@ Night at the Museum is typically held near the end of the trimester, and it serv
 
 ### 3D Animation
 Here are a few pictures of art work for 3D Animation.
-![]({{ site.baseurl }}/images/Lego.png)
-![]({{ site.baseurl }}/images/N@TMDonut.png)
-![]({{ site.baseurl }}/images/Table.png)
+![]({{ site.baseurl }}/images/Soham.png)
+![]({{ site.baseurl }}/images/Aniket.png)
+![]({{ site.baseurl }}/images/Harsha.png)
 I'm actually in this class right now and we use a program called Blender to help us create the objects in the pictures. You can create anything in Blender and the only limit is your imagination!
 
 ---
@@ -50,7 +50,7 @@ The art in this class room was so impressive. There were so many different style
 
 ### AP Computer Science Principles
 Here is a picture of me showing a visitor my recipe review feature. Theres also a couple pictures of another APCSP group's project.
-![]({{ site.baseurl }}/images/helpingryan.png)
-![]({{ site.baseurl }}/images/pong.png)
-![]({{ site.baseurl }}/images/snake.png)
+![]({{ site.baseurl }}/images/Binary.png)
+![]({{ site.baseurl }}/images/GeoGuesser.png)
+![]({{ site.baseurl }}/images/Basketball.png)
 The APCSP and APCSA classrooms were very packed and full of students attempting to finish their assignments. However, there were also many other groups already done with theirs. I saw many different projects including an arcade, an F1 race betting site, and a fitness tracker. These were all very impressive and extremely hard to create.

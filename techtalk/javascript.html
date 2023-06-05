@@ -272,10 +272,10 @@ window.onload = wrap_img;
 
 
 
-<div id="33bfc391-59dd-417a-b04e-a1547ea4bb6a"></div>
+<div id="c9db4503-b559-4b1a-82d2-74852aa0e803"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#33bfc391-59dd-417a-b04e-a1547ea4bb6a');
+var element = $('#c9db4503-b559-4b1a-82d2-74852aa0e803');
 console.log("JavaScript/Jupyter Output Intro");
 
 // Browser Console output; debugging or tracing
@@ -348,10 +348,10 @@ element.append('<br><b>Hello World Again!');
 
 
 
-<div id="a1d94b26-a715-4958-a430-aa5bb83e2254"></div>
+<div id="eaf487fe-e849-4882-8e37-962db6ab9ce0"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#a1d94b26-a715-4958-a430-aa5bb83e2254');
+var element = $('#eaf487fe-e849-4882-8e37-962db6ab9ce0');
 console.log("Variable Definition");
 
 var msg = "Hello, World!";
@@ -433,10 +433,10 @@ element.text(msg);
 
 
 
-<div id="0d950a47-f8e2-480a-abc0-19b6da701636"></div>
+<div id="5da2c036-7f54-45bb-815b-80a0ea12278a"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#0d950a47-f8e2-480a-abc0-19b6da701636');
+var element = $('#5da2c036-7f54-45bb-815b-80a0ea12278a');
 console.log("Function Definition");
 
 /* Function: logIt
@@ -544,10 +544,10 @@ logIt(msg + "  " + classOf); // concatenation of strings
 
 
 
-<div id="4793b416-50fd-42aa-aec2-7ed75694b2a7"></div>
+<div id="e0140d46-4e4c-4d5f-b3fd-14f36be9be36"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#4793b416-50fd-42aa-aec2-7ed75694b2a7');
+var element = $('#e0140d46-4e4c-4d5f-b3fd-14f36be9be36');
 console.log("Examine Data Types");
 
 // Function to add typeof to output
@@ -794,10 +794,10 @@ logIt(JSON.stringify(person));  //method used to convert this object into readab
 
 
 
-<div id="57961683-99b4-4d10-9634-c495c34e4a77"></div>
+<div id="43d741b8-4903-490c-b345-3fb010655c7b"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#57961683-99b4-4d10-9634-c495c34e4a77');
+var element = $('#43d741b8-4903-490c-b345-3fb010655c7b');
 console.log("Person objects");
 
 /* class: Person
@@ -1015,10 +1015,10 @@ student.logIt(); // log to console
 
 
 
-<div id="5c4453f2-0206-4a5c-b6da-7caf7d6a4800"></div>
+<div id="ba00d13e-eacf-47ef-aac3-aba2bb6683cd"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#5c4453f2-0206-4a5c-b6da-7caf7d6a4800');
+var element = $('#ba00d13e-eacf-47ef-aac3-aba2bb6683cd');
 console.log("Classroom object");
 
 /* class: Person
@@ -1207,10 +1207,10 @@ $('#jsonText').text(compsci.json);  // posts/embeds/writes compsci.json to HTML 
 
 
 
-<div id="66f05e84-c803-41fe-914d-5b035d77fe7c"></div>
+<div id="b488756f-ffbc-48ea-872f-ffd7b0bc804e"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#66f05e84-c803-41fe-914d-5b035d77fe7c');
+var element = $('#b488756f-ffbc-48ea-872f-ffd7b0bc804e');
 console.log("Classroom Web Page");
 
 // extract JSON text from HTML page
@@ -1441,6 +1441,7 @@ for (var row of classroom) {
 <table id="flaskTable1" class="table" style="width:100%">
     <thead id="flaskHead1">
         <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Time</th>
         </tr>
@@ -1460,7 +1461,8 @@ for (var row of classroom) {
     .then(data => {
       for (const row of data) {
         // BUG warning/resolution - DataTable requires row to be single append
-        $('#flaskBody1').append('<tr><td>' + 
+        $('#flaskBody1').append('<tr><td>' +
+            row.id + '</td><td>' + 
             row.uid + '</td><td>' + 
             row.totaltime + '</td><td>');
       }

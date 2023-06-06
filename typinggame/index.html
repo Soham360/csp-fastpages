@@ -108,6 +108,11 @@ window.onload = wrap_img;
     flex-shrink: 0;
     }
   </style>
+  <!-- load jQuery and DataTables syle and scripts -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+  <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>var define = null;</script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
   <div id="game-container">
@@ -117,6 +122,17 @@ window.onload = wrap_img;
   </div>
   <div id="result">
   </div>
+
+  <table id="flaskTable" class="table" style="width:100%">
+    <thead id="flaskHead">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody id="flaskBody"></tbody>
+  </table>
 
   <script>
     var words = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape"];
@@ -182,62 +198,62 @@ window.onload = wrap_img;
       timer.textContent = "Time: " + actualTime + " seconds"; // Convert elapsed time to seconds with two decimal places
     }
 
-    read_times();
+    // read_times();
 
-    function read_times() {
-        // prepare fetch options
-        const read_options = {
-        method: 'GET',
-        mode: 'cors',
-        cache: 'default',
-        credentials: 'omit',
-        headers: {
-            'Content-Type': 'application/json'
-        },        
-        };
-        // fetch the data from API
-        fetch(read_fetch, read_options)
-        // response is a RESTful "promise" on any successful fetch
-        .then(response => {
-            // check for response errors
-            if (response.status !== 200) {
-                const errorMsg = 'Database read error: ' + response.status;
-                console.log(errorMsg);
-                return;
-            }
-            // valid response will have json data
-            response.json().then(data => {
-                console.log(data);
-                resultContainer.innerHTML = ''
-                //Construct Table header
-                const tbody = document.createElement("tbody");
-                const tr = document.createElement("tr");
-                const col1 = document.createElement("td");
-                const col2 = document.createElement("td")
-                // obtain data that is specific to the API
-                col1.innerHTML = "<span style='font-weight:bold' onclick='sortTable(0)'>Username</span>";
-                col2.innerHTML = "<span style='font-weight:bold' onclick='sortTable(1)'>Time</span>";
-                // add HTML to container
-                tr.appendChild(col1);
-                tr.appendChild(col2);                 
-                resultContainer.appendChild(tr);
-                //Print Reviews              
-                for (let row in data) {
-                console.log(data[row]);
-                add_row(data[row]);
-                }
-            })
-        })
-        // catch fetch errors (ie ACCESS to server blocked)
-        .catch(err => {
-        console.error(err);
-        alert(err);
-        });
-    }
+    // function read_times() {
+    //     // prepare fetch options
+    //     const read_options = {
+    //     method: 'GET',
+    //     mode: 'cors',
+    //     cache: 'default',
+    //     credentials: 'omit',
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     },        
+    //     };
+    //     // fetch the data from API
+    //     fetch(read_fetch, read_options)
+    //     // response is a RESTful "promise" on any successful fetch
+    //     .then(response => {
+    //         // check for response errors
+    //         if (response.status !== 200) {
+    //             const errorMsg = 'Database read error: ' + response.status;
+    //             console.log(errorMsg);
+    //             return;
+    //         }
+    //         // valid response will have json data
+    //         response.json().then(data => {
+    //             console.log(data);
+    //             resultContainer.innerHTML = ''
+    //             //Construct Table header
+    //             const tbody = document.createElement("tbody");
+    //             const tr = document.createElement("tr");
+    //             const col1 = document.createElement("td");
+    //             const col2 = document.createElement("td")
+    //             // obtain data that is specific to the API
+    //             col1.innerHTML = "<span style='font-weight:bold' onclick='sortTable(0)'>Username</span>";
+    //             col2.innerHTML = "<span style='font-weight:bold' onclick='sortTable(1)'>Time</span>";
+    //             // add HTML to container
+    //             tr.appendChild(col1);
+    //             tr.appendChild(col2);                 
+    //             resultContainer.appendChild(tr);
+    //             //Print Reviews              
+    //             for (let row in data) {
+    //             console.log(data[row]);
+    //             add_row(data[row]);
+    //             }
+    //         })
+    //     })
+    //     // catch fetch errors (ie ACCESS to server blocked)
+    //     .catch(err => {
+    //     console.error(err);
+    //     alert(err);
+    //     });
+    // }
     function create_times(){
         // New data entry
         alert(username)
-        alert(actualTime)  
+        alert(actualTime)
         const body = {
             uid: username,
             totaltime: actualTime,
@@ -263,76 +279,99 @@ window.onload = wrap_img;
             })
         })
     }
-    function add_row(data) {
-        const tr = document.createElement("tr");
-        const uid = document.createElement("td");  
-        const totaltime = document.createElement("td");
-        // obtain data that is specific to the API
-        // alert(data.uid)
-        // alert(data.totaltime)
-        uid.innerHTML = data.uid;   
-        totaltime.innerHTML = data.totaltime;
-        // add HTML to container
-        tr.appendChild(uid);  
-        tr.appendChild(totaltime);
-        resultContainer.appendChild(tr);
-    }
+    // function add_row(data) {
+    //     const tr = document.createElement("tr");
+    //     const uid = document.createElement("td");  
+    //     const totaltime = document.createElement("td");
+    //     // obtain data that is specific to the API
+    //     // alert(data.uid)
+    //     // alert(data.totaltime)
+    //     uid.innerHTML = data.uid;   
+    //     totaltime.innerHTML = data.totaltime;
+    //     // add HTML to container
+    //     tr.appendChild(uid);  
+    //     tr.appendChild(totaltime);
+    //     resultContainer.appendChild(tr);
+    // }
 
-    function sortTable(columnIndex) {
-      const table = document.getElementById("result");
-      const tbody = table.getElementsByTagName("tbody")[0];
-      alert("sort table" + columnIndex + tbody)
-      const rows = tbody.getElementsByTagName("tr");
-      const sortDirection = getSortDirection(columnIndex);
+    // function sortTable(columnIndex) {
+    //   const table = document.getElementById("result");
+    //   const tbody = table.getElementsByTagName("tbody")[0];
+    //   alert("sort table" + columnIndex + tbody)
+    //   const rows = tbody.getElementsByTagName("tr");
+    //   const sortDirection = getSortDirection(columnIndex);
 
-      const sortedRows = Array.from(rows)
-        .sort((rowA, rowB) => {
-          const cellA = rowA.getElementsByTagName("td")[columnIndex];
-          const cellB = rowB.getElementsByTagName("td")[columnIndex];
-          return compareCells(cellA, cellB, sortDirection);
-        });
+    //   const sortedRows = Array.from(rows)
+    //     .sort((rowA, rowB) => {
+    //       const cellA = rowA.getElementsByTagName("td")[columnIndex];
+    //       const cellB = rowB.getElementsByTagName("td")[columnIndex];
+    //       return compareCells(cellA, cellB, sortDirection);
+    //     });
 
-      for (const row of sortedRows) {
-        tbody.appendChild(row);
+    //   for (const row of sortedRows) {
+    //     tbody.appendChild(row);
+    //   }
+    // }
+
+    // function getSortDirection(columnIndex) {
+    //   const table = document.getElementById("result");
+    //   const headerRow = table.getElementsByTagName("thead")[0].getElementsByTagName("tr")[0];
+    //   const headerCell = headerRow.getElementsByTagName("th")[columnIndex];
+
+    //   if (headerCell.getAttribute("data-sort-direction") === "asc") {
+    //     headerCell.setAttribute("data-sort-direction", "desc");
+    //     return "desc";
+    //   } else {
+    //     headerCell.setAttribute("data-sort-direction", "asc");
+    //     return "asc";
+    //   }
+    // }
+
+    // function compareCells(cellA, cellB, sortDirection) {
+    //   const valueA = cellA.textContent.trim();
+    //   const valueB = cellB.textContent.trim();
+
+    //   if (sortDirection === "asc") {
+    //     if (valueA < valueB) {
+    //       return -1;
+    //     } else if (valueA > valueB) {
+    //       return 1;
+    //     } else {
+    //       return 0;
+    //     }
+    //   } else {
+    //     if (valueA < valueB) {
+    //       return 1;
+    //     } else if (valueA > valueB) {
+    //       return -1;
+    //     } else {
+    //       return 0;
+    //     }
+    //   }
+    // }
+  $(document).ready(function() {
+    fetch('http://127.0.0.1:8086/api/times/', { mode: 'cors' })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('API response failed');
       }
-    }
-
-    function getSortDirection(columnIndex) {
-      const table = document.getElementById("result");
-      const headerRow = table.getElementsByTagName("thead")[0].getElementsByTagName("tr")[0];
-      const headerCell = headerRow.getElementsByTagName("th")[columnIndex];
-
-      if (headerCell.getAttribute("data-sort-direction") === "asc") {
-        headerCell.setAttribute("data-sort-direction", "desc");
-        return "desc";
-      } else {
-        headerCell.setAttribute("data-sort-direction", "asc");
-        return "asc";
+      return response.json();
+    })
+    .then(data => {
+      for (const row of data) {
+        // BUG warning/resolution - DataTable requires row to be single append
+        $('#flaskBody').append('<tr><td>' + 
+            row.id + '</td><td>' + 
+            row.uid + '</td><td>' + 
+            row.totaltime + '</td></tr>');
       }
-    }
-
-    function compareCells(cellA, cellB, sortDirection) {
-      const valueA = cellA.textContent.trim();
-      const valueB = cellB.textContent.trim();
-
-      if (sortDirection === "asc") {
-        if (valueA < valueB) {
-          return -1;
-        } else if (valueA > valueB) {
-          return 1;
-        } else {
-          return 0;
-        }
-      } else {
-        if (valueA < valueB) {
-          return 1;
-        } else if (valueA > valueB) {
-          return -1;
-        } else {
-          return 0;
-        }
-      }
-    }
+      // BUG warning - Jupyter does not show Datatable controls, works on deployed GitHub pages
+      $("#flaskTable").DataTable();
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  });
   </script>
 </body>
 </html>

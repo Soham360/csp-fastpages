@@ -987,7 +987,7 @@
   
       ,"page11": {
           "title": "Typing Game",
-          "content": ". Start typing... . . .",
+          "content": ". Start typing... . . ID Name Time . .",
           "url": "https://soham360.github.io/csp-fastpages/typinggame/",
           "relUrl": "/typinggame/",
           "date": ""

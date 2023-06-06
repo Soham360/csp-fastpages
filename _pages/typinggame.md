@@ -75,7 +75,7 @@ permalink: /typinggame/
     var inputField = document.getElementById("input-field");
     var timer = document.getElementById("timer");
 
-    const url = "https://petitepandas.duckdns.org/api/times/"
+    const url = "http://127.0.0.1:8086/api/times/"
     const resultContainer = document.getElementById("result");
     const create_fetch = url + '/create';
     const read_fetch = url + '/';
@@ -204,6 +204,7 @@ permalink: /typinggame/
                 console.log(data);
                 //add a table row for the new/created reviewid
                 add_row(data);
+
             })
         })
     }
@@ -292,6 +293,7 @@ permalink: /typinggame/
             row.id + '</td><td>' + 
             row.uid + '</td><td>' + 
             row.totaltime + '</td></tr>');
+                    document.getElementById('#flaskBody') = ""
       }
       // BUG warning - Jupyter does not show Datatable controls, works on deployed GitHub pages
       $("#flaskTable").DataTable();

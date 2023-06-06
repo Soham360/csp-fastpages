@@ -49,34 +49,38 @@ permalink: /typinggame/
     <p id="timer"></p>
   </div>
   <div id="result">
+    <table id="flaskTable" class="table" style="width:100%">
+        <thead id="flaskHead">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody id="flaskBody"></tbody>
+    </table>
   </div>
 
-  <table id="flaskTable" class="table" style="width:100%">
-      <thead id="flaskHead">
-          <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Time</th>
-          </tr>
-      </thead>
-      <tbody id="flaskBody"></tbody>
-  </table>
+ 
 
   <script>
-    var words = ["apple"]; //, "banana", "cherry", "date", "elderberry", "fig", "grape"];
-    var currentWordIndex = 0;
+    var words = ["determine", "retiree", "thought", "improve", "truth", "active", "polish", "curve", "stun", "addicted", "extreme", "affect", "present", "certain", "dramatic", "greeting", "order", "twin", "fade", "relevance", "glimpse", "grain", "debt", "tell", "morning", "genetic", "suggest", "reduce", "demonstrate", "lift", "make", "entry", "circulation", "supply", "accountant", "admire", "spot", "assignment", "bracket", "satellite", "agony", "equal", "afford", "wash", "throw", "mistreat", "measure", "competition", "education", "tolerate"];
+    var wordsComplete = 0;
+    var currentWordIndex = Math.floor((Math.random() * 50) + 1);
     var currentWord = words[currentWordIndex];
     var startTime = null;
     var timerInterval = null;
 
+    const tableContainer = document.getElementById("result");
+
     var username = null;
+    var actualTime = null;
 
     var wordDisplay = document.getElementById("word-display");
     var inputField = document.getElementById("input-field");
     var timer = document.getElementById("timer");
 
-    const url = "http://127.0.0.1:8086/api/times"
-    const resultContainer = document.getElementById("result");
+    const url = "https://petitepandas.duckdns.org/api/times"
     const create_fetch = url + '/create';
     const read_fetch = url + '/';
 
@@ -91,8 +95,9 @@ permalink: /typinggame/
       }
 
       if (enteredText === currentWord) {
-        currentWordIndex++;
-        if (currentWordIndex >= words.length) {
+        currentWordIndex = Math.floor((Math.random() * 50) + 1);
+        wordsComplete++;
+        if (wordsComplete >= 5) {
           wordDisplay.textContent = "You Win!";
           inputField.style.display = "none";
           stopTimer();
@@ -114,7 +119,12 @@ permalink: /typinggame/
       // alert(timer.textContent)
       setTimeout(()=> {
          username = prompt('What is your name?');
-         create_times()
+         create_times();
+        //  onPageLoad();
+        setTimeout(()=> {
+          location.reload();
+        }
+        ,1000);
       }
       ,1000);
     }
@@ -128,8 +138,6 @@ permalink: /typinggame/
 
     function create_times(){
         // New data entry
-        alert(username)
-        alert(actualTime)  
         const body = {
             uid: username,
             totaltime: actualTime,
@@ -144,20 +152,26 @@ permalink: /typinggame/
         };
         // URL for Create API
         // Fetch API call to the database to create a new review
-        alert(create_fetch)
-        alert(requestOptions)
         fetch(create_fetch, requestOptions)
         .then(response => {
             // trap error response from Web API
             // response contains valid result
             response.json().then(data => {
                 console.log(data);
+                // tableContainer.innerHTML = ''
             })
         })
     }
 
   $(document).ready(function() {
-    fetch('http://127.0.0.1:8086/api/times/', { mode: 'cors' })
+  // When document is ready...
+  // $(function(){
+  //     onPageLoad();
+  // });
+
+  // function onPageLoad(){
+
+    fetch('https://petitepandas.duckdns.org/api/times/', { mode: 'cors' })
     .then(response => {
       if (!response.ok) {
         throw new Error('API response failed');

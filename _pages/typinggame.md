@@ -59,7 +59,7 @@ permalink: /typinggame/
     var inputField = document.getElementById("input-field");
     var timer = document.getElementById("timer");
 
-    const url = "http://127.0.0.1:8086/api/times"
+    const url = "https://petitepandas.duckdns.org/api/times/"
     const resultContainer = document.getElementById("result");
     const create_fetch = url + '/create';
     const read_fetch = url + '/';

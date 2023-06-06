@@ -141,13 +141,15 @@ permalink: /typinggame/
 
     // stops the timer when it is called. It is called after the user has typed 5 words
     function stopTimer() {
-      // makes the action above (timer) stop 
+      // makes the action above (timer) stop
       clearInterval(timerInterval);
       // alert(timer.textContent)
+      // Waits 1 second after the game is complete. Then it asks for the user's name. After you give your username, your username and time is added to the database at the bottom.
       setTimeout(()=> {
          username = prompt('What is your name?');
          create_times();
         //  onPageLoad();
+        //  1 second after your username has been given, the page reloads. This allows you to view your score on the leaderboard
         setTimeout(()=> {
           location.reload();
         }
@@ -156,6 +158,7 @@ permalink: /typinggame/
       ,1000);
     }
 
+    // this function 
     function updateTimer() {
       var currentTime = new Date();
       var elapsedTime = Math.floor((currentTime - startTime) / 10); // Calculate elapsed time in hundredths of a second
@@ -163,8 +166,8 @@ permalink: /typinggame/
       timer.textContent = "Time: " + actualTime + " seconds"; // Convert elapsed time to seconds with two decimal places
     }
 
+    // this function posts to the database
     function create_times(){
-        // New data entry
         const body = {
             uid: username,
             totaltime: actualTime,

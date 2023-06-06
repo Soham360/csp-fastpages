@@ -128,7 +128,7 @@ permalink: /typinggame/
           currentWord = words[currentWordIndex];
           // displays the random word
           wordDisplay.textContent = currentWord;
-          // clears the text box
+          // clears the text box after the current word has been entered
           inputField.value = "";
         }
       }
@@ -144,7 +144,7 @@ permalink: /typinggame/
       // makes the action above (timer) stop
       clearInterval(timerInterval);
       // alert(timer.textContent)
-      // Waits 1 second after the game is complete. Then it asks for the user's name. After you give your username, your username and time is added to the database at the bottom.
+      // Waits 1 second after the game is complete. Then it asks for the user's name. Afterwards, your information is added to the database at the bottom.
       setTimeout(()=> {
          username = prompt('What is your name?');
          create_times();
@@ -158,12 +158,15 @@ permalink: /typinggame/
       ,1000);
     }
 
-    // this function 
+    // this function updates the timer every millisecond
     function updateTimer() {
       var currentTime = new Date();
-      var elapsedTime = Math.floor((currentTime - startTime) / 10); // Calculate elapsed time in hundredths of a second
+      // subtracts the currentTime from the startTime to calculate the elapsed time in hundredths of a second
+      var elapsedTime = Math.floor((currentTime - startTime) / 10);
+      // Converts the elapsed time to seconds with two decimal places
       actualTime = (elapsedTime / 100).toFixed(2)
-      timer.textContent = "Time: " + actualTime + " seconds"; // Convert elapsed time to seconds with two decimal places
+      // displays on the frontend
+      timer.textContent = "Time: " + actualTime + " seconds";
     }
 
     // this function posts to the database
@@ -180,8 +183,7 @@ permalink: /typinggame/
                 'Authorization': 'Bearer my-token',
             },
         };
-        // URL for Create API
-        // Fetch API call to the database to create a new review
+        // Fetch API call to the database to create a new database entry
         fetch(create_fetch, requestOptions)
         .then(response => {
             // trap error response from Web API
@@ -193,14 +195,9 @@ permalink: /typinggame/
         })
     }
 
+  // this code runs when the page loads
   $(document).ready(function() {
-  // When document is ready...
-  // $(function(){
-  //     onPageLoad();
-  // });
-
-  // function onPageLoad(){
-
+    // fetches the contents of the database from the below url
     fetch('https://petitepandas.duckdns.org/api/times/', { mode: 'cors' })
     .then(response => {
       if (!response.ok) {
@@ -210,13 +207,13 @@ permalink: /typinggame/
     })
     .then(data => {
       for (const row of data) {
-        // BUG warning/resolution - DataTable requires row to be single append
+        // appends the data to the table
         $('#flaskBody').append('<tr><td>' + 
             row.id + '</td><td>' + 
             row.uid + '</td><td>' + 
             row.totaltime + '</td></tr>');
       }
-      // BUG warning - Jupyter does not show Datatable controls, works on deployed GitHub pages
+      // displays the table
       $("#flaskTable").DataTable();
     })
     .catch(error => {

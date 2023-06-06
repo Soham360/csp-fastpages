@@ -7,6 +7,7 @@ permalink: /typinggame/
 <html>
 <head>
   <style>
+    /* styling */
     body {
       text-align: center;
     }
@@ -36,18 +37,20 @@ permalink: /typinggame/
     flex-shrink: 0;
     }
   </style>
-  <!-- load jQuery and DataTables syle and scripts -->
+  <!-- Importing table and sorting code -->
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
   <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>var define = null;</script>
   <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
+  <!-- div for the game. Includes the words being displayed, the inputs, and the timer -->
   <div id="game-container">
     <p id="word-display">Start typing...</p>
     <input type="text" id="input-field" autofocus>
     <p id="timer"></p>
   </div>
+  <!-- This is the leaderboard table. The table headers are given here and the contents are in "flaskBody" and is updated by the script at the bottom. -->
   <div id="result">
     <table id="flaskTable" class="table" style="width:100%">
         <thead id="flaskHead">
@@ -64,57 +67,81 @@ permalink: /typinggame/
  
 
   <script>
+    // This is the word bank
     var words = ["determine", "retiree", "thought", "improve", "truth", "active", "polish", "curve", "stun", "addicted", "extreme", "affect", "present", "certain", "dramatic", "greeting", "order", "twin", "fade", "relevance", "glimpse", "grain", "debt", "tell", "morning", "genetic", "suggest", "reduce", "demonstrate", "lift", "make", "entry", "circulation", "supply", "accountant", "admire", "spot", "assignment", "bracket", "satellite", "agony", "equal", "afford", "wash", "throw", "mistreat", "measure", "competition", "education", "tolerate"];
+    // This is the counter for how many words have been completed
     var wordsComplete = 0;
+    // This generates a random integer from 1 to 50
     var currentWordIndex = Math.floor((Math.random() * 50) + 1);
+    // This uses the random integer from above as an index for a random word from the word bank
     var currentWord = words[currentWordIndex];
+    // This sets the startTime and the timerInterval to un undefined value
     var startTime = null;
     var timerInterval = null;
 
+    // This is the table being defined as a constant variable
     const tableContainer = document.getElementById("result");
 
+    // This sets the username and the actualTime to un undefined value
     var username = null;
     var actualTime = null;
 
+    // This is the code that replaces the previous word
     var wordDisplay = document.getElementById("word-display");
+    // This gets the input from the text box
     var inputField = document.getElementById("input-field");
+    // This is the code that allows the timer to update
     var timer = document.getElementById("timer");
 
+    // This is the database where the scores are stored. The read and create urls are also defined here
     const url = "https://petitepandas.duckdns.org/api/times"
     const create_fetch = url + '/create';
     const read_fetch = url + '/';
 
+    // This displays the random word
     wordDisplay.textContent = currentWord;
 
+    // function starts as soon as it detects an input
     inputField.addEventListener("input", function(event) {
       var enteredText = event.target.value;
 
+      // starts the timer after the user inputs something into the textbox
       if (!startTime) {
         startTime = new Date();
         startTimer();
       }
 
+      // verifies is the entered word is the same as the actual word they are trying to type
       if (enteredText === currentWord) {
         currentWordIndex = Math.floor((Math.random() * 50) + 1);
         wordsComplete++;
+        // makes sure the user has typed at least 5 random words
         if (wordsComplete >= 5) {
+          // displays a "You Win!"
           wordDisplay.textContent = "You Win!";
+          // hides the text box
           inputField.style.display = "none";
+          // stops the timer
           stopTimer();
         } else {
+          // if the user has not typed 5 words, gets another random word
           currentWord = words[currentWordIndex];
-
+          // displays the random word
           wordDisplay.textContent = currentWord;
+          // clears the text box
           inputField.value = "";
         }
       }
     });
 
+    // starts repeated action (timer) that updates every 10 milliseconds (0.01)
     function startTimer() {
-      timerInterval = setInterval(updateTimer, 10); // Update every hundredth of a second (10 milliseconds)
+      timerInterval = setInterval(updateTimer, 10);
     }
 
+    // stops the timer when it is called. It is called after the user has typed 5 words
     function stopTimer() {
+      // makes the action above (timer) stop 
       clearInterval(timerInterval);
       // alert(timer.textContent)
       setTimeout(()=> {

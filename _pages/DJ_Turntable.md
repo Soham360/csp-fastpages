@@ -61,7 +61,7 @@ permalink: /turntable/
   <div class="turntable">
     <div class="record">
       <div class="record-label">
-        <img src="path/to/your/record/image.jpg" alt="Record Image">
+        <img src="https://github.com/Soham360/csp-fastpages/blob/master/images/record.png?raw=true" alt="Record Image">
       </div>
     </div>
   </div>
@@ -71,7 +71,7 @@ permalink: /turntable/
   </div>
 
   <script>
-    var audio = new Audio('path/to/your/audio/file.mp3');
+    var audio = new Audio('https://github.com/Soham360/csp-fastpages/blob/master/images/HeartOnMySleeve.mp3?raw=true');
     var isPlaying = false;
 
     function togglePlayback() {

@@ -66,8 +66,7 @@ permalink: /turntable/
     </div>
   </div>
   <div class="controls">
-    <button class="button">Play</button>
-    <button class="button">Stop</button>
+    <button class="button">Play/Pause</button>
   </div>
 
   <script>

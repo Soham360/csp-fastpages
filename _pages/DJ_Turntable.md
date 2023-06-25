@@ -6,7 +6,6 @@ permalink: /turntable/
 
 <html>
 <head>
-  <title>Virtual DJ Turntable</title>
   <style>
     .turntable {
       width: 400px;
